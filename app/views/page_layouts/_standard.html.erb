@@ -1,0 +1,31 @@
+<div id="page">
+  <div id="bordure"></div>
+  <div id="header">
+    <div class="holder">
+      <%= image_tag "alchemy_logo.png", :id => :logo %>
+      <div id="main_navigation" class="navigation">
+        <%= render_navigation :all_sub_menues => true %>
+      </div>
+      <div id="language_select" class="navigation">
+        <a href="#" class="active first">de</a>
+        <span class="spacer">|</span>
+        <a href="#" class="last">en</a>
+        <%= language_switches :spacer => '<span class="spacer">|</span>' %>
+      </div>
+    </div>
+  </div>
+  <%= render_cell(:slide_gallery) %>
+  <div id="content">
+    <div class="holder">
+      <%= render_elements %>
+      <div class="to_top">
+        <a href="#top"><%= t("back to top") %></a>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="holder">
+      <%= render_elements(:only => 'footer_column', :fallback => {:for => 'footer_column', :from => 'footer'}) %>
+    </div>
+  </div>
+</div>

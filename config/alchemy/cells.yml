@@ -1,0 +1,8 @@
+- name: left_column
+  elements: [headline, subheadline, text]
+
+- name: right_column
+  elements: [headline, subheadline, text]
+
+- name: slide_gallery
+  elements: [slide]

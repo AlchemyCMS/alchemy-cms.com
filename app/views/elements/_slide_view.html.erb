@@ -1,0 +1,18 @@
+<div class="slide" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+	<div class="slide_images">
+		<%- element.all_contents_by_type("EssencePicture").each do |content| -%>
+		<div class="slide_image <%= content.essence.css_class %>">
+			<%= render_essence_view(content, :image_size => "160x120") %>
+		</div>
+		<%- end -%>
+	</div>
+	<div class="headline">
+		<%= render_essence_view_by_name(element, 'headline') %>
+	</div>
+	<div class="subheadline">
+		<%= render_essence_view_by_name(element, 'subheadline') %>
+	</div>
+	<div class="bigtext">
+		<%= render_essence_view_by_name(element, 'bigtext') %>
+	</div>
+</div>

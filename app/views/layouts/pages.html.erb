@@ -1,0 +1,12 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <%= render_meta_data(:title_prefix => "Alchemy CMS", :title_seperator => "|") %>
+    <%= stylesheet_link_tag "styles", :media => :screen %>
+    <%= javascript_include_tag "alchemy/jquery", :cache => true %>
+  </head>
+  <body>
+    <%= yield %>
+    <%= alchemy_preview_mode_code %>
+  </body>
+</html>
