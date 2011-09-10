@@ -1,1 +1,21 @@
-<%= render_cell_elements(cell) -%>
+<%- if cell.elements.any? %>
+<div id="slide_gallery_container">
+	<div class="holder">
+		<div id="slide_gallery">
+			<%= render_cell_elements(cell) -%>
+		</div>
+		<div id="pager"></div>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+	  jQuery('#slide_gallery').cycle({ 
+		    fx:     'scrollHorz', 
+		    speed:  '400', 
+		    timeout: 5000, 
+		    pager: '#pager'
+		});
+	});
+</script>
+<%- end -%>

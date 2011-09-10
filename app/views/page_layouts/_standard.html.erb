@@ -7,9 +7,6 @@
         <%= render_navigation :all_sub_menues => true %>
       </div>
       <div id="language_select" class="navigation">
-        <a href="#" class="active first">de</a>
-        <span class="spacer">|</span>
-        <a href="#" class="last">en</a>
         <%= language_switches :spacer => '<span class="spacer">|</span>' %>
       </div>
     </div>
@@ -25,6 +22,9 @@
   </div>
   <div id="footer">
     <div class="holder">
+			<div class="to_top">
+        <a href="#top"><%= t("back to top") %></a>
+      </div>
       <%= render_elements(:only => 'footer_column', :fallback => {:for => 'footer_column', :from => 'footer'}) %>
     </div>
   </div>
