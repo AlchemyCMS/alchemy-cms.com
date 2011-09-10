@@ -3,3 +3,6 @@ db/*.sqlite3
 log/*.log
 tmp/
 alchemy
+public/javascripts/alchemy
+public/images/alchemy
+public/stylesheets/alchemy
