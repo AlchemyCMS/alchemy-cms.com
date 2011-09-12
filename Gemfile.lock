@@ -15,7 +15,7 @@ PATH
       tinymce_hammer (>= 0.2)
       tvdeyen-fleximage (>= 1.0.5)
       userstamp (>= 2.0.1)
-      will_paginate (~> 3.0)
+      will_paginate (>= 3.0.pre4)
 
 GEM
   remote: http://rubygems.org/
