@@ -123,6 +123,9 @@
     type: EssenceText
   - name: subheadline
     type: EssenceText
-  - name: bigtext
-    type: EssenceRichtext
+    
+- name: code
+  contents:
+  - name: block
+    type: EssenceHtml
 

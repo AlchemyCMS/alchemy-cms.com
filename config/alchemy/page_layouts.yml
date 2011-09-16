@@ -32,10 +32,10 @@
   unique: true
 
 - name: standard
-  elements: [headline, subheadline, text, slide]
+  elements: [headline, subheadline, text, slide, code]
 
 - name: two_columns
-  elements: [headline, subheadline, text, slide]
+  elements: [headline, subheadline, text, slide, code]
   cells: [left_column, right_column, slide_gallery]
   
 - name: footer

@@ -7,25 +7,22 @@
         <%= render_navigation :all_sub_menues => true %>
       </div>
       <div id="language_select" class="navigation">
-        <%= language_switches :spacer => '<span class="spacer">|</span>' %>
+        <%= language_switches :spacer => '<span class="spacer">|</span>', :linkname => :code %>
       </div>
     </div>
   </div>
-  <%= render_cell(:slide_gallery) %>
-  <div id="content">
-    <div class="holder">
-      <%= render_elements %>
-      <div class="to_top">
-        <a href="#top"><%= t("back to top") %></a>
-      </div>
-    </div>
-  </div>
+	<div id="main">
+		<div id="bubbles"></div>
+	  <%= render_cell(:slide_gallery) %>
+	  <div id="content">
+	    <div class="holder">
+	      <%= render_elements %>
+	    </div>
+	  </div>
+	</div>
   <div id="footer">
     <div class="holder">
-			<div class="to_top">
-        <a href="#top"><%= t("back to top") %></a>
-      </div>
-      <%= render_elements(:only => 'footer_column', :fallback => {:for => 'footer_column', :from => 'footer'}) %>
-    </div>
-  </div>
+			<%= render_elements(:only => 'footer_column', :fallback => {:for => 'footer_column', :from => 'footer'}) %>
+		</div>
+	</div>
 </div>

@@ -2,7 +2,7 @@
 db/*.sqlite3
 log/*.log
 tmp/
-alchemy
+alchemy_cms
 public/javascripts/alchemy
 public/images/alchemy
 public/stylesheets/alchemy

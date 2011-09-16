@@ -1,26 +1,25 @@
 PATH
-  remote: alchemy
+  remote: alchemy_cms
   specs:
-    alchemy (2.0.pre)
-      acts_as_ferret (>= 0.5.2)
+    alchemy_cms (2.0.pre3)
+      acts_as_ferret (~> 0.5)
       acts_as_list (~> 0.1)
       attachment_magic (~> 0.1)
-      authlogic (>= 3.0.3)
-      awesome_nested_set (>= 2.0.0)
-      declarative_authorization (>= 0.5)
-      dynamic_form (>= 1.1.4)
-      gettext_i18n_rails (>= 0.2.19)
-      jquery-rails (>= 1.0.3)
+      authlogic (~> 3.0)
+      awesome_nested_set (~> 2.0)
+      declarative_authorization (~> 0.5)
+      dynamic_form (~> 1.1)
+      gettext_i18n_rails (~> 0.2)
+      jquery-rails (~> 1.0)
       rails (~> 3.0)
-      tinymce_hammer (>= 0.2)
-      tvdeyen-fleximage (>= 1.0.5)
-      userstamp (>= 2.0.1)
-      will_paginate (>= 3.0.pre4)
+      tinymce_hammer (~> 0.2)
+      tvdeyen-fleximage (~> 1.0.7)
+      userstamp (~> 2.0.1)
+      will_paginate (~> 3.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    ZenTest (4.6.1)
     abstract (1.0.0)
     actionmailer (3.0.10)
       actionpack (= 3.0.10)
@@ -60,8 +59,6 @@ GEM
     authlogic (3.0.3)
       activerecord (>= 3.0.7)
       activerecord (>= 3.0.7)
-    autotest (4.4.6)
-      ZenTest (>= 4.4.1)
     awesome_nested_set (2.0.2)
       activerecord (>= 3.0.0)
     aws-s3 (0.6.2)
@@ -79,7 +76,6 @@ GEM
     columnize (0.3.4)
     daemons (1.1.4)
     declarative_authorization (0.5.3)
-    diff-lcs (1.1.2)
     dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -119,7 +115,6 @@ GEM
     net-ssh (2.2.1)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
-    nokogiri (1.5.0)
     polyglot (0.3.2)
     rack (1.2.3)
     rack-mount (0.6.14)
@@ -142,22 +137,8 @@ GEM
       thor (~> 0.14.4)
     rake (0.9.2)
     rbx-require-relative (0.0.5)
-    rcov (0.9.10)
     rdoc (3.9.4)
     rmagick (2.13.1)
-    rspec (2.6.0)
-      rspec-core (~> 2.6.0)
-      rspec-expectations (~> 2.6.0)
-      rspec-mocks (~> 2.6.0)
-    rspec-core (2.6.4)
-    rspec-expectations (2.6.0)
-      diff-lcs (~> 1.1.2)
-    rspec-mocks (2.6.0)
-    rspec-rails (2.6.1)
-      actionpack (~> 3.0)
-      activesupport (~> 3.0)
-      railties (~> 3.0)
-      rspec (~> 2.6.0)
     ruby-debug (0.10.4)
       columnize (>= 0.1)
       ruby-debug-base (~> 0.10.4.0)
@@ -173,8 +154,6 @@ GEM
       ruby-debug-base19 (>= 0.11.19)
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
-    shoulda (2.11.3)
-    spork (0.8.5)
     thor (0.14.6)
     tinymce_hammer (0.2.2)
     treetop (1.4.10)
@@ -185,10 +164,6 @@ GEM
       rmagick
     tzinfo (0.3.29)
     userstamp (2.0.1)
-    webrat (0.7.3)
-      nokogiri (>= 1.2.0)
-      rack (>= 1.0)
-      rack-test (>= 0.5.3)
     will_paginate (3.0.0)
     xml-simple (1.1.0)
 
@@ -196,16 +171,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  alchemy!
-  autotest
+  alchemy_cms!
   capistrano
   mongrel
   mysql2 (~> 0.2.6)
   rails (= 3.0.10)
-  rcov
-  rspec-rails
   ruby-debug
   ruby-debug19
-  shoulda
-  spork
-  webrat

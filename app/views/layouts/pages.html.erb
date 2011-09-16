@@ -1,9 +1,10 @@
 <!DOCTYPE>
 <html>
   <head>
-    <%= render_meta_data(:title_prefix => "Alchemy CMS", :title_seperator => "|") %>
+    <%= render_meta_data(:title_prefix => "Alchemy CMS", :title_seperator => "-") %>
     <%= stylesheet_link_tag "styles", :media => :screen %>
-    <%= javascript_include_tag "alchemy/jquery", "jquery.cycle.all", :cache => true %>
+    <%= stylesheet_link_tag "styles", :media => :print %>
+    <%= javascript_include_tag "alchemy/jquery", "jquery.cycle.all", :cache => 'jquery-with-plugins' %>
   </head>
   <body>
     <%= yield %>
