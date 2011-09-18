@@ -1,8 +1,11 @@
 <div id="page">
+	<a href="http://github.com/magiclabs/alchemy_cms" id="forkme">
+		<%= image_tag "forkme.png", :alt => "Fork me on GitHub" %>
+	</a>
   <div id="bordure"></div>
   <div id="header">
     <div class="holder">
-      <%= image_tag "alchemy_logo.png", :id => :logo %>
+      <%= link_to(image_tag("alchemy_logo.png", :id => :logo), "/") %>
       <div id="main_navigation" class="navigation">
         <%= render_navigation :all_sub_menues => true %>
       </div>
