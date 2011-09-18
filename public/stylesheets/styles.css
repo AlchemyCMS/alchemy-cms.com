@@ -139,10 +139,15 @@ pre {
 	position: absolute;
 	right: 0;
 	top: 85px;
+	text-transform: uppercase;
 }
 
 #language_select a {
 	text-decoration: none;
+}
+
+#language_select span.spacer {
+	margin: 0 0.3em;
 }
 
 #language_select a.active {
