@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/magiclabs/alchemy_cms.git
-  revision: 34228647c6352302c79f37dd925243373f5c52ce
-  branch: rails3
+  revision: ca9bdc44f7423765be566b7f904ff65b60cc1a0a
+  branch: next_stable
   specs:
     alchemy_cms (2.0.pre4)
       acts_as_ferret (~> 0.5)
@@ -173,7 +173,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  alchemy_cms (>= 2.0.pre3)!
+  alchemy_cms (>= 2.0.pre4)!
   capistrano
   mongrel
   mysql2 (~> 0.2.6)
