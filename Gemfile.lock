@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/magiclabs/alchemy_cms.git
-  revision: 39e5c90dd9a8d3fadc1f5f0eecc01879c9a51359
+  revision: 23ae49895ec2e60497931d450fd197046d7994a1
   branch: rails3
   specs:
-    alchemy_cms (2.0.pre3)
+    alchemy_cms (2.0.pre4)
       acts_as_ferret (~> 0.5)
       acts_as_list (~> 0.1)
       attachment_magic (~> 0.1)
