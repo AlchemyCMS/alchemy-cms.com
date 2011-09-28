@@ -109,15 +109,6 @@ pre {
 	height: 30px;
 }
 
-#forkme {
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	border: 0;
-	z-index: 20;
-}
-
 #header {
 	height: 140px;
 	background: #C7E4F5;
