@@ -52,7 +52,7 @@ namespace :deploy do
   
   desc 'Seeds the database'
     task :seed, :roles => :app, :except => { :no_release => true } do
-      run "cd #{release_path} && RAILS_ENV=production rake db:seed"
+      run "cd #{release_path} && RAILS_ENV=production #{rake} db:seed"
     end
   
   namespace :db do
