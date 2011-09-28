@@ -2,7 +2,7 @@
   elements: [headline, subheadline, text, code]
 
 - name: right_column
-  elements: [headline, subheadline, text, code]
+  elements: [headline, subheadline, text, code, features_table]
 
 - name: slide_gallery
   elements: [slide]
