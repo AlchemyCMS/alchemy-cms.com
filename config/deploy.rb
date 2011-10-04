@@ -1,5 +1,5 @@
 require "bundler/capistrano"
-require "alchemy_cms/lib/alchemy/capistrano"
+require "alchemy/capistrano"
 
 set :application, "alchemy-cms"
 set :repository,  "git@magiclabs.de:alchemy-app.git"
