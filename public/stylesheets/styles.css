@@ -236,6 +236,56 @@ div#bubbles {
 	top: 140px;
 }
 
+.gallery {
+	width: 920px;
+	background: transparent;
+	overflow: hidden;
+}
+
+.gallery .gallery_image {
+	float: left;
+	margin: 0 10px 10px 0;
+	position: relative;
+	font-size: 0;
+	box-shadow: #33393f 0px 0px 5px;
+	-moz-box-shadow: #33393f 0px 0px 5px;
+	-webkit-box-shadow: #33393f 0px 0px 5px;
+}
+
+.gallery .gallery_image .image_caption {
+	color: #a3a3a5;
+	font-size: 11px;
+	height: 18px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #33393f;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	opacity: 0.9;
+}
+
+.gallery .gallery_image img {
+	display: block;
+}
+
+.gallery_image a {
+	display: block;
+}
+
+.gallery_image .zoom {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	background: url(../images/image_zoom.png) no-repeat;
+	z-index: 10;
+}
+
 #column_left, #column_right {
 	width: 450px;
 	float: left;
@@ -314,7 +364,12 @@ div#column_right div.text {
 }
 
 #footer p {
-	display: inline;
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+#footer p a {
+	color: #a5a5a5;
 }
 
 

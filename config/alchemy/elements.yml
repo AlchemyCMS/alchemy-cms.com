@@ -136,3 +136,20 @@
     type: EssenceText
   - name: features
     type: EssenceRichtext
+    
+- name: gallery
+  contents:
+  - name: image
+    type: EssencePicture
+
+- name: overlay
+  unique: true
+  contents:
+  - name: image
+    type: EssencePicture
+  - name: text
+    type: EssenceRichtext
+  - name: link
+    type: EssenceText
+    settings:
+      linkable: true

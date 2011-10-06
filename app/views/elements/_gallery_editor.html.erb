@@ -1,0 +1,7 @@
+<%- sizes = {
+  "a) 1/2 Bild" => "500x450",
+  "b) 1/3 Bild" => "330x450",
+  "d) 1/6 Bild" => "330x220",
+  "e) 1/24 Bild" => "160x105"
+} -%>
+<%= render_picture_editor(element, :sizes => sizes, :image_size => "160x105", :crop => true) %>
