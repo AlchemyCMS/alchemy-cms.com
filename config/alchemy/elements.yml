@@ -129,3 +129,10 @@
   - name: block
     type: EssenceHtml
 
+- name: features_table
+  unique: true
+  contents:
+  - name: headline
+    type: EssenceText
+  - name: features
+    type: EssenceRichtext

@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+require "alchemy/capistrano"
 
 set :application, "alchemy-cms"
 set :repository,  "git@magiclabs.de:alchemy-app.git"
@@ -11,7 +12,7 @@ set :use_sudo, false
 set :port, 12312
 
 set :user, "web28"
-set :password, "mxc92shf"
+set :password, "hym1guv3"
 
 role :web, "rv2.nethosting4you-server.de"                          # Your HTTP server, Apache/etc
 role :app, "rv2.nethosting4you-server.de"                          # This may be the same as your `Web` server
@@ -20,14 +21,10 @@ role :db,  "rv2.nethosting4you-server.de", :primary => true        # This is whe
 set :deploy_to, "/var/www/#{user}/html/#{application}"
 
 after "deploy:setup", "deploy:db:setup" unless fetch(:skip_db_setup, false)
-after "deploy:setup", "alchemy:shared_folders:create"
 
 after "deploy:symlink", "deploy:db:symlink"
-after "deploy:symlink", "alchemy:shared_folders:symlink"
 
 before "deploy:restart", "deploy:migrate"
-before "deploy:restart", "alchemy:db:migrate"
-before "deploy:restart", "alchemy:assets:copy"
 before "deploy:restart", "deploy:seed"
 
 after "deploy", "deploy:cleanup"
@@ -55,7 +52,7 @@ namespace :deploy do
   
   desc 'Seeds the database'
     task :seed, :roles => :app, :except => { :no_release => true } do
-      run "cd #{release_path} && RAILS_ENV=production rake db:seed"
+      run "cd #{release_path} && RAILS_ENV=production #{rake} db:seed"
     end
   
   namespace :db do

@@ -130,10 +130,15 @@ pre {
 	position: absolute;
 	right: 0;
 	top: 85px;
+	text-transform: uppercase;
 }
 
 #language_select a {
 	text-decoration: none;
+}
+
+#language_select span.spacer {
+	margin: 0 0.3em;
 }
 
 #language_select a.active {
@@ -328,3 +333,30 @@ div.addthis_toolbox {
 #footer .column.last {
 	margin-right: 0;
 }
+
+/* @group Features Table */
+
+div.features_table {
+	background-color: #F3F8FA;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;
+	padding: 10px;
+}
+
+div#content div.features_table div.features ul {
+	padding: 0;
+	margin: 10px;
+	list-style-type: none;
+}
+
+div#content div.features_table div.features ul li {
+	background: url(../images/checkmark.png) no-repeat right top;
+	padding-right: 50px;
+	height: 30px;
+	padding-top: 10px;
+}
+
+/* @end */
