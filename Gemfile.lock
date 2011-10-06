@@ -1,3 +1,24 @@
+GIT
+  remote: git://github.com/magiclabs/alchemy_cms.git
+  revision: 88174a7502fa66a633d51e62d314e89fe630a572
+  branch: next_stable
+  specs:
+    alchemy_cms (2.0.rc3)
+      acts_as_ferret (~> 0.5)
+      acts_as_list (~> 0.1)
+      attachment_magic (~> 0.1)
+      authlogic (~> 3.0)
+      awesome_nested_set (~> 2.0)
+      declarative_authorization (~> 0.5)
+      dynamic_form (~> 1.1)
+      gettext_i18n_rails (>= 0.3)
+      jquery-rails (~> 1.0)
+      rails (~> 3.0)
+      tinymce_hammer (~> 0.2)
+      tvdeyen-fleximage (~> 1.0.7)
+      userstamp (~> 2.0.1)
+      will_paginate (~> 3.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -32,21 +53,6 @@ GEM
       jk-ferret (>= 0.11.8)
       rails (>= 3.0)
     acts_as_list (0.1.4)
-    alchemy_cms (2.0.rc3)
-      acts_as_ferret (~> 0.5)
-      acts_as_list (~> 0.1)
-      attachment_magic (~> 0.1)
-      authlogic (~> 3.0)
-      awesome_nested_set (~> 2.0)
-      declarative_authorization (~> 0.5)
-      dynamic_form (~> 1.1)
-      gettext_i18n_rails (>= 0.3)
-      jquery-rails (~> 1.0)
-      rails (~> 3.0)
-      tinymce_hammer (~> 0.2)
-      tvdeyen-fleximage (~> 1.0.7)
-      userstamp (~> 2.0.1)
-      will_paginate (~> 3.0)
     archive-tar-minitar (0.5.2)
     arel (2.0.10)
     attachment_magic (0.1.0)
@@ -167,7 +173,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  alchemy_cms (>= 2.0.rc2)
+  alchemy_cms (>= 2.0.rc3)!
   capistrano
   mongrel
   mysql2 (~> 0.2.6)
