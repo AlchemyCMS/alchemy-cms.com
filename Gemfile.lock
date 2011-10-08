@@ -1,5 +1,7 @@
-PATH
-  remote: alchemy_cms
+GIT
+  remote: git://github.com/magiclabs/alchemy_cms.git
+  revision: 36e2f1e15078d47c0520a19e7df4ed77e44142b5
+  branch: next_stable
   specs:
     alchemy_cms (2.0.rc3)
       acts_as_ferret (~> 0.5)
@@ -79,7 +81,7 @@ GEM
     dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    fast_gettext (0.6.0)
+    fast_gettext (0.6.1)
     fastthread (1.0.7)
     gem_plugin (0.2.3)
     gettext_i18n_rails (0.3.0)
@@ -91,6 +93,7 @@ GEM
     jquery-rails (1.0.14)
       railties (~> 3.0)
       thor (~> 0.14)
+    json (1.6.1)
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
     linecache19 (0.5.12)
@@ -137,7 +140,8 @@ GEM
       thor (~> 0.14.4)
     rake (0.9.2)
     rbx-require-relative (0.0.5)
-    rdoc (3.9.4)
+    rdoc (3.10)
+      json (~> 1.4)
     rmagick (2.13.1)
     ruby-debug (0.10.4)
       columnize (>= 0.1)
@@ -171,7 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  alchemy_cms!
+  alchemy_cms (>= 2.0.rc3)!
   capistrano
   mongrel
   mysql2 (~> 0.2.6)
