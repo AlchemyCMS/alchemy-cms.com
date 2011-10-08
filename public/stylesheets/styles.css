@@ -399,6 +399,7 @@ div.features_table {
 	-o-border-radius: 20px;
 	-ms-border-radius: 20px;
 	padding: 10px;
+	opacity: 0.85;
 }
 
 div#content div.features_table div.features ul {
