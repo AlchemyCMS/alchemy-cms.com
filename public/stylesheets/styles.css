@@ -58,7 +58,7 @@ img {
 }
 
 h1, h2 {
-	font: normal 28px "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
+	font: normal normal 24px "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
 	color: #87AC59;
 	letter-spacing: 1px;
 	padding-top: 0;
@@ -338,11 +338,11 @@ div#column_right div.text {
 	left: 0;
 	top: 0;
 	display: block;
-	font-size: 22px;
-	
+	font-size: 18px;
 	text-decoration: none;
 	color: #33393f;
 	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 #main_navigation ul li.last {
@@ -410,7 +410,7 @@ div#content div.features_table div.features ul {
 div#content div.features_table div.features ul li {
 	background: url(../images/checkmark.png) no-repeat right top;
 	padding-right: 50px;
-	height: 30px;
+	min-height: 30px;
 	padding-top: 10px;
 }
 
