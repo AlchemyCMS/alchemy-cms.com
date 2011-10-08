@@ -63,8 +63,8 @@ default_translation: de
 
 # Default language for your homepgae.
 default_language:
-  code: de
-  name: Deutsch
+  code: en
+  name: English
   page_layout: intro
   frontpage_name: Intro
 
