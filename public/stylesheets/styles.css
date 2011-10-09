@@ -99,6 +99,11 @@ pre {
 	width: 100%;
 	overflow: hidden;
 	background-color: #FBFBFB;
+	background-image: -moz-radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
+	background-image: -webkit-radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
+	background-image: -o-radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
+	background-image: -ms-radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
+	background-image: radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
 }
 
 #bordure {
@@ -361,6 +366,11 @@ div#column_right div.text {
 	float: left;
 	width: 100%;
 	padding-bottom: 60px;
+	background-image: -moz-radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
+	background-image: -webkit-radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
+	background-image: -o-radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
+	background-image: -ms-radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
+	background-image: radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
 }
 
 #footer p {
