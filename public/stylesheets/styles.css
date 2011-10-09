@@ -232,7 +232,7 @@ div#bubbles {
 	background: url(../images/big_bubbles.png) no-repeat center;
 	position: absolute;
 	z-index: 0;
-	left: 243px;
+	left: 200px;
 	top: 140px;
 }
 
@@ -391,28 +391,38 @@ div.addthis_toolbox {
 
 /* @group Features Table */
 
-div.features_table {
+div.info_table {
 	background-color: #F3F8FA;
 	border-radius: 20px;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	-o-border-radius: 20px;
 	-ms-border-radius: 20px;
-	padding: 10px;
-	opacity: 0.85;
+	-webkit-box-shadow: inset 1px 1px 20px #aac3d1;
+	-moz-box-shadow: inset 1px 1px 20px #aac3d1;
+	-o-box-shadow: inset 1px 1px 20px #aac3d1;
+	-box-shadow: inset 1px 1px 20px #aac3d1;
+	padding: 30px;
+	opacity: 0.8;
 }
 
-div#content div.features_table div.features ul {
+div#content div.info_table div.content ul {
 	padding: 0;
-	margin: 10px;
-	list-style-type: none;
+	margin: 0px;
+	list-style: none;
 }
 
-div#content div.features_table div.features ul li {
+div#content div.info_table div.content ul li {
 	background: url(../images/checkmark.png) no-repeat right top;
 	padding-right: 50px;
 	min-height: 30px;
 	padding-top: 10px;
+	border-bottom: 1px solid #d6e2ea;
+	
+}
+
+div#content div.info_table div.content ul li:last-child {
+	border-bottom: 0 none;
 }
 
 /* @end */

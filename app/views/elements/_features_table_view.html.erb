@@ -1,8 +1,6 @@
-<h1>
-	<%= render_essence_view_by_name(element, 'headline') %>
-</h1>
-<div class="features_table" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
-	<div class="features">
+<div class="info_table" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+	<div class="content">
+		<h1><%= render_essence_view_by_name(element, 'headline') %></h1>
 		<%= render_essence_view_by_name(element, 'features') %>
 	</div>
 </div>
