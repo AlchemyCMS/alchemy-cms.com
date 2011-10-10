@@ -4,7 +4,9 @@
 		<div id="slide_gallery">
 			<%= render_cell_elements(cell) -%>
 		</div>
+		<%- if cell.elements.count > 1 -%>
 		<div id="pager"></div>
+		<%- end -%>
 	</div>
 </div>
 
