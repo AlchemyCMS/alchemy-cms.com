@@ -16,9 +16,14 @@ Tinymce::Hammer.init = {
   :theme_advanced_toolbar_location => 'top',
   :theme_advanced_statusbar_location => 'bottom',
   :theme_advanced_buttons1 => 'bold,italic,underline,strikethrough,sub,sup,|,numlist,bullist,indent,outdent,|,alchemy_link,unlink,|,removeformat,cleanup,|,fullscreen',
-  :theme_advanced_buttons2 => 'formatselect,pastetext,pasteword,charmap,code,help',
+  :theme_advanced_buttons2 => 'styleselect,pastetext,pasteword,charmap,code,help',
   :theme_advanced_buttons3 => '',
+  :theme_advanced_resizing => 'true',
+  :theme_advanced_resize_horizontal => false,
+  :theme_advanced_resizing_min_height => '185',
   :fix_list_elements => true,
   :convert_urls => false,
-  :theme_advanced_blockformats => 'p,h1,h2,pre'
+  :style_formats => [
+    {:title => 'Code', :inline => 'code'}
+  ]
 }
