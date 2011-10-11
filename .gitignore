@@ -7,4 +7,4 @@ alchemy_cms
 public/javascripts/alchemy
 public/images/alchemy
 public/stylesheets/alchemy
-uploads/*
+uploads
