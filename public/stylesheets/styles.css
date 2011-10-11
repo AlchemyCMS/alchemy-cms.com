@@ -41,6 +41,11 @@ body {
 	color: #33393F;
 	margin: 0;
 	font: 12px/18px "JunctionRegular", Helvetica, Arial, sans-serif;
+	background-image: -moz-radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
+	background-image: -webkit-radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
+	background-image: -o-radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
+	background-image: -ms-radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
+	background-image: radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
 }
 
 a {
@@ -119,6 +124,11 @@ pre {
 	background: #C7E4F5;
 	color: #FFF;
 	font: 14px normal "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
+	background-image: -moz-radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
+	background-image: -webkit-radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
+	background-image: -o-radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
+	background-image: -ms-radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
+	background-image: radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
 }
 
 #header a {
@@ -238,7 +248,7 @@ div#bubbles {
 	position: absolute;
 	z-index: 0;
 	left: 200px;
-	top: 140px;
+	top: 130px;
 }
 
 .gallery {
@@ -355,7 +365,7 @@ div#column_right div.text {
 }
 
 #footer {
-	background: #33393F;
+	background: transparent;
 	color: #a5a5a5;
 	padding-top: 40px;
 	position: relative;
@@ -366,11 +376,6 @@ div#column_right div.text {
 	float: left;
 	width: 100%;
 	padding-bottom: 60px;
-	background-image: -moz-radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
-	background-image: -webkit-radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
-	background-image: -o-radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
-	background-image: -ms-radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
-	background-image: radial-gradient(50% 50%, circle cover, #3c444a, #33393F 60%);
 }
 
 #footer p {
