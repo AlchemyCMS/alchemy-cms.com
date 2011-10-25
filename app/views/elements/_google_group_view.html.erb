@@ -1,3 +1,4 @@
+<%- unless render_essence_view_by_name(element, 'rss_url').blank? -%>
 <div id="google_group" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
 	<%- feed = FeedNormalizer::FeedNormalizer.parse open(render_essence_view_by_name(element, 'rss_url')) -%>
 	<div class="entries">
@@ -14,3 +15,4 @@
 		<%- end -%>
 	</div>
 </div>
+<%- end -%>
