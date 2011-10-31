@@ -7,6 +7,17 @@ GIT
       acts_as_ferret (~> 0.5)
       acts_as_list (~> 0.1)
       attachment_magic (~> 0.1.1)
+      authlogic (~> 3.0)
+      awesome_nested_set (~> 2.0)
+      declarative_authorization (~> 0.5)
+      dynamic_form (~> 1.1)
+      gettext_i18n_rails (>= 0.3)
+      jquery-rails (~> 1.0)
+      rails (~> 3.0)
+      tinymce_hammer (~> 0.2)
+      tvdeyen-fleximage (~> 1.0.7)
+      userstamp (~> 2.0.1)
+      will_paginate (~> 3.0)
 
 GEM
   remote: http://rubygems.org/
@@ -47,7 +58,15 @@ GEM
     attachment_magic (0.1.1)
       mimetype-fu (~> 0.1.2)
       rails (>= 3.0.7, < 3.1)
-      rails (>= 3.0.7, < 3.1)
+    authlogic (3.1.0)
+      activerecord (>= 3.0.7)
+      activerecord (>= 3.0.7)
+    awesome_nested_set (2.0.2)
+      activerecord (>= 3.0.0)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     builder (2.1.2)
     capistrano (2.9.0)
       highline
@@ -58,18 +77,26 @@ GEM
     cgi_multipart_eof_fix (2.5.0)
     columnize (0.3.4)
     daemons (1.1.4)
+    declarative_authorization (0.5.3)
+    dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    fast_gettext (0.6.2)
     fastthread (1.0.7)
     feed-normalizer (1.5.2)
       hpricot (>= 0.6)
       simple-rss (>= 1.1)
     gem_plugin (0.2.3)
+    gettext_i18n_rails (0.3.0)
+      fast_gettext
     highline (1.6.2)
     hpricot (0.8.4)
     i18n (0.5.0)
     jk-ferret (0.11.8.3)
       rake
+    jquery-rails (1.0.16)
+      railties (~> 3.0)
+      thor (~> 0.14)
     json (1.6.1)
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
@@ -80,7 +107,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.16)
+    mime-types (1.17.2)
     mimetype-fu (0.1.2)
     mongrel (1.1.5)
       cgi_multipart_eof_fix (>= 2.4)
@@ -115,10 +142,11 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.4)
-    rake (0.9.2)
+    rake (0.9.2.2)
     rbx-require-relative (0.0.5)
-    rdoc (3.10)
+    rdoc (3.11)
       json (~> 1.4)
+    rmagick (2.13.1)
     ruby-debug (0.10.4)
       columnize (>= 0.1)
       ruby-debug-base (~> 0.10.4.0)
@@ -136,10 +164,17 @@ GEM
       archive-tar-minitar (>= 0.5.2)
     simple-rss (1.2.3)
     thor (0.14.6)
+    tinymce_hammer (0.2.2)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    tvdeyen-fleximage (1.0.8)
+      aws-s3
+      rmagick
     tzinfo (0.3.30)
+    userstamp (2.0.1)
+    will_paginate (3.0.2)
+    xml-simple (1.1.1)
 
 PLATFORMS
   ruby
