@@ -153,3 +153,9 @@
     type: EssenceText
     settings:
       linkable: true
+      
+- name: google-group
+  unique: true
+  contents:
+  - name: rss_url
+    type: EssenceText
