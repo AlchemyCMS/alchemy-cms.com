@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/magiclabs/alchemy_cms.git
-  revision: 89354cdbcde7f86b90de869550a65f9bd75d1cfc
+  revision: d65d0fa51e5cf9c884ff53c777592a60e93fc30f
   branch: next_stable
   specs:
     alchemy_cms (2.0.rc6)
@@ -122,7 +122,7 @@ GEM
     net-ssh (2.2.1)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
-    polyglot (0.3.2)
+    polyglot (0.3.3)
     rack (1.2.4)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
