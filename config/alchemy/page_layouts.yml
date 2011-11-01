@@ -41,3 +41,8 @@
 - name: footer
   elements: [footer_column]
   layoutpage: true
+  
+- name: community
+  cache: false
+  elements: [headline, subheadline, text, gallery, slide, code, features_table, google-group]
+  cells: [left_column, right_column, slide_gallery]

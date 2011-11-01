@@ -448,4 +448,30 @@ div#content div.info_table div.content.features ul li strong {
 	font-size: 12px;	
 }
 
+#google_group .entries {
+	margin-top: 2em;
+}
+
+#google_group .title {
+	font-weight: bold;
+}
+
+#google_group .entry {
+	padding-bottom: 1em;
+	border-bottom: 1px solid #d6e2ea;
+	margin-bottom: 1em;
+}
+
+#google_group .entry_footer {
+	font-size: 10px;
+	font-style: italic;
+}
+
+
+#google_group .entry_footer .url {
+	float: right;
+	font-style: normal;
+	padding: 2px;
+}
+
 /* @end */

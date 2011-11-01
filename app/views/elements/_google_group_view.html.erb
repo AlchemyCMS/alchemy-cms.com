@@ -1,0 +1,18 @@
+<%- unless render_essence_view_by_name(element, 'rss_url').blank? -%>
+<div id="google_group" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+	<%- feed = FeedNormalizer::FeedNormalizer.parse open(render_essence_view_by_name(element, 'rss_url')) -%>
+	<div class="entries">
+		<%- feed.entries.first(6).each do |entry| -%>
+			<div class="entry">
+					<div class="title"><%=h entry.title %></div>
+					<span class="content"><%=h strip_tags(truncate(entry.content, :length => 160).html_safe) %></span>
+					<div class="entry_footer">
+						<span class="date"><%=l entry.date_published %>,</span> 
+						<span class="author"><%=h entry.author %></span>
+						<span class="url"><%=h link_to t('read'), entry.url %></span>
+					</div>
+			</div>
+		<%- end -%>
+	</div>
+</div>
+<%- end -%>
