@@ -8,3 +8,5 @@ public/javascripts/alchemy
 public/images/alchemy
 public/stylesheets/alchemy
 uploads
+public/javascripts/jquery-with-plugins.js
+public/javascripts/tinymce_hammer.js
