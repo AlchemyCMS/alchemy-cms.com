@@ -146,10 +146,12 @@ pre {
 	right: 0;
 	top: 85px;
 	text-transform: uppercase;
+	color: #33393f;
 }
 
 #language_select a {
 	text-decoration: none;
+	color: #33393f;
 }
 
 #language_select span.spacer {
