@@ -1,5 +1,3 @@
-/* @override http://localhost:3000/stylesheets/styles.css */
-
 @font-face {
     font-family: 'AngelinaRegular';
     src: url('/fonts/angelina-webfont.eot');
@@ -246,7 +244,7 @@ div.holder {
 div#bubbles {
 	width: 100%;
 	height: 631px;
-	background: url(../images/big_bubbles.png) no-repeat center;
+	background: image-url('big_bubbles.png') no-repeat center;
 	position: absolute;
 	z-index: 0;
 	left: 200px;
@@ -299,7 +297,7 @@ div#bubbles {
 	position: absolute;
 	top: 1px;
 	left: 1px;
-	background: url(../images/image_zoom.png) no-repeat;
+	background: image-url('image_zoom.png') no-repeat;
 	z-index: 10;
 }
 
@@ -430,7 +428,7 @@ div#content div.info_table div.content ul {
 }
 
 div#content div.info_table div.content ul li {
-	background: url(../images/checkmark.png) no-repeat right center;
+	background: image-url('checkmark.png') no-repeat right center;
 	padding-right: 50px;
 	padding-top: 17px;
 	border-bottom: 1px solid #d6e2ea;

@@ -1,4 +1,4 @@
-Tinymce::Hammer.init = {
+Alchemy::Tinymce.init = {
   :paste_convert_headers_to_strong => true,
   :paste_convert_middot_lists => true,
   :paste_remove_spans => true,
