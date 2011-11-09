@@ -32,7 +32,7 @@ GEM
       jk-ferret (>= 0.11.8)
       rails (>= 3.0)
     acts_as_list (0.1.4)
-    alchemy_cms (2.0)
+    alchemy_cms (2.0.3)
       acts_as_ferret (~> 0.5)
       acts_as_list (~> 0.1)
       attachment_magic (~> 0.1.1)
@@ -79,7 +79,7 @@ GEM
       simple-rss (>= 1.1)
     gettext_i18n_rails (0.3.0)
       fast_gettext
-    highline (1.6.2)
+    highline (1.6.5)
     hpricot (0.8.4)
     i18n (0.5.0)
     jk-ferret (0.11.8.3)
@@ -99,7 +99,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     mimetype-fu (0.1.2)
-    mysql2 (0.2.13)
+    mysql2 (0.2.14)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -153,10 +153,10 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tvdeyen-fleximage (1.0.8)
+    tvdeyen-fleximage (1.0.9)
       aws-s3
       rmagick
-    tzinfo (0.3.30)
+    tzinfo (0.3.31)
     userstamp (2.0.1)
     will_paginate (3.0.2)
     xml-simple (1.1.1)
