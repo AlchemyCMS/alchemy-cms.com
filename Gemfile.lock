@@ -32,7 +32,7 @@ GEM
       jk-ferret (>= 0.11.8)
       rails (>= 3.0)
     acts_as_list (0.1.4)
-    alchemy_cms (2.0.3)
+    alchemy_cms (2.0.3.1)
       acts_as_ferret (~> 0.5)
       acts_as_list (~> 0.1)
       attachment_magic (~> 0.1.1)
