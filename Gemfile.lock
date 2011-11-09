@@ -1,5 +1,7 @@
-PATH
-  remote: alchemy_cms
+GIT
+  remote: git://github.com/magiclabs/alchemy_cms
+  revision: 6312133c6360bd1d1089d8c314eef7486ac72d52
+  branch: next_stable
   specs:
     alchemy_cms (2.1.beta1)
       acts_as_ferret (~> 0.5)
