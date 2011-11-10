@@ -142,6 +142,11 @@
   - name: image
     type: EssencePicture
 
+- name: screenshot
+  contents:
+  - name: screen
+    type: EssencePicture
+
 - name: overlay
   unique: true
   contents:

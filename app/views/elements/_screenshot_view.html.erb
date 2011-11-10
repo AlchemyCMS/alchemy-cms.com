@@ -1,0 +1,9 @@
+<div class="screenshot" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+	<div class="screenshot_images">
+		<%- element.all_contents_by_type("EssencePicture").each do |content| -%>
+		<div class="screenshot_image <%= content.essence.css_class %>">
+			<%= render_essence_view(content, :image_size => "450x280", :crop => true) %>
+		</div>
+		<%- end -%>
+	</div>
+</div>
