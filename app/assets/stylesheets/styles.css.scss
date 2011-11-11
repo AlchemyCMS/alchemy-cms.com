@@ -337,7 +337,7 @@ div#column_right div.text {
 }
 
 #main_navigation ul li {
-  	position: relative;
+	position: relative;
 	float: left;
 	margin-right: 20px;
 	list-style-image: none;
@@ -345,6 +345,7 @@ div#column_right div.text {
 
 #main_navigation ul li a.active {
 	color: #87ac59;
+	font: 14px normal "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
 }
 
 #main_navigation ul li a {

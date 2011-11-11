@@ -9,7 +9,7 @@
 					<div class="entry_footer">
 						<span class="date"><%=l entry.date_published %>,</span> 
 						<span class="author"><%=h entry.author %></span>
-						<span class="url"><%=h link_to t('read'), entry.url %></span>
+						<span class="url"><%=h link_to t('read'), entry.url, :target => '_blank' %></span>
 					</div>
 			</div>
 		<%- end -%>
