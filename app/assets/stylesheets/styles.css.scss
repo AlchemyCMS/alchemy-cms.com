@@ -1,3 +1,11 @@
+@mixin drop-shadow($depth) {
+	box-shadow: #ccc 0px 0px $depth;
+	-o-box-shadow: #ccc 0px 0px $depth;
+	-ms-box-shadow: #ccc 0px 0px $depth;
+	-moz-box-shadow: #ccc 0px 0px $depth;
+	-webkit-box-shadow: #ccc 0px 0px $depth;
+}
+
 @font-face {
     font-family: 'AngelinaRegular';
     src: url('/fonts/angelina-webfont.eot');
@@ -262,9 +270,6 @@ div#bubbles {
 	margin: 0 10px 10px 0;
 	position: relative;
 	font-size: 0;
-	box-shadow: #33393f 0px 0px 5px;
-	-moz-box-shadow: #33393f 0px 0px 5px;
-	-webkit-box-shadow: #33393f 0px 0px 5px;
 }
 
 .gallery .gallery_image .image_caption {
@@ -358,7 +363,7 @@ div#column_right div.text {
 	color: #33393f;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	font: 14px normal "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
+	font-family: "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
 }
 
 #main_navigation ul li.last {
@@ -476,3 +481,7 @@ div#content div.info_table div.content.features ul li strong {
 }
 
 /* @end */
+
+.screenshot_image img {
+	@include drop-shadow(5px);
+}
