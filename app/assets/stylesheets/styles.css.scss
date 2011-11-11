@@ -345,11 +345,10 @@ div#column_right div.text {
 
 #main_navigation ul li a.active {
 	color: #87ac59;
-	font: 14px normal "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
 }
 
 #main_navigation ul li a {
-  	padding: 5px 20px 10px 0;
+	padding: 5px 20px 10px 0;
 	position: relative;
 	left: 0;
 	top: 0;
@@ -359,6 +358,7 @@ div#column_right div.text {
 	color: #33393f;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	font: 14px normal "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
 }
 
 #main_navigation ul li.last {
