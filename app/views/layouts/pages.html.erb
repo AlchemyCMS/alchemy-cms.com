@@ -2,9 +2,10 @@
 <html>
 	<head>
 		<%= render_meta_data(:title_prefix => "Alchemy CMS", :title_seperator => "-") %>
-		<%= stylesheet_link_tag "application", :media => :screen %>
-		<%= stylesheet_link_tag "application", :media => :print %>
 		<%= javascript_include_tag "application" %>
+		<%= stylesheet_link_tag 'application', :media => 'screen, projection' %>
+		<%= stylesheet_link_tag 'print.css', :media => 'print' %>
+		<!--[if IE]><%= stylesheet_link_tag 'ie.css', :media => 'screen, projection' %><![endif]-->
 	</head>
 	<body>
 		<%= yield %>

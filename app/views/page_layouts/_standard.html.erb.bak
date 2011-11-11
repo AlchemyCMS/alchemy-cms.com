@@ -1,8 +1,7 @@
-<!-- not ready >
 <div id="page">
   <div id="bordure"></div>
   <div id="header">
-    <div class="container_12">
+    <div class="holder">
       <%= link_to(image_tag("alchemy_logo.png", :id => :logo), "#") %>
       <div id="main_navigation" class="navigation">
         <%= render_navigation :all_sub_menues => true %>
@@ -27,16 +26,3 @@
 		<%= render_elements(:only => 'footer_column', :fallback => {:for => 'footer_column', :from => 'footer'}) %>
 	</div>
 </div>
-
-<div id="container" class="container_12">
-	<div class="grid_4">
-		test
-	</div>
-	<div class="grid_4">
-		bla
-	</div>
-	<div class="grid_4">
-		test
-	</div>
-</div>
--->
