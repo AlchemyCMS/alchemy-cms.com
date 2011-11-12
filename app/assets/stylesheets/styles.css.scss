@@ -126,6 +126,7 @@ pre {
 }
 
 #header {
+	position: relative;
 	height: 140px;
 	background: #C7E4F5;
 	color: #FFF;
@@ -186,6 +187,8 @@ pre {
 	padding: 10px;
 	background-color: #c7e4f5;
 	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	-o-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
 	width: 20px;

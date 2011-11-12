@@ -7,6 +7,23 @@
 @import "compass/utilities/general/clearfix";
 @import "960/grid";
 
+$anthrazit: #33393F;
+$alchemy_blue: #C7E4F5;
+$alchemy_green: #87AC59;
+
+@mixin opacity($strength) {
+	opacity: $strength;
+	filter: alpha(opacity = $strength*100);
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-khtml-border-radius: $radius;
+	-o-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
 @mixin drop-shadow($depth) {
 	box-shadow: #ccc 0px 0px $depth;
 	-o-box-shadow: #ccc 0px 0px $depth;
@@ -51,27 +68,26 @@
 
 }
 
-#container {
-  @include grid-system(16);
+.container {
+  @include grid-system(12);
   @include clearfix;
   @include grid-children;
-  color: white;
 }
 
 body {
-	background: #33393f;
-	color: #33393F;
+	background: $anthrazit;
+	color: $anthrazit;
 	margin: 0;
 	font: 12px/18px "JunctionRegular", Helvetica, Arial, sans-serif;
-	background-image: -moz-radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
-	background-image: -webkit-radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
-	background-image: -o-radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
-	background-image: -ms-radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
-	background-image: radial-gradient(50% 100%, circle cover, #3c444a, #33393F 60%);
+	background-image: -moz-radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
+	background-image: -webkit-radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
+	background-image: -o-radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
+	background-image: -ms-radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
+	background-image: radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
 }
 
 a {
-	color: #33393F;
+	color: $anthrazit;
 	text-decoration: underline;
 }
 
@@ -86,7 +102,7 @@ img {
 
 h1, h2 {
 	font: normal normal 24px "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
-	color: #87AC59;
+	color: $alchemy_green;
 	letter-spacing: 1px;
 	padding-top: 0;
 	margin-top: 0;
@@ -105,7 +121,7 @@ code {
 }
 
 pre {
-	background: #33393f;
+	background: $anthrazit;
 	color: #eed785;
 	padding: 1em;
 	font: 12px/1.5em Menlo, Monaco, mono;
@@ -134,25 +150,200 @@ pre {
 }
 
 #bordure {
-	background: #33393F;
-	background: -webkit-gradient(linear, left top, left bottom, from(#4D585E), to(#33393F));
-	background: -moz-linear-gradient(top,  #4D585E,  #33393F);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4D585E', endColorstr='#33393F');
+	background: $anthrazit;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4D585E), to($anthrazit));
+	background: -moz-linear-gradient(top,  #4D585E,  $anthrazit);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4D585E', endColorstr='$anthrazit');
 	height: 30px;
 }
 
 #header {
-	height: 140px;
-	background: #C7E4F5;
+	background: darken($alchemy_blue, 5);
 	color: #FFF;
 	font: 14px normal "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
-	background-image: -moz-radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
-	background-image: -webkit-radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
-	background-image: -o-radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
-	background-image: -ms-radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
-	background-image: radial-gradient(50% 50%, circle cover, #deeff9, #c7e4f5 60%);
+	background-image: -moz-radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
+	background-image: -webkit-radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
+	background-image: -o-radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
+	background-image: -ms-radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
+	background-image: radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
 }
 
 #header a {
 	color: #FFF;
+}
+
+#header .container {
+	height: 140px;
+	background: $alchemy_blue;
+	@include border-radius(4px);
+	padding: 0px;
+}
+
+#language_select {
+	text-align: right;
+	text-transform: uppercase;
+}
+
+#language_select a {
+	text-decoration: none;
+	padding: 5px 7px;
+	@include border-radius(6*4px);
+	color: $anthrazit;
+}
+
+#language_select a:hover {
+	background: darken($alchemy_blue, 4);
+}
+
+#language_select a.active {
+	color: $alchemy_green;
+	border: 1px solid $alchemy_green;
+	background: transparent;
+}
+
+#language_select #logo {
+	background: transparent;
+	display: block;
+	width: 300px;
+	height: 91px;
+	text-align: right;
+	padding: 0;
+}
+
+#language_select #logo img {
+	margin-right: -8px;
+}
+
+#main_navigation {
+	position: relative;
+	padding-top: 52px;
+}
+
+#main_navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+	height: inherit;
+	line-height: 0;
+}
+
+#main_navigation ul li {
+	position: relative;
+	float: left;
+	margin-right: 20px;
+	list-style-image: none;
+}
+
+#main_navigation ul li a.active {
+	color: $alchemy_green;
+}
+
+#main_navigation ul li a {
+	padding: 5px 20px 10px 0;
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+	font-size: 18px;
+	text-decoration: none;
+	color: $anthrazit;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-family: "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
+}
+
+#main_navigation ul li.last {
+	margin-right: 0px;
+}
+
+#slide_gallery {
+	position: relative;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#slide_gallery #pager {
+	position: absolute;
+	bottom: 60px;
+	right: 0;
+	text-align: right;
+	z-index: 10;
+}
+
+#slide_gallery #pager a {
+	margin-left: 10px;
+	padding: 10px;
+	background-color: #c7e4f5;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	-o-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	color: #33393f;
+	text-decoration: none;
+	font: 24px/18px SansusWebissimoRegular, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+#slide_gallery #pager a.activeSlide {
+	background-color: #33393f;
+	color: #FFFFFF;
+}
+
+#slide_gallery .slide {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 280px;
+	width: 960px;
+	margin: 0;
+}
+
+#slide_gallery .slide h1,
+#slide_gallery .slide h2 {
+	position:  absolute;
+	right: 0;
+	top: 1em;
+	text-transform: uppercase;
+	color: #33393f;
+	font-size: 74px;
+}
+
+#slide_gallery .slide h2 {
+	top: 0.5em;
+	font: 28px JunctionRegular;
+	text-transform: none;
+}
+
+#content {
+	position: relative;
+	top: 0;
+  left: 0;
+	padding-bottom: 110px;
+	padding-top: 70px;
+	overflow: auto;
+	min-height: 300px;
+}
+
+#footer {
+	background: transparent;
+	background: url('footer_pattern.png') repeat-x;
+	color: #a5a5a5;
+	padding-top: 40px;
+	padding-bottom: 60px;
+}
+
+#footer p {
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+#footer p a {
+	color: #a5a5a5;
 }

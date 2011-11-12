@@ -1,13 +1,11 @@
 <%- if cell.elements.any? %>
-<div id="slide_gallery_container">
-	<div class="holder">
-		<div id="slide_gallery">
-			<%= render_cell_elements(cell) -%>
-		</div>
-		<%- if cell.elements.count > 1 -%>
-		<div id="pager"></div>
-		<%- end -%>
+<div class="container">
+	<div id="slide_gallery" class="grid_12">
+		<%= render_cell_elements(cell) -%>
 	</div>
+	<%- if cell.elements.count > 1 -%>
+	<div id="pager"></div>
+	<%- end -%>
 </div>
 
 <script type="text/javascript" charset="utf-8">

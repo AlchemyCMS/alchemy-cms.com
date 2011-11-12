@@ -1,8 +1,8 @@
-<div class="slide" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+<div class="grid_12 slide" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
 	<div class="slide_images">
 		<%- element.all_contents_by_type("EssencePicture").each do |content| -%>
 		<div class="slide_image <%= content.essence.css_class %>">
-			<%= render_essence_view(content, :image_size => "450x280", :crop => true, :format => :png) %>
+			<%= render_essence_view(content, :image_size => "960x280", :crop => true, :format => :png) %>
 		</div>
 		<%- end -%>
 	</div>

@@ -1,7 +1,6 @@
-<%- same_elements = element.page.elements.select{|e| e.name == element.name} -%>
-<%- last_element = (same_elements.any? ? same_elements.sort_by(&:position).last : nil) %>
+<%- all_elements = element.page.elements.published.select{|e| e.name == element.name} -%>
 
-<div class="column<%= (last_element == element ? " last" : "") unless last_element.blank? -%>" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+<div class="grid_<%= (12/all_elements.count).ceil -%>" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
   <%- unless render_essence_view_by_name(element, 'addthis_profile').blank? %>
     <div class="addthis_toolbox addthis_default_style ">
       <a class="addthis_button_facebook"></a>
