@@ -4,7 +4,7 @@ load 'deploy/assets'
 
 set :application, "alchemy-cms"
 set :repository,  "git@magiclabs.de:alchemy-app.git"
-set :branch, 'rails31'
+set :branch, 'compass_960'
 
 set :scm, :git
 set :deploy_via, :remote_cache
