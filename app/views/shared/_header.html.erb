@@ -1,13 +1,30 @@
 <div id="header">
-	<div class="container">
+	<a href="https://github.com/magiclabs/alchemy_cms" target="_blank" id="forkme"></a>
+	<div class="container" style="position: relative;">
 		<div class="grid_12">
 			<%= link_to(image_tag("alchemy_logo.png"), "#", :id => :logo) %>
 		</div>
-		<div id="main_navigation" class="grid_8 navigation">
-			<%= render_navigation :all_sub_menues => true %>
-		</div>
-		<div id="language_select" class="grid_4 navigation">
-			<%= language_switches :spacer => " ", :linkname => :code %>
+		<div id="scroll_navi">
+			<div id="main_navigation" class="grid_8 navigation">
+				<%= render_navigation :all_sub_menues => true %>
+			</div>
+			<div id="language_select" class="grid_4 navigation">
+				<%= language_switches :spacer => " ", :linkname => :code %>
+			</div>
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		var scroller = new StickyScroller("#scroll_navi",
+		{
+		    start: 90,
+		    end: 1800,
+		    interval: 300,
+		    range: 140,
+		    margin: 0
+		});
+	});
+	
+</script>
