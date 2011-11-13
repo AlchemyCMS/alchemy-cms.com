@@ -1,26 +1,8 @@
-	<div id="bordure"></div>
-  <div id="header">
-		<div class="container">
-			<div id="main_navigation" class="grid_8 navigation">
-				<%= render_navigation :all_sub_menues => true %>
-			</div>
-			<div id="language_select" class="grid_4 navigation">
-				<%= link_to(image_tag("alchemy_logo.png"), "#", :id => :logo) %>
-				<%= language_switches :spacer => " ", :linkname => :code %>
-			</div>
-		</div>
-  </div>
-	<div id="main">
-		<div id="bubbles"></div>
-		<%= render_cell(:slide_gallery) %>
-		<div id="content" class="container">
-			<div class="grid_12">
-				<%= render_elements(:except => ['slide']) %>
-			</div>
-		</div>
-	</div>
-<div id="footer">
-	<div class="container">
-		<%= render_elements(:only => 'footer_column', :fallback => {:for => 'footer_column', :from => 'footer'}) %>
-	</div>
+<%= render :partial => "shared/header" %>
+<div id="bubbles"></div>
+<%= render_cell(:slide_gallery) %>
+<div id="content" class="container">
+	<%= render_elements(:except => [:slide]) %>
 </div>
+</div>
+<%= render :partial => "shared/footer" %>

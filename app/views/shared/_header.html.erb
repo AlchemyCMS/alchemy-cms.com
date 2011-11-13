@@ -1,0 +1,13 @@
+<div id="header">
+	<div class="container">
+		<div class="grid_12">
+			<%= link_to(image_tag("alchemy_logo.png"), "#", :id => :logo) %>
+		</div>
+		<div id="main_navigation" class="grid_8 navigation">
+			<%= render_navigation :all_sub_menues => true %>
+		</div>
+		<div id="language_select" class="grid_4 navigation">
+			<%= language_switches :spacer => " ", :linkname => :code %>
+		</div>
+	</div>
+</div>

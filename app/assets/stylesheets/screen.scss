@@ -7,8 +7,10 @@
 @import "compass/utilities/general/clearfix";
 @import "960/grid";
 
-$anthrazit: #33393F;
 $alchemy_blue: #C7E4F5;
+$anthrazit: darken($alchemy_blue, 80);
+$anthrazit_light: lighten($anthrazit, 10);
+$alchemy_dark_blue: darken($alchemy_blue, 50);
 $alchemy_green: #87AC59;
 
 @mixin opacity($strength) {
@@ -79,11 +81,11 @@ body {
 	color: $anthrazit;
 	margin: 0;
 	font: 12px/18px "JunctionRegular", Helvetica, Arial, sans-serif;
-	background-image: -moz-radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
-	background-image: -webkit-radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
-	background-image: -o-radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
-	background-image: -ms-radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
-	background-image: radial-gradient(50% 100%, circle cover, #3c444a, $anthrazit 60%);
+	background-image: -moz-radial-gradient(50% 25em, circle cover, $anthrazit_light, $anthrazit 60%);
+	background-image: -webkit-radial-gradient(50% 25em, circle cover, $anthrazit_light, $anthrazit 60%);
+	background-image: -o-radial-gradient(50% 25em, circle cover, $anthrazit_light, $anthrazit 60%);
+	background-image: -ms-radial-gradient(50% 25em, circle cover, $anthrazit_light, $anthrazit 60%);
+	background-image: radial-gradient(50% 25em, circle cover, $anthrazit_light, $anthrazit 60%);
 }
 
 a {
@@ -141,58 +143,37 @@ pre {
 	left: 0;
 	width: 100%;
 	overflow: hidden;
-	background-color: #FBFBFB;
-	background-image: -moz-radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
-	background-image: -webkit-radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
-	background-image: -o-radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
-	background-image: -ms-radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
-	background-image: radial-gradient(50% 50%, circle cover, #FFF, #F8F8F8 60%);
-}
-
-#bordure {
-	background: $anthrazit;
-	background: -webkit-gradient(linear, left top, left bottom, from(#4D585E), to($anthrazit));
-	background: -moz-linear-gradient(top,  #4D585E,  $anthrazit);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4D585E', endColorstr='$anthrazit');
-	height: 30px;
 }
 
 #header {
-	background: darken($alchemy_blue, 5);
+	background: $anthrazit;
 	color: #FFF;
 	font: 14px normal "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
-	background-image: -moz-radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
-	background-image: -webkit-radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
-	background-image: -o-radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
-	background-image: -ms-radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
-	background-image: radial-gradient(50% 50%, circle cover, lighten($alchemy_blue, 4), darken($alchemy_blue, 4) 90%);
-}
-
-#header a {
-	color: #FFF;
+	margin: 2em 0;
+	border-bottom: 1px solid $anthrazit_light;
 }
 
 #header .container {
 	height: 140px;
-	background: $alchemy_blue;
-	@include border-radius(4px);
 	padding: 0px;
 }
 
 #language_select {
 	text-align: right;
 	text-transform: uppercase;
+	margin-top: -3px;
 }
 
 #language_select a {
 	text-decoration: none;
 	padding: 5px 7px;
 	@include border-radius(6*4px);
-	color: $anthrazit;
+	color: $alchemy_blue;
+	border: 1px solid transparent;
 }
 
 #language_select a:hover {
-	background: darken($alchemy_blue, 4);
+	border: 1px solid $alchemy_dark_blue;
 }
 
 #language_select a.active {
@@ -201,22 +182,23 @@ pre {
 	background: transparent;
 }
 
-#language_select #logo {
+#logo {
 	background: transparent;
 	display: block;
 	width: 300px;
-	height: 91px;
-	text-align: right;
+	height: 105px;
 	padding: 0;
 }
 
-#language_select #logo img {
-	margin-right: -8px;
+#logo img {
+	margin-left: -10px;
 }
 
 #main_navigation {
 	position: relative;
-	padding-top: 52px;
+	top: 0;
+	left: 0;
+	padding: 0px;
 }
 
 #main_navigation ul {
@@ -235,6 +217,10 @@ pre {
 	list-style-image: none;
 }
 
+#main_navigation ul li a:hover {
+	color: $alchemy_dark_blue;
+}
+
 #main_navigation ul li a.active {
 	color: $alchemy_green;
 }
@@ -247,7 +233,7 @@ pre {
 	display: block;
 	font-size: 18px;
 	text-decoration: none;
-	color: $anthrazit;
+	color: $alchemy_blue;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-family: "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
@@ -277,11 +263,7 @@ pre {
 	margin-left: 10px;
 	padding: 10px;
 	background-color: #c7e4f5;
-	-webkit-border-radius: 20px;
-	-khtml-border-radius: 20px;
-	-o-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
+	@include border-radius(20px);
 	width: 20px;
 	height: 20px;
 	display: inline-block;
@@ -308,10 +290,10 @@ pre {
 #slide_gallery .slide h1,
 #slide_gallery .slide h2 {
 	position:  absolute;
-	right: 0;
+	right: 10px;
 	top: 1em;
 	text-transform: uppercase;
-	color: #33393f;
+	color: $anthrazit;
 	font-size: 74px;
 }
 
@@ -329,14 +311,15 @@ pre {
 	padding-top: 70px;
 	overflow: auto;
 	min-height: 300px;
+	color: $alchemy_blue;
 }
 
 #footer {
-	background: transparent;
-	background: url('footer_pattern.png') repeat-x;
-	color: #a5a5a5;
+	background: $anthrazit url('footer_pattern.png') repeat-x;
+	color: $alchemy_blue;
 	padding-top: 40px;
 	padding-bottom: 60px;
+	border-top: 1px solid $anthrazit_light;
 }
 
 #footer p {
@@ -346,4 +329,84 @@ pre {
 
 #footer p a {
 	color: #a5a5a5;
+}
+
+/* @group Info Table */
+
+div.info_table {
+	background-color: $anthrazit_light;
+	@include border-radius(20px);
+	border: 1px solid $anthrazit;
+	-webkit-box-shadow: inset 1px 1px 25px $alchemy_blue;
+	-moz-box-shadow: inset 1px 1px 25px $alchemy_blue;
+	-o-box-shadow: inset 1px 1px 25px $alchemy_blue;
+	-box-shadow: inset 1px 1px 25px $alchemy_blue;
+	padding: 30px;
+	opacity: 0.8;
+}
+
+div#content div.info_table div.content ul {
+	padding: 0;
+	margin: 0px;
+	list-style: none;
+}
+
+div#content div.info_table div.content ul li {
+	background: image-url('checkmark.png') no-repeat 355px center;
+	padding-right: 55px;
+	padding-top: 17px;
+	border-bottom: 1px solid $anthrazit;
+	margin-bottom: 6px;
+	padding-bottom: 15px;
+	padding-left: 8px;
+}
+
+div#content div.info_table div.content ul li:hover {
+	background-color: lighten($anthrazit_light, 3);
+	border-bottom: 1px solid $anthrazit_light;
+	@include border-radius(20px);
+}
+
+div#content div.info_table div.content ul li:last-child {
+	border-bottom: 0 none;
+}
+
+div#content div.info_table div.content.features ul li {
+	font-size: 10px;	
+}
+
+div#content div.info_table div.content.features ul li strong {
+	font-size: 12px;	
+}
+
+#google_group .entries {
+	margin-top: 2em;
+}
+
+#google_group .title {
+	font-weight: bold;
+}
+
+#google_group .entry {
+	padding-bottom: 1em;
+	border-bottom: 1px solid #d6e2ea;
+	margin-bottom: 1em;
+}
+
+#google_group .entry_footer {
+	font-size: 10px;
+	font-style: italic;
+}
+
+
+#google_group .entry_footer .url {
+	float: right;
+	font-style: normal;
+	padding: 2px;
+}
+
+/* @end */
+
+.screenshot_image img {
+	@include drop-shadow(5px);
 }

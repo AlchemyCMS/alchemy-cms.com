@@ -32,7 +32,7 @@
   unique: true
 
 - name: standard
-  elements: [headline, subheadline, text, gallery, code, screenshot, slide]
+  elements: [headline, subheadline, text, gallery, slide, code, screenshot]
   cells: [slide_gallery]
 
 - name: two_columns
