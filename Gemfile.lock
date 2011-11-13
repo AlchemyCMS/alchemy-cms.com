@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/magiclabs/alchemy_cms
-  revision: 7fcef58402a6966c7ab8d1f16ef143a0563e028b
+  revision: 2532887847c5db0d4fc66453cc44632ac1ecb7e0
   branch: next_stable
   specs:
     alchemy_cms (2.1.beta1)
