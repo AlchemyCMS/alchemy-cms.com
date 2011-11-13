@@ -20,7 +20,7 @@ role :web, "rv2.nethosting4you-server.de"                          # Your HTTP s
 role :app, "rv2.nethosting4you-server.de"                          # This may be the same as your `Web` server
 role :db,  "rv2.nethosting4you-server.de", :primary => true        # This is where Rails migrations will run
 
-set :deploy_to, "/var/www/#{user}/html/#{application}_2"
+set :deploy_to, "/var/www/#{user}/html/#{application}_gfx"
 
 after "deploy:setup", "deploy:db:setup" unless fetch(:skip_db_setup, false)
 
@@ -83,7 +83,7 @@ namespace :deploy do
         encoding: utf8
         reconnect: false
         pool: 5
-        database: usr_web28_3
+        database: usr_web28_4
         username: web28
         password: pBCcLenz
         socket: /var/run/mysqld/mysqld.sock
