@@ -186,7 +186,7 @@ pre {
 #language_select a {
 	text-decoration: none;
 	padding: 5px 7px;
-	@include border-radius(10px);
+	@include border-radius(4px);
 	color: $anthrazit;
 	border: 1px solid transparent;
 }
@@ -366,7 +366,7 @@ div#bubbles {
 
 div.info_table {
 	background-color: $anthrazit_light;
-	@include border-radius(20px);
+	@include border-radius(8px);
 	border: 1px solid $anthrazit;
 	-webkit-box-shadow: inset 1px 1px 25px $alchemy_blue;
 	-moz-box-shadow: inset 1px 1px 25px $alchemy_blue;
@@ -396,7 +396,7 @@ div#content div.info_table div.content ul li {
 	-o-box-shadow: inset 1px 1px 6px $anthrazit;
 	-box-shadow: inset 1px 1px 6px $anthrazit;
 	border-bottom: 0 none;
-	@include border-radius(20px);
+	@include border-radius(8px);
 }
 
 div#content div.info_table div.content ul li:last-child {
