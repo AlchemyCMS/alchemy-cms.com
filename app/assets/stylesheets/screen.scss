@@ -264,12 +264,13 @@ pre {
 }
 
 div#bubbles {
-	width: 100%;
+	width: 500px;
 	height: 631px;
 	background: url('big_bubbles.png') no-repeat center;
 	position: absolute;
 	z-index: 0;
-	left: 200px;
+	right: -400px;
+	margin-right: 50%;
 	top: 160px;
 	opacity: 0.05;
 }
@@ -346,7 +347,7 @@ div#bubbles {
 }
 
 #footer {
-	background: $anthrazit url('footer_pattern.png') repeat-x;
+	background: $anthrazit;
 	color: $alchemy_blue;
 	padding-top: 40px;
 	padding-bottom: 60px;
