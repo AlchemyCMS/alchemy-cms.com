@@ -8,6 +8,26 @@ GIT
       fssm (>= 0.2.7)
       sass (~> 3.1)
 
+GIT
+  remote: git://github.com/magiclabs/alchemy_cms
+  revision: 6be7aab4009862b290259cfef1d3b13acecb2676
+  branch: next_stable
+  specs:
+    alchemy_cms (2.1.beta3)
+      acts_as_ferret (~> 0.5)
+      acts_as_list (~> 0.1)
+      attachment_magic (~> 0.2)
+      authlogic
+      awesome_nested_set (~> 2.0)
+      declarative_authorization (~> 0.5.3)
+      dynamic_form (~> 1.1)
+      gettext_i18n_rails (>= 0.3)
+      jquery-rails (~> 1.0.16)
+      magiclabs-userstamp (~> 2.0.2)
+      rails (~> 3.1)
+      tvdeyen-fleximage (~> 1.0.9)
+      will_paginate (~> 3.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -43,20 +63,6 @@ GEM
       jk-ferret (>= 0.11.8)
       rails (>= 3.0)
     acts_as_list (0.1.4)
-    alchemy_cms (2.1.beta2)
-      acts_as_ferret (~> 0.5)
-      acts_as_list (~> 0.1)
-      attachment_magic (~> 0.2)
-      authlogic
-      awesome_nested_set (~> 2.0)
-      declarative_authorization (~> 0.5)
-      dynamic_form (~> 1.1)
-      gettext_i18n_rails (>= 0.3)
-      jquery-rails (~> 1.0.16)
-      magiclabs-userstamp (~> 2.0.2)
-      rails (~> 3.1)
-      tvdeyen-fleximage (~> 1.0.9)
-      will_paginate (~> 3.0)
     archive-tar-minitar (0.5.2)
     arel (2.2.1)
     attachment_magic (0.2.0)
@@ -210,7 +216,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  alchemy_cms (~> 2.1.beta1)
+  alchemy_cms!
   capistrano
   coffee-rails (~> 3.1.1)
   compass!

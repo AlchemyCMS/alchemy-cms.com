@@ -2,8 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'mysql2', '~> 0.3.7'
-gem 'alchemy_cms', "~> 2.1.beta1"
-#gem 'alchemy_cms', :git => 'git://github.com/magiclabs/alchemy_cms', :branch => 'next_stable'
+gem 'alchemy_cms', :git => 'git://github.com/magiclabs/alchemy_cms', :branch => 'next_stable'
 #gem 'alchemy_cms', :path => 'alchemy_cms'
 gem 'feed-normalizer'
 
