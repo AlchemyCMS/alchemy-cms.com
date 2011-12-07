@@ -89,12 +89,12 @@ body {
 }
 
 a {
-	color: $anthrazit;
+	color: $alchemy_blue;
 	text-decoration: underline;
 }
 
 a:hover {
-	color: #88AD59;
+	color: $alchemy_green;
 	text-decoration: none;
 }
 
@@ -140,6 +140,7 @@ pre {
 	background: url('forkme.png') top right no-repeat;
 	width: 149px;
 	height: 149px;
+	z-index: 9999999;
 }
 
 #content p, #content li {
@@ -166,9 +167,9 @@ pre {
 	left: -480px;
 	margin-left: 50%;
 	width: 960px;
-	background: $alchemy_blue;
+	background: transparentize($alchemy_blue, 0.05);
 	z-index: 1000;
-	outline: 8px solid $alchemy_blue;
+	outline: 8px solid transparentize($alchemy_blue, 0.05);
 }
 
 #header .container {
@@ -272,49 +273,57 @@ div#bubbles {
 	right: -400px;
 	margin-right: 50%;
 	top: 160px;
-	opacity: 0.05;
+	@include opacity(0.05);
+}
+
+#slide_gallery_container {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 320px;
 }
 
 #slide_gallery {
 	position: relative;
 	left: 0;
-	top: 0;
+	top: 0px;
 	margin: 0;
 	padding: 0;
+	background-color: transparentize($alchemy_blue, 0.95);
 }
 
-#slide_gallery #pager {
+#slide_gallery_container #pager {
 	position: absolute;
-	bottom: 60px;
-	right: 0;
+	bottom: 2em;
+	right: 20px;
 	text-align: right;
 	z-index: 10;
 }
 
-#slide_gallery #pager a {
+#slide_gallery_container #pager a {
 	margin-left: 10px;
 	padding: 10px;
-	background-color: #c7e4f5;
+	background-color: $alchemy_blue;
 	@include border-radius(20px);
 	width: 20px;
 	height: 20px;
 	display: inline-block;
 	text-align: center;
-	color: #33393f;
+	color: $anthrazit_light;
 	text-decoration: none;
 	font: 24px/18px SansusWebissimoRegular, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
-#slide_gallery #pager a.activeSlide {
-	background-color: #33393f;
-	color: #FFFFFF;
+#slide_gallery_container #pager a.activeSlide {
+	background-color: $anthrazit;
+	color: $alchemy_blue;
 }
 
 #slide_gallery .slide {
 	position: relative;
 	top: 0;
 	left: 0;
-	height: 280px;
+	height: 320px;
 	width: 960px;
 	margin: 0;
 }
@@ -347,11 +356,14 @@ div#bubbles {
 }
 
 #footer {
-	background: $anthrazit;
+	background: transparentize($anthrazit, 0.5);
 	color: $alchemy_blue;
 	padding-top: 40px;
 	padding-bottom: 60px;
-	border-top: 1px solid $anthrazit_light;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
 #footer p {
@@ -359,8 +371,10 @@ div#bubbles {
 	margin-bottom: 1em;
 }
 
-#footer p a {
-	color: #a5a5a5;
+div.addthis_toolbox {
+	float: left;
+	margin-right: 5px;
+	width: 80px;
 }
 
 /* @group Info Table */

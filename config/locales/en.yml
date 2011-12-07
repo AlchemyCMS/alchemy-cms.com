@@ -72,7 +72,8 @@ en:
     # == Translations for the build in full text search.
     search:
       no_results: 'No results found'
-      result_heading: 'Your search for %{query} has %{count} results'
+      result_heading: "Your search for '%{query}'"
+      result_count: 'Offers %{result_count} results'
     
     # == Contactform translations
     contactform:
@@ -199,6 +200,9 @@ en:
       overlay: Overlay
     
   # END of Alchemy translation
+  
+  will_paginate:
+    page_gap: '...'
   
   # == Rails translations
   # Below are Rails specific translations for date, time, number, currency, error messages and so on.
@@ -352,7 +356,6 @@ en:
       error_messages:
         login_blank: 'can not be blank'
         login_not_found: 'is not valid'
-        login_invalid: 'should use only letters, numbers, spaces, and .-_@ please.'
         consecutive_failed_logins_limit_exceeded: 'Consecutive failed logins limit exceeded, account is disabled.'
         email_invalid: 'should look like an email address.'
         password_blank: 'can not be blank'

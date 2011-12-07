@@ -47,6 +47,13 @@
   cache: false
   elements: [headline, subheadline, text, gallery, slide, code, features_table, google-group]
   cells: [left_column, right_column, slide_gallery]
+  
+- name: guide
+  elements: [guide]
+  cells: [left_column]
 
 - name: external
   redirects_to_external: true
+
+- name: search_results
+  searchresults: true

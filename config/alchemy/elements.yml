@@ -164,3 +164,9 @@
   contents:
   - name: rss_url
     type: EssenceText
+
+- name: guide
+  unique: true
+  contents:
+  - name: text
+    type: EssenceRichtext

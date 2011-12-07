@@ -1,5 +1,5 @@
 - name: left_column
-  elements: [headline, subheadline, text, code, google-group]
+  elements: [headline, subheadline, text, code, google-group, guide]
 
 - name: right_column
   elements: [headline, subheadline, text, code, features_table, google-group]

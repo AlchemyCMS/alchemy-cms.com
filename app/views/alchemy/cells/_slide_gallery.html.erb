@@ -1,5 +1,5 @@
 <%- if cell.elements.any? %>
-<div class="container">
+<div class="container" id="slide_gallery_container">
 	<div id="slide_gallery" class="grid_12">
 		<%= render_cell_elements(cell) -%>
 	</div>
@@ -13,7 +13,7 @@
 	  jQuery('#slide_gallery').cycle({ 
 		    fx:     'scrollHorz', 
 		    speed:  '400', 
-		    timeout: 5000, 
+		    timeout: 6000, 
 		    pager: '#pager'
 		});
 	});
