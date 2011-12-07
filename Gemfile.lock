@@ -8,8 +8,10 @@ GIT
       fssm (>= 0.2.7)
       sass (~> 3.1)
 
-PATH
-  remote: alchemy_cms
+GIT
+  remote: git://github.com/magiclabs/alchemy_cms
+  revision: f62397d1e8191943acef1ed5de1073a9e83b4db9
+  branch: next_stable
   specs:
     alchemy_cms (2.1.beta5)
       acts_as_ferret (~> 0.5)
