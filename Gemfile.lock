@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/magiclabs/alchemy_cms
-  revision: f62397d1e8191943acef1ed5de1073a9e83b4db9
+  revision: f922907cb3c30b528cf022fec82d55b4981ac6f6
   branch: next_stable
   specs:
     alchemy_cms (2.1.beta5)
@@ -97,7 +97,7 @@ GEM
     declarative_authorization (0.5.4)
     dynamic_form (1.1.4)
     erubis (2.7.0)
-    execjs (1.2.9)
+    execjs (1.2.11)
       multi_json (~> 1.0)
     feed-normalizer (1.5.2)
       hpricot (>= 0.6)
@@ -126,7 +126,7 @@ GEM
     mime-types (1.17.2)
     mimetype-fu (0.1.2)
     multi_json (1.0.4)
-    mysql2 (0.3.10)
+    mysql2 (0.3.11)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
