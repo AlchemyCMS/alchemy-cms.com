@@ -355,6 +355,41 @@ div#bubbles {
 	color: $alchemy_blue;
 }
 
+/* Gallery */
+.gallery {
+	width: 920px;
+	background: transparent;
+	overflow: hidden;
+	
+	.gallery_image {
+		float: left;
+		margin: 0 10px 10px 0;
+		position: relative;
+		font-size: 0;
+		
+		.image_caption {
+			color: #a3a3a5;
+			font-size: 11px;
+			height: 18px;
+			overflow: hidden;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: #33393f;
+			text-align: center;
+			padding-top: 2px;
+			padding-bottom: 3px;
+			opacity: 0.9;
+		}
+		
+		img, a {
+			display: block;
+		}
+	}
+}
+/* Gallery end */
+
 #footer {
 	background: transparentize($anthrazit, 0.5);
 	color: $alchemy_blue;
@@ -364,11 +399,11 @@ div#bubbles {
 	top: 0;
 	left: 0;
 	z-index: 1;
-}
-
-#footer p {
-	margin: 0;
-	margin-bottom: 1em;
+	
+	p {
+		margin: 0;
+		margin-bottom: 1em;
+	}
 }
 
 div.addthis_toolbox {
