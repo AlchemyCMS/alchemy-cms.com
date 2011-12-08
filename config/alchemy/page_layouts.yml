@@ -56,5 +56,5 @@
   redirects_to_external: true
 
 - name: search_results
-  cache: true
+  cache: false
   searchresults: true
