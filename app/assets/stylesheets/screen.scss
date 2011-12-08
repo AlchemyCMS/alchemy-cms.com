@@ -380,7 +380,7 @@ div.addthis_toolbox {
 /* @group Info Table */
 
 div.info_table {
-	background-color: $anthrazit_light;
+  background-color: transparentize($anthrazit_light, 0.2);
 	@include border-radius(8px);
 	border: 1px solid $anthrazit;
 	-webkit-box-shadow: inset 1px 1px 25px $alchemy_blue;
@@ -388,7 +388,6 @@ div.info_table {
 	-o-box-shadow: inset 1px 1px 25px $alchemy_blue;
 	-box-shadow: inset 1px 1px 25px $alchemy_blue;
 	padding: 30px;
-	opacity: 0.8;
 }
 
 div#content div.info_table div.content ul {
