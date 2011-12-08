@@ -2,7 +2,7 @@
 	<div class="slide_images">
 		<%- element.all_contents_by_type("EssencePicture").each do |content| -%>
 		<div class="slide_image <%= content.essence.css_class %>">
-			<%= render_essence_view(content, :image_size => "960x320", :crop => true, :format => :png) %>
+			<%= render_essence_view(content, :image_size => "480x320", :crop => true, :format => :png) %>
 		</div>
 		<%- end -%>
 	</div>
