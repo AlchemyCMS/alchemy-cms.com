@@ -1,6 +1,5 @@
 <div class="gallery" id="<%= element_dom_id(element) %>" <%= element_preview_code(element) -%>>
   <div class="gallery_images">
-	<%- debugger -%>
     <%- element.contents.essence_pictures.each do |content| -%>
     <div class="gallery_image">
       <%- if content.linked? -%><div class="zoom"></div><%- end -%>
