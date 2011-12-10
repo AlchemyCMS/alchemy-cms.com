@@ -9,11 +9,17 @@ GIT
       sass (~> 3.1)
 
 GIT
-  remote: git://github.com/magiclabs/alchemy_cms
-  revision: a60f155581350739f074c52bc02b621c1327efa2
-  branch: next_stable
+  remote: git://github.com/silviurosu/acts_as_ferret.git
+  revision: f338b37f6965e97f573472bb8a60a11c774e5eaa
   specs:
-    alchemy_cms (2.1.beta5)
+    acts_as_ferret (0.5.2)
+      jk-ferret (>= 0.11.8)
+      rails (>= 3.0)
+
+PATH
+  remote: alchemy_cms
+  specs:
+    alchemy_cms (2.1.beta6)
       acts_as_ferret (~> 0.5)
       acts_as_list (~> 0.1)
       attachment_magic (~> 0.2.1)
@@ -58,9 +64,6 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
-    acts_as_ferret (0.5.3)
-      jk-ferret (>= 0.11.8)
-      rails (>= 3.0)
     acts_as_list (0.1.4)
     archive-tar-minitar (0.5.2)
     arel (2.2.1)
@@ -213,6 +216,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_ferret!
   alchemy_cms!
   capistrano
   coffee-rails (~> 3.1.1)

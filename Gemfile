@@ -2,8 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'mysql2', '~> 0.3.7'
-gem 'alchemy_cms', :git => 'git://github.com/magiclabs/alchemy_cms', :branch => 'next_stable'
-#gem 'alchemy_cms', :path => 'alchemy_cms'
+#gem 'alchemy_cms', :git => 'git://github.com/magiclabs/alchemy_cms', :branch => 'next_stable'
+gem 'alchemy_cms', :path => 'alchemy_cms'
 gem 'feed-normalizer'
 
 group :development do
@@ -12,6 +12,7 @@ group :development do
   gem 'ruby-debug', :platforms => :ruby_18
   gem 'capistrano'
 	gem 'rails-dev-tweaks', '~> 0.5.1'
+	gem 'acts_as_ferret', :git => 'git://github.com/silviurosu/acts_as_ferret.git'
 end
 
 group :assets do
