@@ -23,12 +23,9 @@ role :db,  "rv2.nethosting4you-server.de", :primary => true        # This is whe
 set :deploy_to, "/var/www/#{user}/html/#{application}_gfx"
 
 after "deploy:setup", "deploy:db:setup" unless fetch(:skip_db_setup, false)
-
+before "deploy:start", "deploy:seed"
 after "deploy:symlink", "deploy:db:symlink"
-
 before "deploy:restart", "deploy:migrate"
-before "deploy:restart", "deploy:seed"
-
 after "deploy", "deploy:cleanup"
 
 namespace :logs do
@@ -44,22 +41,22 @@ namespace :logs do
 end
 
 namespace :deploy do
-  
-  task :start do ; end
-  task :stop do ; end
-  
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-  end
-  
-  desc 'Seeds the database'
-    task :seed, :roles => :app, :except => { :no_release => true } do
-      run "cd #{release_path} && RAILS_ENV=production #{rake} db:seed"
-    end
-  
-  namespace :db do
-    
-    desc <<-DESC
+
+	task :start do ; end
+	task :stop do ; end
+
+	task :restart, :roles => :app, :except => { :no_release => true } do
+	  run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+	end
+
+	desc 'Seeds the database'
+	task :seed, :roles => :app, :except => { :no_release => true } do
+		run "cd #{release_path} && RAILS_ENV=production #{rake} db:seed"
+	end
+
+	namespace :db do
+
+		desc <<-DESC
       Creates the database.yml configuration file in shared path.
 
       By default, this task uses a template unless a template \
@@ -74,10 +71,10 @@ namespace :deploy do
       capistrano-ext/multistaging to avoid multiple db:setup calls \ 
       when running deploy:setup for all stages one by one.
     DESC
-    
-    task :setup, :except => { :no_release => true } do
-      
-      default_template = <<-EOF
+
+		task :setup, :except => { :no_release => true } do
+
+			default_template = <<-EOF
       production:
         adapter: mysql2
         encoding: utf8
@@ -88,24 +85,24 @@ namespace :deploy do
         password: pBCcLenz
         socket: /var/run/mysqld/mysqld.sock
       EOF
-      
-      location = fetch(:template_dir, "config/deploy") + '/database.yml.erb'
-      template = File.file?(location) ? File.read(location) : default_template
-      
-      config = ERB.new(template)
-      
-      run "mkdir -p #{shared_path}/config" 
-      put config.result(binding), "#{shared_path}/config/database.yml"
-    end
-    
-    desc <<-DESC
-      [internal] Updates the symlink for database.yml file to the just deployed release.
-    DESC
-    task :symlink, :except => { :no_release => true } do
-      run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml" 
-    end
-    
+
+			location = fetch(:template_dir, "config/deploy") + '/database.yml.erb'
+			template = File.file?(location) ? File.read(location) : default_template
+
+			config = ERB.new(template)
+
+			run "mkdir -p #{shared_path}/config" 
+			put config.result(binding), "#{shared_path}/config/database.yml"
+		end
+
+		desc <<-DESC
+			[internal] Updates the symlink for database.yml file to the just deployed release.
+		DESC
+		task :symlink, :except => { :no_release => true } do
+			run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml" 
+		end
+
   end
-  
+
 end
 
