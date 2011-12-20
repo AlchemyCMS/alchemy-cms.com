@@ -2,7 +2,9 @@
 	<div class="screenshot_images">
 		<%- element.all_contents_by_type("EssencePicture").each do |content| -%>
 		<div class="screenshot_image <%= content.essence.css_class %>">
-			<%= render_essence_view(content, :image_size => "450x280", :crop => true) %>
+			<%= link_to alchemy.zoom_picture_path(:id => content.ingredient.id, :name => content.ingredient.urlname), :class => 'zoomable' do %>
+				<%= render_essence_view(content, :image_size => "450x280", :crop => true) %>
+			<% end %>
 		</div>
 		<%- end -%>
 	</div>

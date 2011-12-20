@@ -8,6 +8,11 @@
 	<body>
 		<%= yield %>
 		<%= alchemy_preview_mode_code %>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$(".zoomable").fancybox();
+			});
+		</script>
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-22277258-1']);

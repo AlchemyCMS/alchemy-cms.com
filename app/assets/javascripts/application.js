@@ -3,3 +3,4 @@
 //= require easing
 //= require GetSet
 //= require StickyScroller.min
+//= require jquery.fancybox
