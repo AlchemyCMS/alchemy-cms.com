@@ -1,16 +1,16 @@
 GIT
   remote: git://github.com/chriseppstein/compass.git
-  revision: 520df2b17331654a771678bdf0cf1222aeda6554
-  tag: v0.12.alpha.0
+  revision: c2671e271c32b8c2f7bef9600377bd5bf0ab9554
+  tag: v0.12.alpha.2
   specs:
-    compass (0.12.alpha.0.2fea4c1)
+    compass (0.12.alpha.2.aab827f)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
 
 GIT
   remote: git://github.com/magiclabs/alchemy_cms
-  revision: 0cafc68f2a173d0d57fea458cfbfb20b941c737a
+  revision: f498db94a0670e5a8410212d87896b619dc7511c
   branch: next_stable
   specs:
     alchemy_cms (2.1.rc1)
