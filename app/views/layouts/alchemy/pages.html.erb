@@ -4,6 +4,8 @@
 		<%= render_meta_data(:title_prefix => "Alchemy CMS", :title_seperator => "-") %>
 		<%= javascript_include_tag "application" %>
 		<%= stylesheet_link_tag 'application', :media => 'screen, projection' %>
+		<%= alchemy_preview_mode_code %>
+		<%= alchemy_menu_bar %>
 	</head>
 	<body>
 		<%= yield %>
@@ -24,7 +26,5 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		</script>
-		<%= alchemy_preview_mode_code %>
-		<%= alchemy_menu_bar %>
 	</body>
 </html>
