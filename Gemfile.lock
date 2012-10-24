@@ -1,13 +1,3 @@
-GIT
-  remote: git://github.com/chriseppstein/compass.git
-  revision: c2671e271c32b8c2f7bef9600377bd5bf0ab9554
-  tag: v0.12.alpha.2
-  specs:
-    compass (0.12.alpha.2.aab827f)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -83,8 +73,14 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     columnize (0.3.6)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
     compass-960-plugin (0.10.4)
       compass (>= 0.10.0)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     debugger (1.2.1)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.1.1)
@@ -176,10 +172,11 @@ GEM
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
     sass (3.2.1)
-    sass-rails (3.1.6)
+    sass-rails (3.1.4)
       actionpack (~> 3.1.0)
       railties (~> 3.1.0)
-      sass (>= 3.1.10)
+      sass (>= 3.1.4)
+      sprockets (~> 2.0.0)
       tilt (~> 1.3.2)
     simple-rss (1.2.3)
     sprockets (2.0.4)
@@ -208,8 +205,8 @@ DEPENDENCIES
   alchemy_cms (= 2.1.12)
   capistrano
   coffee-rails (~> 3.1.1)
-  compass!
   compass-960-plugin
+  compass-rails
   debugger
   execjs
   feed-normalizer
@@ -217,6 +214,6 @@ DEPENDENCIES
   rails (~> 3.1.3)
   rails-dev-tweaks (~> 0.5.1)
   ruby-debug
-  sass-rails (~> 3.1.4)
+  sass-rails (= 3.1.4)
   therubyracer
   uglifier (>= 1.0.3)
