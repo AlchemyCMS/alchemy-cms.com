@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111122144301) do
+ActiveRecord::Schema.define(:version => 20121024204514) do
 
   create_table "alchemy_attachments", :force => true do |t|
     t.string   "name"
@@ -77,6 +77,16 @@ ActiveRecord::Schema.define(:version => 20111122144301) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "alchemy_essence_booleans", :force => true do |t|
+    t.boolean  "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "creator_id"
+    t.integer  "updater_id"
+  end
+
+  add_index "alchemy_essence_booleans", ["value"], :name => "index_alchemy_essence_booleans_on_value"
 
   create_table "alchemy_essence_dates", :force => true do |t|
     t.datetime "date"
@@ -145,6 +155,16 @@ ActiveRecord::Schema.define(:version => 20111122144301) do
     t.datetime "updated_at"
   end
 
+  create_table "alchemy_essence_selects", :force => true do |t|
+    t.string   "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "creator_id"
+    t.integer  "updater_id"
+  end
+
+  add_index "alchemy_essence_selects", ["value"], :name => "index_alchemy_essence_selects_on_value"
+
   create_table "alchemy_essence_texts", :force => true do |t|
     t.text     "body"
     t.string   "link"
@@ -180,7 +200,7 @@ ActiveRecord::Schema.define(:version => 20111122144301) do
 
   create_table "alchemy_languages", :force => true do |t|
     t.string   "name"
-    t.string   "code"
+    t.string   "language_code"
     t.string   "frontpage_name"
     t.string   "page_layout",    :default => "intro"
     t.boolean  "public",         :default => false
@@ -189,9 +209,11 @@ ActiveRecord::Schema.define(:version => 20111122144301) do
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.boolean  "default",        :default => false
+    t.string   "country_code",   :default => "",      :null => false
   end
 
-  add_index "alchemy_languages", ["code"], :name => "index_languages_on_code"
+  add_index "alchemy_languages", ["language_code", "country_code"], :name => "index_alchemy_languages_on_language_code_and_country_code"
+  add_index "alchemy_languages", ["language_code"], :name => "index_alchemy_languages_on_language_code"
 
   create_table "alchemy_pages", :force => true do |t|
     t.string   "name"
@@ -235,6 +257,8 @@ ActiveRecord::Schema.define(:version => 20111122144301) do
     t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
+    t.string   "upload_hash"
+    t.string   "cached_tag_list"
   end
 
   create_table "alchemy_users", :force => true do |t|
@@ -264,5 +288,22 @@ ActiveRecord::Schema.define(:version => 20111122144301) do
   end
 
   add_index "alchemy_users", ["perishable_token"], :name => "index_users_on_perishable_token"
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context"
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
+  end
 
 end
