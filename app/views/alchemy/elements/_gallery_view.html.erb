@@ -1,12 +1,12 @@
 <div class="gallery" id="<%= element_dom_id(element) %>" <%= element_preview_code(element) -%>>
   <div class="gallery_images">
-    <%- element.contents.essence_pictures.each do |content| -%>
+    <%- element.contents.gallery_pictures.each do |content| -%>
     <div class="gallery_image">
       <%- if content.linked? -%><div class="zoom"></div><%- end -%>
       <%= render_essence_view(
-        content, 
+        content,
         {
-          :image_size => content.essence.render_size || "160x105", 
+          :image_size => content.essence.render_size || "160x105",
           :crop => true
         },
         {
@@ -28,14 +28,14 @@
       var $image = jQuery(this);
       var $zoom_icon = $image.parent().parent().find('.zoom');
       $zoom_icon.hide();
-      
+
       $image.hover(function(){
         $zoom_icon.show('slow');
       }, function() {
         $zoom_icon.hide('slow');
       });
-      
+
     });
-    
+
   });
 </script>
