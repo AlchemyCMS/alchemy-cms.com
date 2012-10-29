@@ -1,5 +1,6 @@
 require 'bundler/capistrano'
 require 'alchemy/capistrano'
+require 'capistrano/maintenance'
 load 'deploy/assets'
 
 # ssh settings
