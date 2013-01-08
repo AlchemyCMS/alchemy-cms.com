@@ -19,7 +19,7 @@ set :deploy_to,                 "/var/www/alchemy-homepage"
 
 # repository settings
 set :scm,                       "git"
-set :repository,                "ssh://git@magiclabs.de:12312/alchemy-app.git"
+set :repository,                "ssh://git@src.magiclabs.de:22044/alchemy-cms.git"
 set :branch,                    "master"
 
 # before hooks
