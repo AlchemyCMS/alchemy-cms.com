@@ -1,6 +1,13 @@
 GIT
+  remote: git://github.com/Druwerd/caplock.git
+  revision: a977c17251dd5c4ecf3fbc847187b8f9ba0ee815
+  specs:
+    caplock (0.2.0)
+      capistrano (>= 2.9.0)
+
+GIT
   remote: git://github.com/magiclabs/alchemy_cms.git
-  revision: d359c0cb3c71b629d917a3454dc7076f48ca4e73
+  revision: 9809b23df32295fec7dfcdbba3aa05bded1a2ecc
   branch: master
   specs:
     alchemy_cms (2.5.0.rc1)
@@ -215,6 +222,9 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    turbo-sprockets-rails3 (0.3.6)
+      railties (> 3.2.8, < 4.0.0)
+      sprockets (>= 2.0.0)
     tzinfo (0.3.35)
     uglifier (1.3.0)
       execjs (>= 0.3.0)
@@ -229,6 +239,7 @@ DEPENDENCIES
   alchemy_cms!
   capistrano
   capistrano-maintenance
+  caplock!
   coffee-rails (~> 3.2.1)
   compass-960-plugin
   compass-rails
@@ -242,4 +253,5 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   therubyracer
   thin
+  turbo-sprockets-rails3
   uglifier (>= 1.0.3)

@@ -15,6 +15,7 @@ group :development do
   gem 'ruby-debug', :platforms => :ruby_18
   gem 'capistrano'
   gem 'capistrano-maintenance'
+  gem 'caplock', github: 'Druwerd/caplock'
   gem 'thin'
 end
 
@@ -25,6 +26,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier',     '>= 1.0.3'
   gem 'quiet_assets'
+  gem 'turbo-sprockets-rails3'
 end
 
 group :production do

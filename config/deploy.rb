@@ -1,7 +1,7 @@
 require 'bundler/capistrano'
 require 'alchemy/capistrano'
 require 'capistrano/maintenance'
-load 'deploy/assets'
+require 'caplock'
 
 # ssh settings
 set :user,                      "rails3"
