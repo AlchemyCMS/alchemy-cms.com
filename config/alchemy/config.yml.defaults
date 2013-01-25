@@ -1,13 +1,13 @@
 # encoding: UTF-8
 #
-# = Configuration
-#
 # == This is the global Alchemy configuration file
 #
-# Please override your apps settings in your config/alchemy/config.yml file.
-# You can use a handy rake task to generate it.
+
+# === Require SSL for login form and all admin modules
 #
-#   rake alchemy:app_structure:create:config
+# NOTE: You have to create a SSL certificate on your server to make this work
+#
+require_ssl: false
 
 # === Auto Log Out Time
 #
@@ -77,28 +77,26 @@ url_nesting: false
 
 # === Picture rendering settings
 #
-# Alchemy uses Fleximage and RMagick to render images. Use {:image_size => "XXXxYYY", :crop => BOOLEAN [true]} to resize images.
+# Alchemy uses Dragonfly and RMagick to render images. Use {:image_size => "XXXxYYY", :crop => BOOLEAN [true]} to resize images.
 #
-# See https://github.com/Squeegy/fleximage for further infos.
+# See http://markevans.github.com/dragonfly for further infos.
 #
 # ==== Options:
 #
 #   output_image_jpg_quality  [Integer]       # If image gets rendered as JPG this is the quality setting for it. (Default 85)
 #   preprocess_image_resize   [String]        # I.E.: 1000x1000. If you are limited on diskspace use this option to downsize large images to that value. (Default nil)
-#   image_store_format        [String]        # The storage format of the master image. All images get rendered from this master image, so a lossless format (png) is strongly recommended. (Default png)
 #   image_output_format       [String]        # The global image output format setting.
 #
 # TIP: You can always override the output format in the options of your Essence. I.E. {:format => :gif}
 #
 output_image_jpg_quality: 85
-preprocess_image_resize: 1000x1000
-image_store_format: png
+preprocess_image_resize:
 image_output_format: jpg
 
 # This is the default language for the seeder.
 default_language:
-  code: en
-  name: English
+  code: de
+  name: Deutsch
   page_layout: intro
   frontpage_name: Intro
 
@@ -132,8 +130,8 @@ mailer:
   page_layout_name: contact
   forward_to_page: false
   mail_success_page: thanks
-  mail_from: mail@alchemy-cms.com
-  mail_to: mail@alchemy-cms.com
+  mail_from: your.mail@your-domain.com
+  mail_to: your.mail@your-domain.com
   fields: [salutation, firstname, lastname, address, zip, city, phone, email, message]
   validate_fields: [lastname, email]
 
@@ -163,9 +161,13 @@ user_roles: [registered, author, editor, admin]
 #
 uploader:
   upload_limit: 50
-  file_size_limit: 500
+  file_size_limit: 100
   allowed_filetypes:
-    pictures: [jpg, jpeg, gif, png, psd, pdf]
+    pictures:
+    - :jpg
+    - :jpeg
+    - :gif
+    - :png
     attachments: ['*']
 
 # === Link Target Options
@@ -194,4 +196,4 @@ devise_modules:
   - :validatable
   - :timeoutable
   - :recoverable
-  - :encryptable # Uncomment this if you are upgrading from an Alchemy version < 2.5.0
+  # - :encryptable # Uncomment this if you are upgrading from an Alchemy version < 2.5.0
