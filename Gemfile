@@ -5,9 +5,9 @@ end
 
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '~> 3.2.12'
 gem 'mysql2'
-gem 'alchemy_cms', :github => 'magiclabs/alchemy_cms', :branch => 'master'
+gem 'alchemy_cms', :github => 'magiclabs/alchemy_cms', :branch => '2.5-stable'
 gem 'feed-normalizer'
 
 group :development do
