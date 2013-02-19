@@ -3,7 +3,7 @@
 		<% content = element.content_by_name('screen') %>
 		<% if content && content.ingredient %>
 		<div class="screenshot_image <%= content.essence.css_class %>">
-			<%= link_to alchemy.zoom_picture_path(:id => content.ingredient.id, :name => content.ingredient.urlname, :format => :jpg), :class => 'zoomable' do %>
+			<%= link_to show_alchemy_picture_path(content.ingredient, :format => :jpg), :class => 'zoomable' do %>
 				<%= render_essence_view(content, :image_size => "450x280", :crop => true) %>
 			<% end %>
 		</div>
