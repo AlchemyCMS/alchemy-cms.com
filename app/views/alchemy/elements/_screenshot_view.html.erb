@@ -1,12 +1,7 @@
 <div class="screenshot" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
-	<div class="screenshot_images">
-		<% content = element.content_by_name('screen') %>
-		<% if content && content.ingredient %>
-		<div class="screenshot_image <%= content.essence.css_class %>">
-			<%= link_to show_alchemy_picture_path(content.ingredient, :format => :jpg), :class => 'zoomable' do %>
-				<%= render_essence_view(content, :image_size => "450x280", :crop => true) %>
-			<% end %>
-		</div>
-		<% end %>
-	</div>
+<% element.contents.gallery_pictures.each do |content| %>
+	<%= link_to show_alchemy_picture_path(content.ingredient, format: :jpg), class: 'zoomable', rel: 'tour', title: content.essence.caption do %>
+		<%= render_essence_view(content, image_size: "450x280", crop: true) %>
+	<% end %>
+<% end %>
 </div>

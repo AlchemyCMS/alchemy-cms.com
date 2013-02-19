@@ -1,4 +1,5 @@
 @import "compass/reset";
+@import "compass/css3";
 @import "compass/utilities/general/clearfix";
 @import "960/grid";
 
@@ -483,6 +484,16 @@ div#content div.info_table div.content.features ul li strong {
 
 /* @end */
 
-.screenshot_image img {
-	@include drop-shadow(5px);
+.screenshot {
+	margin: 2em 0;
+
+	a {
+		@include inline-block(top);
+		text-decoration: none;
+		margin-right: 20px;
+	}
+
+	img {
+		@include drop-shadow(5px);
+	}
 }

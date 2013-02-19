@@ -50,9 +50,7 @@
   picture_gallery: true
 
 - name: screenshot
-  contents:
-  - name: screen
-    type: EssencePicture
+  picture_gallery: true
 
 - name: google-group
   unique: true
