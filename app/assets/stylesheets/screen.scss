@@ -20,45 +20,20 @@ a {
   height: 30px;
 }
 
-// img {
-//   border: 0 none;
-// }
+code {
+  font: 12px Menlo, Monaco, mono;
+  background-color: #F4F4F4;
+}
 
-// h1, h2 {
-//   font: normal normal 24px "SansusWebissimoRegular", Helvetica, Arial, sans-serif;
-//   color: $alchemy_green;
-//   letter-spacing: 1px;
-//   padding-top: 0;
-//   margin-top: 0;
-//   margin-bottom: 1em;
-// }
-
-// h2 {
-//   font-size: 18px;
-//   letter-spacing: 1px;
-//   text-transform: none;
-//   margin-top: 20px;
-// }
-
-// code {
-//   font: 12px Menlo, Monaco, mono;
-//   background-color: #F4F4F4;
-// }
-
-// pre {
-//   background: $anthrazit;
-//   color: #eed785;
-//   padding: 1em;
-//   font: 12px/1.5em Menlo, Monaco, mono;
-//   text-align: left;
-//   overflow-x: auto;
-//   overflow-y: none;
-// }
-
-// #content p, #content li {
-//   margin-top: 0;
-//   margin-bottom: 0.75em;
-// }
+pre {
+  background: $anthrazit;
+  color: #eed785;
+  padding: 1em;
+  font: 12px/1.5em Menlo, Monaco, mono;
+  text-align: left;
+  overflow-x: auto;
+  overflow-y: none;
+}
 
 header {
   background: $alchemy_blue;
@@ -75,30 +50,6 @@ header {
   }
 }
 
-// #language_select {
-//   text-align: right;
-//   text-transform: uppercase;
-//   margin-top: -3px;
-// }
-
-// #language_select a {
-//   text-decoration: none;
-//   padding: 5px 7px;
-//   @include border-radius(4px);
-//   color: $anthrazit;
-//   border: 1px solid transparent;
-// }
-
-// #language_select a:hover {
-//   border: 1px solid $alchemy_dark_blue;
-// }
-
-// #language_select a.active {
-//   color: $alchemy_green;
-//   border: 1px solid $alchemy_green;
-//   background: transparent;
-// }
-
 #logo {
   display: block;
   width: 300px;
@@ -113,16 +64,14 @@ header {
 #main_navigation {
   margin-top: 23px;
 
-  ul {
+  .nav-bar {
     margin: 0;
     padding: 0;
-    list-style-type: none;
-    position: relative;
-    height: inherit;
-    line-height: 0;
+    background: transparent;
   }
 
   li {
+    @include box-shadow(none);
     position: relative;
     float: left;
     margin-right: 20px;
@@ -300,32 +249,6 @@ div.info_table {
     }
   }
 }
-
-// #google_group .entries {
-//   margin-top: 2em;
-// }
-
-// #google_group .title {
-//   font-weight: bold;
-// }
-
-// #google_group .entry {
-//   padding-bottom: 1em;
-//   border-bottom: 1px solid #d6e2ea;
-//   margin-bottom: 1em;
-// }
-
-// #google_group .entry_footer {
-//   font-size: 10px;
-//   font-style: italic;
-// }
-
-
-// #google_group .entry_footer .url {
-//   float: right;
-//   font-style: normal;
-//   padding: 2px;
-// }
 
 figure {
 
