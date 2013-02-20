@@ -8,11 +8,9 @@ source 'http://rubygems.org'
 gem 'rails', '~> 3.2.12'
 gem 'mysql2'
 gem 'alchemy_cms', :github => 'magiclabs/alchemy_cms', :branch => '2.5-stable'
-gem 'feed-normalizer'
 
 group :development do
-  gem 'debugger', :platforms => :ruby_19
-  gem 'ruby-debug', :platforms => :ruby_18
+  gem 'debugger'
   gem 'capistrano'
   gem 'capistrano-maintenance'
   gem 'caplock', github: 'Druwerd/caplock'
@@ -21,15 +19,13 @@ end
 
 group :assets do
   gem 'sass-rails', '~> 3.2.3'
-  gem 'compass-rails'
-  gem 'compass-960-plugin'
   gem 'coffee-rails', '~> 3.2.1'
+
+  gem 'jquery-rails'
+  gem 'compass-rails'
+  gem 'zurb-foundation'
+
   gem 'uglifier',     '>= 1.0.3'
   gem 'quiet_assets'
   gem 'turbo-sprockets-rails3'
-end
-
-group :production do
-  gem 'execjs'
-  gem 'therubyracer'
 end

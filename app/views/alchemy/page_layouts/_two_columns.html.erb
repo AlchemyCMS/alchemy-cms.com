@@ -1,12 +1,9 @@
 <%= render :partial => "alchemy/shared/header" %>
 <div id="bubbles"></div>
 <%= render_cell(:slide_gallery) %>
-<div id="content" class="container">
-	<div class="grid_6">
-		<%= render_cell(:left_column) %>
-	</div>
-	<div class="grid_6">
-		<%= render_cell(:right_column) %>
-	</div>
+<div id="content" class="row">
+  <%= render_elements only: 'headline' %>
+  <%= render_cell(:left_column) %>
+  <%= render_cell(:right_column) %>
 </div>
 <%= render :partial => "alchemy/shared/footer" %>

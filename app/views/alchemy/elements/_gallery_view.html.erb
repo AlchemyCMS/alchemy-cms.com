@@ -1,41 +1,5 @@
-<div class="gallery" id="<%= element_dom_id(element) %>" <%= element_preview_code(element) -%>>
-  <div class="gallery_images">
-    <%- element.contents.gallery_pictures.each do |content| -%>
-    <div class="gallery_image">
-      <%- if content.linked? -%><div class="zoom"></div><%- end -%>
-      <%= render_essence_view(
-        content,
-        {
-          :image_size => content.essence.render_size || "160x105",
-          :crop => true
-        },
-        {
-          :class => "image_#{element_dom_id(element)}",
-          :onLoad => "jQuery(this).fadeIn('slow');"
-        }
-      ) %>
-    </div>
-    <%- end -%>
-  </div>
+<div class="gallery row" id="<%= element_dom_id(element) %>" <%= element_preview_code(element) -%>>
+<% element.contents.gallery_pictures.each do |content| %>
+  <%= render_essence_view(content, {image_size: "450x280", crop: true}, {class: 'six columns'}) %>
+<% end %>
 </div>
-
-<script type="text/javascript" charset="utf-8">
-  jQuery(window).load(function() {
-
-    var images = jQuery(".gallery_images > .gallery_image > a > .image_<%= element_dom_id(element) %>");
-    images.each(function() {
-
-      var $image = jQuery(this);
-      var $zoom_icon = $image.parent().parent().find('.zoom');
-      $zoom_icon.hide();
-
-      $image.hover(function(){
-        $zoom_icon.show('slow');
-      }, function() {
-        $zoom_icon.hide('slow');
-      });
-
-    });
-
-  });
-</script>

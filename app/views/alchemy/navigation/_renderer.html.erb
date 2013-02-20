@@ -1,0 +1,23 @@
+<% unless pages.blank? %>
+  <%= content_tag :ul, class: options[:css_class] do %>
+    <% pages.each do |page| %>
+      <%= content_tag(
+        :li,
+        class: [
+          page.children.any? ? 'has-flyout' : nil,
+          page_active?(page) ? 'active' : nil
+        ].compact.join(' ')
+      ) do %>
+        <%= render(
+          :partial => options[:navigation_link_partial],
+          :object => page,
+          :locals => {
+            :page => page,
+            :options => options
+          }
+        ) -%>
+        <%= render_navigation options.update(from_page: page, css_class: 'flyout') %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

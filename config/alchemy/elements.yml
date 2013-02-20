@@ -1,23 +1,19 @@
 - name: headline
-  unique: false
   contents:
   - name: headline
     type: EssenceText
 
 - name: subheadline
-  unique: false
   contents:
   - name: subheadline
     type: EssenceText
 
 - name: text
-  unique: false
   contents:
   - name: bigtext
     type: EssenceRichtext
 
 - name: footer_column
-  unique: false
   contents:
   - name: addthis_profile
     type: EssenceText
@@ -51,12 +47,6 @@
 
 - name: screenshot
   picture_gallery: true
-
-- name: google-group
-  unique: true
-  contents:
-  - name: rss_url
-    type: EssenceText
 
 - name: guide
   unique: true

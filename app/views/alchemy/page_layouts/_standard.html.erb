@@ -1,7 +1,10 @@
 <%= render "alchemy/shared/header" %>
 <div id="bubbles"></div>
 <%= render_cell(:slide_gallery) %>
-<div id="content" class="container">
-	<%= render_elements %>
+<div id="content" class="row">
+  <%= render_elements only: 'headline' %>
+  <div class="twelve columns">
+    <%= render_elements except: 'headline' %>
+  </div>
 </div>
 <%= render "alchemy/shared/footer" %>

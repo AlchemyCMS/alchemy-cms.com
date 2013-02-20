@@ -1,7 +1,9 @@
-<div class="screenshot" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+<div class="screenshot row" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
 <% element.contents.gallery_pictures.each do |content| %>
-	<%= link_to show_alchemy_picture_path(content.ingredient, format: :jpg), class: 'zoomable', rel: 'tour', title: content.essence.caption do %>
-		<%= render_essence_view(content, image_size: "450x280", crop: true) %>
-	<% end %>
+  <figure>
+    <%= link_to show_alchemy_picture_path(content.ingredient, format: :jpg), class: 'zoomable six columns', rel: 'tour', title: content.essence.caption do %>
+      <%= render_essence_view(content, image_size: "450x280", crop: true) %>
+    <% end %>
+  </figure>
 <% end %>
 </div>

@@ -6,7 +6,7 @@
   cells: [slide_gallery]
 
 - name: two_columns
-  elements: [headline, subheadline, text, gallery, slide, code, features_table, screenshot]
+  elements: [headline, subheadline, text, slide, code, features_table, screenshot]
   cells: [left_column, right_column, slide_gallery]
 
 - name: footer
@@ -15,7 +15,7 @@
 
 - name: community
   cache: false
-  elements: [headline, subheadline, text, gallery, slide, code, features_table, google-group]
+  elements: [headline, subheadline, text, slide, code, features_table]
   cells: [left_column, right_column, slide_gallery]
 
 - name: guide
