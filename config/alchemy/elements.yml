@@ -17,6 +17,8 @@
   contents:
   - name: addthis_profile
     type: EssenceText
+  - name: headline
+    type: EssenceText
   - name: bigtext
     type: EssenceRichtext
 
