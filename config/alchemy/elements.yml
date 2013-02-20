@@ -47,9 +47,3 @@
 
 - name: screenshot
   picture_gallery: true
-
-- name: guide
-  unique: true
-  contents:
-  - name: text
-    type: EssenceRichtext

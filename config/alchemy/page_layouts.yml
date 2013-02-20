@@ -15,12 +15,8 @@
 
 - name: community
   cache: false
-  elements: [headline, subheadline, text, slide, code, features_table]
+  elements: [headline, subheadline, text, slide, code, features_table, screenshot]
   cells: [left_column, right_column, slide_gallery]
-
-- name: guide
-  elements: [guide]
-  cells: [left_column]
 
 - name: external
   redirects_to_external: true
