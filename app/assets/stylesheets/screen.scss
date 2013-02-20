@@ -248,14 +248,22 @@ div.info_table {
   }
 }
 
-figure {
+.screenshot.row, .gallery.row {
+  margin-bottom: 2em;
 
   a {
     text-decoration: none;
+    @include inline-block(top);
   }
 
   img {
     @include box-shadow(5px);
+  }
+}
+
+.gallery {
+  figure {
+    margin-bottom: 1em
   }
 }
 
