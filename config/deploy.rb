@@ -35,9 +35,9 @@ after "deploy",                 "deploy:web:enable"
 
 # special tasks
 
-namespace :logs do
+namespace :log do
   desc "show last 100 lines of log"
-  task :tail do
+  task :show do
     run "tail -n100 #{shared_path}/log/#{rails_env}.log"
   end
 

@@ -7,10 +7,10 @@ GIT
 
 GIT
   remote: git://github.com/magiclabs/alchemy_cms.git
-  revision: ae057d5c3c9a3d31752fcc07cdf36ae3e374e118
+  revision: 2ddb06899d665bb48bf8c948023dc4377633fae2
   branch: 2.6-stable
   specs:
-    alchemy_cms (2.6.0)
+    alchemy_cms (2.6.2.1)
       acts-as-taggable-on (~> 2.1)
       acts_as_ferret (~> 0.5)
       acts_as_list (~> 0.2.0)
@@ -72,7 +72,7 @@ GEM
     arel (3.0.2)
     awesome_nested_set (2.1.6)
       activerecord (>= 3.0.0)
-    bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.1.1)
     builder (3.0.4)
     capistrano (2.14.1)
       highline
@@ -89,7 +89,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.6.2)
+    coffee-script-source (1.6.3)
     columnize (0.3.6)
     compass (0.12.2)
       chunky_png (~> 1.2)
@@ -124,10 +124,10 @@ GEM
     ferret (0.11.8.5)
     fssm (0.2.10)
     highline (1.6.15)
-    hike (1.2.2)
+    hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
-    jquery-rails (2.2.1)
+    jquery-rails (2.2.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (3.0.1)
@@ -145,7 +145,7 @@ GEM
     modular-scale (1.0.4)
       compass (>= 0.11.5)
       sassy-math (>= 1.2)
-    multi_json (1.7.3)
+    multi_json (1.7.7)
     mysql2 (0.3.11)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
@@ -154,6 +154,7 @@ GEM
     net-ssh (2.6.3)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
+    newrelic_rpm (3.6.5.130)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     quiet_assets (1.0.1)
@@ -182,7 +183,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.0.4)
+    rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
     sass (3.2.9)
@@ -206,7 +207,7 @@ GEM
       rack (>= 1.0.0)
     thor (0.18.1)
     tilt (1.4.1)
-    treetop (1.4.12)
+    treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
     turbo-sprockets-rails3 (0.3.6)
@@ -238,8 +239,9 @@ DEPENDENCIES
   debugger
   jquery-rails
   mysql2
+  newrelic_rpm
   quiet_assets
-  rails (~> 3.2.12)
+  rails (~> 3.2.13)
   sass-rails (~> 3.2.3)
   thin
   turbo-sprockets-rails3
