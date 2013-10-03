@@ -7,8 +7,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '~> 3.2.13'
 gem 'mysql2'
-gem 'alchemy_cms', :github => 'magiclabs/alchemy_cms', :branch => '2.6-stable'
+gem 'alchemy_cms', :github => 'magiclabs/alchemy_cms', :branch => '2.7-stable'
 gem 'newrelic_rpm'
+gem 'devise-encryptable'
 
 group :development do
   gem 'debugger'
