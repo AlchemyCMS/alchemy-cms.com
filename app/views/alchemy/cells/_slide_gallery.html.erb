@@ -1,7 +1,9 @@
 <% if cell.elements.published.any? %>
-<div class="row" id="slide_gallery_container">
-  <div id="slide_gallery">
-    <%= render_cell_elements(cell) %>
+<div class="slide-row">
+  <div class="row" id="slide_gallery_container">
+    <div id="slide_gallery">
+      <%= render_cell_elements(cell) %>
+    </div>
   </div>
 </div>
 <% end %>
