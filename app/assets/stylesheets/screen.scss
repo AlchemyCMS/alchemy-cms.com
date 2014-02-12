@@ -10,7 +10,7 @@ h1 {
   font-weight: 900;
   font-size: 40px;
   line-height: 45px;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
   color: $alchemy_gray;
   text-decoration: none;
 }
@@ -37,10 +37,10 @@ p {
 a {
   color: $alchemy_green;
   text-decoration: underline;
-  @include transition(all 0.2s ease-in-out);
+  @include transition(all 0.1s ease-in-out);
   
   &:hover {
-    color: $alchemy_blue;
+    color: $belize_blue;
     text-decoration: underline;
   }
 }
@@ -137,7 +137,7 @@ header {
     font-weight: 900;
     text-transform: uppercase;
 
-    @include transition(all 0.2s ease-in-out);
+    @include transition(all 0.1s ease-in-out);
 
     &:hover {
       color: $gray_extra;
@@ -155,11 +155,13 @@ header {
   margin-bottom: 0;
 
   > div {
+    padding-top: 13px;
+    margin: auto;
     display: none;
     position: absolute;
     top: 0;
     left: 0;
-    height: 320px;
+    height: auto;
     width: 960px;
   }
 
@@ -185,9 +187,8 @@ header {
 .slide-row {
   
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 0 auto;
-  background-color: blue;
   background-image: url(slider-pattern.png);
 
   #slide_gallery_container {
@@ -246,6 +247,8 @@ header {
   padding-bottom: 110px;
   padding-top: 70px;
   min-height: 300px;
+  margin-bottom: -75px;
+  margin-top: -35px;
   color: $gray_extra;
 }
 
@@ -260,6 +263,28 @@ footer {
     margin: 0;
     margin-bottom: 1em;
   }
+
+  a {
+    color: $alchemy_green;
+    text-decoration: underline;
+    @include transition(all 0.1s ease-in-out);
+  
+    &:hover {
+      color: $gray_ultralight;
+      text-decoration: underline;
+    }
+
+  }
+
+  h3 {
+    color: $gray_ultralight;
+    font-family: 'Bitter', serif;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+
 }
 
 div.addthis_toolbox {
@@ -297,12 +322,25 @@ div.info_table {
   margin-bottom: 2em;
 
   a {
-    text-decoration: none;
-    @include inline-block(top);
+  margin-bottom: 42px;
+  color: $alchemy_green;
+  font-family: 'Bitter', serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+  @include transition(all 0.1s ease-in-out);
+  
+  &:hover {
+    color: $belize_blue;
+    text-decoration: underline;
   }
+}
 
   img {
-    @include box-shadow(5px);
+    @include border-radius(8px);
+    @include box-shadow(0px 2px 5px $gray_extra);
+    margin-bottom: 15px;
   }
 }
 
@@ -335,8 +373,22 @@ figcaption {
   }
 
   h1 {
-    margin-top: -35px;
+    margin-top: -15px;
+    margin-bottom: -1px;
+    font-size: 26px;
+    line-height: 30px;
   }
+
+  h3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  footer h3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
 
   #logo img {
     margin-left: 5px;
