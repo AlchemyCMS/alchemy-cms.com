@@ -1,6 +1,19 @@
+// key colors
+$alchemy_blue: #C7E2F3;
+$alchemy_green: #87AB5A;
+$alchemy_gray: #343D42;
+
+// additional colors
+$marine: #34495E;
+$marine_dark: #2C3E50;
+$gray_ultralight: #F2F2F2;
+$gray_light: #ECF0F1;
+$gray_medium: #BDC3C7;
+$gray_dark: #95A5A6;
+$gray_extra: #7F8C8D;
+
 // custom colors
-$alchemy_blue: #C7E4F5;
 $anthrazit: darken($alchemy_blue, 80);
 $anthrazit_light: lighten($anthrazit, 10);
 $alchemy_dark_blue: darken($alchemy_blue, 50);
-$alchemy_green: #87AC59;
+
