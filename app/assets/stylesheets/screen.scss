@@ -22,6 +22,7 @@ h3 {
   font-size: 25px;
   line-height: 25px;
   margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 // Body fonts
@@ -167,9 +168,10 @@ header {
 
   h1, h2 {
     position:  absolute;
-    right: 0px;
+    right: -20px;
     top: 80px;
     margin: 0;
+    left: auto;
   }
 
   h1 {
@@ -360,6 +362,19 @@ div.info_table {
 
 figcaption {
   line-height: 1.5em
+}
+
+@media only screen and (max-width: 958px) {
+  #logo img {
+    margin-left: 5px;
+  }
+
+  #slide_gallery {
+    h1, h2 {
+      padding-right: 40px;
+    }
+  }
+
 }
 
 @media only screen and (max-width: 767px) {
