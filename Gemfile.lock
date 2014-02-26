@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/magiclabs/alchemy_cms.git
-  revision: ae5c9397adec0f16f744495b41a703946ffc974a
+  revision: 47b4b2c6f3b3fac4f284a8d044adbda30fe059d5
   branch: 2.7-stable
   specs:
     alchemy_cms (2.7.2)
