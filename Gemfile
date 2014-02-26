@@ -25,7 +25,7 @@ group :assets do
 
   gem 'jquery-rails'
   gem 'compass-rails'
-  gem 'zurb-foundation'
+  gem 'zurb-foundation', '~> 3.2.5'
 
   gem 'uglifier',     '>= 1.0.3'
   gem 'quiet_assets'
