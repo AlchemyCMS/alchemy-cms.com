@@ -1,0 +1,43 @@
+<% payable = element.ingredient(:payment).present? %>
+<%= element_view_for(element) do |el| -%>
+  <div class="name">
+    <h3><%= el.render :name %></h3>
+  </div>
+  <div class="description info_table">
+    <%= el.render :description %>
+  </div>
+  <% if payable %>
+    <div class="payment">
+      <% default_days = element.ingredient(:default_days).to_i %>
+      <div class="day_select">
+        Days: <input type="number" min="<%= element.ingredient(:min_days) %>" name="days" value="<%= default_days %>">
+      </div>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="mail@magiclabs.de">
+        <% return_url = Alchemy::Page.find_by_id element.ingredient(:success_page) %>
+        <% if return_url.present? %>
+          <input type="hidden" name="return" value="<%= show_alchemy_page_url return_url %>">
+        <% end %>
+        <input type="hidden" name="lc" value="DE">
+        <input type="hidden" name="item_name" value="<%= el.render :name %>">
+        <input type="hidden" name="quantity" value="<%= default_days %>">
+        <input type="hidden" name="amount" value="<%= element.ingredient(:amount_per_day).to_i %>">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="no_note" value="1">
+        <input type="hidden" name="shipping" value="0.00">
+        <button type="submit" name="submit" alt="" value="">
+          <span>PayPal:</span>
+          <span class="amount"></span><span>,- €</span>
+        </button>
+      </form>
+    <% else %>
+      <form action="http://www.magiclabs.de/" method="get" class="contact">
+        <button type="submit" alt="" value="">
+          <span>Contact us</span>
+        </button>
+      </form>
+    <% end %>
+  </div>
+<%- end -%>
