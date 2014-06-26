@@ -12,7 +12,7 @@ gem 'newrelic_rpm'
 gem 'devise-encryptable'
 
 group :development do
-  gem 'debugger'
+  gem 'pry'
   gem 'capistrano'
   gem 'capistrano-maintenance'
   gem 'caplock', github: 'Druwerd/caplock'
