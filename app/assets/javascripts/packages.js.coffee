@@ -1,3 +1,4 @@
+# jQuery plugin to set the amounts on the buttons calculated by the days from the number input
 $.fn.extend
   packageCalculator: ->
     return $(@).find('.payment').each () ->
@@ -28,3 +29,11 @@ $.fn.extend
 
 $ ->
   $('.packages').packageCalculator()
+  $('.packages .contact button').click ->
+    if $(this).prev('.form_fields').hasClass('invisible')
+      $(this).parents('.package').find('.description, .contact .form_fields').toggleClass('invisible')
+      $(this).children('span').text('Contact us')
+    else
+      $(this).parent().submit()
+
+

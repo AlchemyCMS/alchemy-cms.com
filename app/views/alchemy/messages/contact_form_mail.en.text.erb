@@ -1,0 +1,9 @@
+This is an inquiry for the "<%= @message.package %>" package sent from <%= ActionMailer::Base.default_url_options[:host] %>.
+It is already saved to our CRM.
+This email is just a copy. No need to answer it.
+------------------------------------------------
+
+   Name: <%= @message.firstname %> <%= @message.lastname %>
+Company: <%= @message.company %>
+  Email: <%= @message.email %>
+  Phone: <%= @message.phone %>

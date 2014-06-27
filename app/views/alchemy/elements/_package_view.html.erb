@@ -1,5 +1,5 @@
 <% payable = element.ingredient(:payment).present? %>
-<%= element_view_for(element) do |el| -%>
+<%= element_view_for(element, "data-element" => element.id) do |el| -%>
   <div class="name">
     <h3><%= el.render :name %></h3>
   </div>
@@ -33,11 +33,24 @@
         </button>
       </form>
     <% else %>
-      <form action="http://www.magiclabs.de/" method="get" class="contact">
-        <button type="submit" alt="" value="">
-          <span>Contact us</span>
-        </button>
-      </form>
+      <div class="contact info_table">
+        <%= form_for(@message ||= Alchemy::Message.new, remote: true) do |f| %>
+          <div class="form_fields invisible">
+            <p>We will contact you to talk about individual Service agreements.</p>
+            <%= f.hidden_field :contact_form_id, value: element.id %>
+            <%= f.hidden_field :package, value: el.render(:name) %>
+            <%= f.text_field :spamblocker, class: "hidden" %>
+            <%= f.text_field :company, placeholder: "Company" %>
+            <%= f.text_field :firstname, placeholder: "Firstname", required: true, class: "left" %>
+            <%= f.text_field :lastname, placeholder: "Lastname", required: true , class: "right" %>
+            <%= f.text_field :email, placeholder: "E-Mail", required: true %>
+            <%= f.text_field :phone, placeholder: "Phone number" %>
+          </div>
+          <button type="button" value="">
+            <span data-value="Learn more">Learn more</span>
+          </button>
+        <% end %>
+      </div>
     <% end %>
   </div>
 <%- end -%>

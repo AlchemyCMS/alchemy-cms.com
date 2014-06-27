@@ -22,6 +22,15 @@
     text-align: center;
   }
 
+  .contact {
+    padding-bottom: 0;
+    background: transparent;
+    textarea { height: 78px; }
+    .left, .right { width: 49% }
+    .left { float: left }
+    .right { float: right }
+  }
+
   form { margin: 0 }
 
   .day_select {
@@ -42,7 +51,7 @@
     font-size: 15px;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     cursor: pointer;
-    width: 230px;
+    width: 255px;
     height: 42px;
     border: 0 none;
     border-radius: 8px;
@@ -77,7 +86,7 @@
 
     button {
       font-size: 18px;
-      width: 250px;
+      width: 270px;
       height: 50px;
       background-image: -o-linear-gradient(-89deg, #8CD330  0%, #72AC27  100%);
       background-image: -moz-linear-gradient(-89deg, #8CD330  0%, #72AC27  100%);
@@ -87,6 +96,7 @@
   }
 
   .name {
+    text-align: center;
     width: 100%;
     padding: 10px 35px;
     background: #d8d8d8;
@@ -101,9 +111,6 @@
     min-height: 500px;
     .description { height: 400px }
     .name h3 { color: #FFF }
-    .name {
-      background: $marine;
-      text-align: center;
-    }
+    .name { background: $marine }
   }
 }
