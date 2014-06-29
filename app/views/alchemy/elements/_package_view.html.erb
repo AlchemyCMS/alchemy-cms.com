@@ -40,11 +40,11 @@
             <%= f.hidden_field :contact_form_id, value: element.id %>
             <%= f.hidden_field :package, value: el.render(:name) %>
             <%= f.text_field :spamblocker, class: "hidden" %>
-            <%= f.text_field :company, placeholder: "Company" %>
-            <%= f.text_field :firstname, placeholder: "Firstname", required: true, class: "left" %>
-            <%= f.text_field :lastname, placeholder: "Lastname", required: true , class: "right" %>
-            <%= f.text_field :email, placeholder: "E-Mail", required: true %>
-            <%= f.text_field :phone, placeholder: "Phone number" %>
+            <%= f.text_field :account_name, placeholder: "Company" %>
+            <%= f.text_field :first_name, placeholder: "Firstname", required: true, class: "left" %>
+            <%= f.text_field :last_name, placeholder: "Lastname", required: true , class: "right" %>
+            <%= f.text_field :email1, placeholder: "E-Mail", required: true %>
+            <%= f.text_field :phone_work, placeholder: "Phone number" %>
           </div>
           <button type="button" value="">
             <span data-value="Learn more">Learn more</span>

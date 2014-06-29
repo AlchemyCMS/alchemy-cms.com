@@ -24,11 +24,11 @@ module Alchemy
       uri = URI("http://crm.magicsupport.de/index.php")
       data = {
         'entryPoint' => 'WebToLeadCapture',
-        'campaign_id' => 'XXX',
+        'campaign_id' => '8bdf04e7-3ebf-ffe8-d372-53aea4ddb949',
         'assigned_user_id' => '1',
         'team_id' => '35606215-d5e5-4788-210b-5363e687db9c',
         'team_set_id' => 'labs',
-        'req_id' => 'firstname;lastname;email;'
+        'req_id' => 'first_name;last_name;email1;'
       }.merge(params[:message])
       response = Net::HTTP.post_form(uri, data)
       response.body =~ /Thank You For Your Submission./ # returns true || false
