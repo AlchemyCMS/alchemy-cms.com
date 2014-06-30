@@ -1,0 +1,6 @@
+$('.description, .contact .form_fields', '.package[data-element=<%= @element.id %>]').toggleClass('invisible');
+var $success_node = $("<div class='success'>Your inquiry was successfully sent.</div>");
+$('.description', '.package[data-element=<%= @element.id %>]').prepend($success_node);
+$success_node.delay(3000).fadeOut();
+var button_value = $('.contact button span', '.package[data-element=<%= @element.id %>]').data('value');
+$('.contact button span', '.package[data-element=<%= @element.id %>]').text(button_value);

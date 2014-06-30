@@ -6,3 +6,6 @@
 
 - name: slide_gallery
   elements: [slide]
+
+- name: packages
+  elements: [package]

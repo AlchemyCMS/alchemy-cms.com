@@ -134,8 +134,8 @@ mailer:
   mail_success_page: thanks
   mail_from: mail@alchemy-cms.com
   mail_to: mail@alchemy-cms.com
-  fields: [salutation, firstname, lastname, address, zip, city, phone, email, message]
-  validate_fields: [lastname, email]
+  fields: [package, first_name, last_name, account_name, phone_work, email1, spamblocker]
+  validate_fields: [package, first_name, last_name, email1]
 
 # === User roles
 #

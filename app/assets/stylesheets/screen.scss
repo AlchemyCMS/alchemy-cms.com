@@ -39,14 +39,14 @@ a {
   color: $alchemy_green;
   text-decoration: underline;
   @include transition(all 0.1s ease-in-out);
-  
+
   &:hover {
     color: $belize_blue;
     text-decoration: underline;
   }
 }
 
-// 
+//
 
 #bordure {
   background: $alchemy_gray;
@@ -195,7 +195,7 @@ header {
 }
 
 .slide-row {
-  
+
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -205,7 +205,7 @@ header {
 
     margin: auto;
     padding: auto;
-    
+
     .timer { display: none }
 
     .orbit-bullets {
@@ -278,7 +278,7 @@ footer {
     color: $alchemy_green;
     text-decoration: underline;
     @include transition(all 0.1s ease-in-out);
-  
+
     &:hover {
       color: $gray_ultralight;
       text-decoration: underline;
@@ -295,6 +295,15 @@ footer {
     margin-bottom: 20px;
   }
 
+}
+
+.invisible { visibility: hidden }
+.hidden { display: none !important }
+
+.success {
+  padding: 12px;
+  background: $alchemy_green;
+  color: #fff;
 }
 
 div.addthis_toolbox {
@@ -340,7 +349,7 @@ div.info_table {
   line-height: 18px;
   text-decoration: none;
   @include transition(all 0.1s ease-in-out);
-  
+
   &:hover {
     color: $belize_blue;
     text-decoration: underline;

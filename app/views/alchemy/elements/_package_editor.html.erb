@@ -1,0 +1,10 @@
+<%= element_editor_for(element) do |el| -%>
+  <%= el.edit :name %>
+  <%= el.edit :description %>
+  <%= el.edit :default_days %>
+  <%= el.edit :min_days %>
+  <%= el.edit :amount_per_day %>
+  <%= el.edit :payment, select_values: [["PayPal", "PayPal"], ["Contact only", ""]] %>
+  <%= page_selector(element, 'success_page') %>
+  <%= page_selector(element, 'abort_page') %>
+<%- end -%>

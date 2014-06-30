@@ -1,0 +1,116 @@
+.package {
+  @include inline-block;
+  position: relative;
+  max-width: 295px;
+  height: 430px;
+  background: #FFF;
+  @include box-sizing(border-box);
+  @include box-shadow(lighten($gray_medium, 10) 0px 6px 8px);
+
+  .description {
+    background: transparent;
+    ul { margin: 14px }
+    li { padding-left: 8px }
+  }
+
+  .payment, .contact {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    text-align: center;
+  }
+
+  .contact {
+    padding-bottom: 0;
+    background: transparent;
+    textarea { height: 78px; }
+    .left, .right { width: 49% }
+    .left { float: left }
+    .right { float: right }
+  }
+
+  form { margin: 0 }
+
+  .day_select {
+    font-size: 18px;
+    margin-bottom: 20px;
+    input {
+      margin: 0;
+      @include inline-block;
+      color: $gray_extra;
+      font-size: inherit;
+      width: 54px;
+      height: auto;
+    }
+  }
+
+  button {
+    color: #FFF;
+    font-size: 15px;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    width: 255px;
+    height: 42px;
+    border: 0 none;
+    border-radius: 8px;
+    -moz-box-shadow:  0px 2px 2px 0px rgba(0,0,0,0.15);
+    box-shadow:       0px 2px 2px 0px rgba(0,0,0,0.15);
+    background-image: -o-linear-gradient(-89deg, #349BDE 0%, #2980B9 100%);
+    background-image: -moz-linear-gradient(-89deg, #349BDE 0%, #2980B9 100%);
+    background-image: -ms-linear-gradient(-89deg, #349BDE 0%, #2980B9 100%);
+    background-image: linear-gradient(-179deg, #349BDE 0%, #2980B9 100%);
+  }
+
+  &:first-child {
+    @include border-radius(8px 0 0 8px);
+    .name {
+      @include border-top-left-radius(8px);
+    }
+  }
+
+  &:last-child {
+    @include border-radius(0 8px 8px 0);
+    .name {
+      @include border-top-right-radius(8px);
+    }
+  }
+
+  &:nth-child(2) {
+    @include border-radius(8px);
+    .name {
+      @include border-top-left-radius(8px);
+      @include border-top-right-radius(8px);
+    }
+
+    button {
+      font-size: 18px;
+      width: 270px;
+      height: 50px;
+      background-image: -o-linear-gradient(-89deg, #8CD330  0%, #72AC27  100%);
+      background-image: -moz-linear-gradient(-89deg, #8CD330  0%, #72AC27  100%);
+      background-image: -ms-linear-gradient(-89deg, #8CD330  0%, #72AC27  100%);
+      background-image: linear-gradient(-179deg, #8CD330  0%, #72AC27  100%);
+    }
+  }
+
+  .name {
+    text-align: center;
+    width: 100%;
+    padding: 10px 35px;
+    background: #d8d8d8;
+    @include inline-block(top);
+  }
+
+  &:nth-child(2) {
+    position: relative;
+    z-index: 2;
+    width: 380px;
+    max-width: 380px;
+    min-height: 500px;
+    .description { height: 400px }
+    .name h3 { color: #FFF }
+    .name { background: $marine }
+  }
+}

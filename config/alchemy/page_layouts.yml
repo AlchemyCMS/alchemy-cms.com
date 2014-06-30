@@ -2,8 +2,8 @@
   unique: true
 
 - name: standard
-  elements: [headline, subheadline, text, gallery, slide, code, screenshot]
-  cells: [slide_gallery]
+  elements: [headline, subheadline, text, gallery, slide, code, screenshot, package]
+  cells: [slide_gallery, packages]
 
 - name: two_columns
   elements: [headline, subheadline, text, slide, code, features_table, screenshot]

@@ -31,6 +31,33 @@
   - name: subheadline
     type: EssenceText
 
+- name: package
+  contents:
+  - name: name
+    type: EssenceText
+  - name: description
+    type: EssenceRichtext
+  - name: default_days
+    type: EssenceText
+    default: 3
+    hint: "Vorausgefüllte Anzahl von Tagen"
+  - name: min_days
+    type: EssenceText
+    default: 1
+    hint: "Minimum Anzahl von Tagen, die ausgewählt werden können."
+  - name: amount_per_day
+    type: EssenceText
+    default: 1040
+    hint: "Betrag pro Tag. Bitte ohne Währung angeben."
+  - name: payment
+    type: EssenceSelect
+  - name: success_page
+    type: EssenceSelect
+    hint: "Seite, die aufgerufen wird, nachdem die PayPal Bezahlung erfolgt ist."
+  - name: abort_page
+    type: EssenceSelect
+    hint: "Seite, die aufgerufen wird, wenn die PayPal Bezahlung abgebrochen wurde."
+
 - name: code
   contents:
   - name: block
