@@ -1,7 +1,9 @@
 <%= render "alchemy/shared/header" %>
 <%= render_cell(:slide_gallery) %>
 <div id="content" class="row">
-  <%= render_elements only: 'headline' %>
+  <div class="twelve columns">
+    <%= render_elements only: 'headline' %>
+  </div>
   <%= render_cell(:left_column) %>
   <%= render_cell(:right_column) %>
 </div>
