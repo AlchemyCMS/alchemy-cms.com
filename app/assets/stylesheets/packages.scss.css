@@ -1,3 +1,7 @@
+.packages {
+  margin: 5em 0;
+}
+
 .package {
   @include inline-block;
   position: relative;
