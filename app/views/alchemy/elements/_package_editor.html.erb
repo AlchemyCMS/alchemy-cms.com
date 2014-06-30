@@ -6,4 +6,5 @@
   <%= el.edit :amount_per_day %>
   <%= el.edit :payment, select_values: [["PayPal", "PayPal"], ["Contact only", ""]] %>
   <%= page_selector(element, 'success_page') %>
+  <%= page_selector(element, 'abort_page') %>
 <%- end -%>

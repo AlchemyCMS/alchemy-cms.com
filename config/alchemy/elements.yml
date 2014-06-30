@@ -53,7 +53,10 @@
     type: EssenceSelect
   - name: success_page
     type: EssenceSelect
-
+    hint: "Seite, die aufgerufen wird, nachdem die PayPal Bezahlung erfolgt ist."
+  - name: abort_page
+    type: EssenceSelect
+    hint: "Seite, die aufgerufen wird, wenn die PayPal Bezahlung abgebrochen wurde."
 
 - name: code
   contents:
