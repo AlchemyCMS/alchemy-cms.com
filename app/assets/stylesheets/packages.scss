@@ -13,6 +13,7 @@
 
   .description {
     background: transparent;
+
     ul { margin: 14px }
     li { padding-left: 8px }
   }
@@ -29,6 +30,7 @@
   .contact {
     padding-bottom: 0;
     background: transparent;
+
     textarea { height: 78px; }
     .left, .right { width: 49% }
     .left { float: left }
@@ -40,6 +42,7 @@
   .day_select {
     font-size: 18px;
     margin-bottom: 20px;
+
     input {
       margin: 0;
       @include inline-block;
@@ -69,6 +72,7 @@
 
   &:first-child {
     @include border-radius(8px 0 0 8px);
+
     .name {
       @include border-top-left-radius(8px);
     }
@@ -76,6 +80,7 @@
 
   &:last-child {
     @include border-radius(0 8px 8px 0);
+
     .name {
       @include border-top-right-radius(8px);
     }
@@ -83,6 +88,7 @@
 
   &:nth-child(2) {
     @include border-radius(8px);
+
     .name {
       @include border-top-left-radius(8px);
       @include border-top-right-radius(8px);
@@ -113,6 +119,7 @@
     width: 380px;
     max-width: 380px;
     min-height: 500px;
+
     .description { height: 400px }
     .name h3 { color: #FFF }
     .name { background: $marine }
