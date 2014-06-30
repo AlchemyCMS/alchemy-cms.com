@@ -21,7 +21,7 @@ $.fn.extend
           $day_select.val(days)
         amount = amount_per_day * days
         $quantity_hidden_field.val(days)
-        $amount_label.text(amount)
+        $amount_label.text numeral(amount).format()
         return
 
       setAmount()
@@ -33,6 +33,29 @@ $.fn.extend
     return $this
 
 $ ->
+  # Get the users language setting
+  user_language = (navigator.language || navigator.userLanguage).substring(0, 2)
+  # Set the default price formatting
+  numeral.defaultFormat('0,0 $')
+  # Register number formats
+  numeral.language 'en',
+    delimiters:
+      thousands: ','
+      decimal: '.'
+    currency:
+      symbol: '€'
+  numeral.language 'de',
+    delimiters:
+      thousands: '.'
+      decimal: ','
+    currency:
+      symbol: '€'
+  # Set the language depending of user language
+  if user_language == 'de'
+    numeral.language(user_language)
+  else
+    numeral.language('en')
+  # Init packages
   $packages = $('.packages')
   $packages.packageCalculator()
   $packages.find('.contact button').click ->

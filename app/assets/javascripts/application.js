@@ -6,3 +6,4 @@
 //= require orbit
 //= require topbar
 //= require jquery.fancybox
+//= require numeral.min
