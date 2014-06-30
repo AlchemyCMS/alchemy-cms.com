@@ -13,7 +13,7 @@ h1 {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-weight: 900;
   font-size: 40px;
-  line-height: 45px;
+  line-height: 1.2;
   margin-bottom: 45px;
   color: $alchemy_gray;
   text-decoration: none;
@@ -24,7 +24,7 @@ h2 {
   font-family: 'Bitter', serif;
   font-weight: normal;
   font-size: 28px;
-  line-height: 35px;
+  line-height: 1.2;
   color: $gray_extra;
 }
 
@@ -33,7 +33,7 @@ h3 {
   font-family: 'Bitter', serif;
   font-weight: normal;
   font-size: 25px;
-  line-height: 25px;
+  line-height: 1.2;
   margin-bottom: 20px;
   padding-top: 20px;
 }
@@ -295,12 +295,12 @@ footer {
   color: #fff;
 }
 
-div.addthis_toolbox {
+.addthis_toolbox {
   margin-bottom: 1em;
 }
 
-div.info_table {
-  background-color: transparentize($gray_medium, 0.75);;
+.info_table {
+  background-color: transparentize($gray_medium, 0.75);
   @include border-radius(8px);
   padding: 20px;
 
@@ -369,6 +369,10 @@ figcaption {
     h1, h2 {
       padding-right: 40px;
     }
+  }
+
+  .package {
+    width: 100%;
   }
 }
 
