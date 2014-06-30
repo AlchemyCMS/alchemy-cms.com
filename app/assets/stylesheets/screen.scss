@@ -1,6 +1,10 @@
 body {
   background: $gray_ultralight;
   color: $gray_extra;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
 }
 
 // Headline fonts
@@ -15,6 +19,15 @@ h1 {
   text-decoration: none;
 }
 
+h2 {
+  padding-top: 20px;
+  font-family: 'Bitter', serif;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 35px;
+  color: $gray_extra;
+}
+
 h3 {
   color: $marine;
   font-family: 'Bitter', serif;
@@ -27,11 +40,6 @@ h3 {
 
 // Body fonts
 p {
-  color: $gray_extra;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 22px;
   margin-bottom: 20px;
 }
 
@@ -71,7 +79,6 @@ pre {
 header {
   background: $alchemy_blue;
   color: #FFF;
-  font: 14px normal Helvetica, Arial, sans-serif;
   width: 100%;
   min-height: 140px;
   border-bottom: 4px solid $alchemy_green;
@@ -134,7 +141,6 @@ header {
     font-size: 16px;
     text-decoration: none;
     color: $alchemy_gray;
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     font-weight: 900;
     text-transform: uppercase;
 
@@ -175,9 +181,6 @@ header {
   }
 
   h1 {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-weight: 900;
-    font-size: 40px;
     line-height: 42px;
     color: $marine;
     text-transform: uppercase;
@@ -186,11 +189,6 @@ header {
 
   h2 {
     padding-top: 20px;
-    font-family: 'Bitter', serif;
-    font-weight: normal;
-    font-size: 28px;
-    line-height: 35px;
-    color: $gray_extra;
   }
 }
 
@@ -199,7 +197,7 @@ header {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  background-image: url(slider-pattern.png);
+  background-image: image-url("slider-pattern.png");
 
   #slide_gallery_container {
 
@@ -248,10 +246,7 @@ header {
       }
     }
   }
-
 }
-
-
 
 #content {
   padding-bottom: 110px;
@@ -283,18 +278,12 @@ footer {
       color: $gray_ultralight;
       text-decoration: underline;
     }
-
   }
 
   h3 {
     color: $gray_ultralight;
-    font-family: 'Bitter', serif;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 25px;
     margin-bottom: 20px;
   }
-
 }
 
 .invisible { visibility: hidden }
@@ -324,7 +313,6 @@ div.info_table {
   li {
     color: $belize-blue;
     font-weight: 600;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     margin-bottom: 12px;
     background-color: none;
     border-bottom: 0 none;
@@ -341,20 +329,20 @@ div.info_table {
   margin-bottom: 2em;
 
   a {
-  margin-bottom: 42px;
-  color: $alchemy_green;
-  font-family: 'Bitter', serif;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 18px;
-  text-decoration: none;
-  @include transition(all 0.1s ease-in-out);
+    margin-bottom: 42px;
+    color: $alchemy_green;
+    font-family: 'Bitter', serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    @include transition(all 0.1s ease-in-out);
 
-  &:hover {
-    color: $belize_blue;
-    text-decoration: underline;
+    &:hover {
+      color: $belize_blue;
+      text-decoration: underline;
+    }
   }
-}
 
   img {
     @include box-shadow(0px 2px 5px $gray_extra);
@@ -382,10 +370,10 @@ figcaption {
       padding-right: 40px;
     }
   }
-
 }
 
 @media only screen and (max-width: 767px) {
+
   #main_navigation {
     margin-top: 10;
     text-align: center;
@@ -396,14 +384,15 @@ figcaption {
   }
 
   #slide_gallery {
+
     h1, h2 {
       display: none
     }
   }
-
 }
 
 @media only screen and (max-width: 479px) {
+
   .slide-row {
     display: none;
   }
