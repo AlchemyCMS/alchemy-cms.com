@@ -7,13 +7,13 @@
   position: relative;
   width: 30%;
   max-width: 295px;
-  padding-bottom: 120px;
-  background: #FFF;
+  padding-bottom: 140px;
+  background: #fff;
   @include box-sizing(border-box);
   @include box-shadow(lighten($gray_medium, 10) 0px 6px 8px);
 
   &:first-child {
-    @include border-radius(8px 0 0 8px);
+    @include border-left-radius(8px);
 
     .name {
       @include border-top-left-radius(8px);
@@ -21,7 +21,7 @@
   }
 
   &:last-child {
-    @include border-radius(0 8px 8px 0);
+    @include border-right-radius(8px);
 
     .name {
       @include border-top-right-radius(8px);
@@ -33,7 +33,6 @@
     z-index: 2;
     width: 40%;
     max-width: 380px;
-    min-height: 500px;
     @include border-radius(8px);
 
     .name {
