@@ -1,5 +1,5 @@
 <footer>
   <div class="row">
-    <%= render_elements(:only => 'footer_column', :fallback => {:for => 'footer_column', :from => 'footer'}) %>
+    <%= render_elements(from_page: footer_page, only: 'footer_column') %>
   </div>
 </footer>
