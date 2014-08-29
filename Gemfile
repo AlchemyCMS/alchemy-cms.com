@@ -25,7 +25,6 @@ gem 'zurb-foundation', '~> 3.2.5'
 group :development do
   gem 'pry'
   gem 'capistrano', "~> 2.15"
-  gem 'capistrano-maintenance'
   gem 'caplock', github: 'Druwerd/caplock'
   gem 'thin'
   gem 'quiet_assets'

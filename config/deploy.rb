@@ -1,6 +1,5 @@
 require 'bundler/capistrano'
 require 'alchemy/capistrano'
-require 'capistrano/maintenance'
 require 'caplock'
 
 # ssh settings
