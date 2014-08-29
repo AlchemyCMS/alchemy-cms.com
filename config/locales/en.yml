@@ -1,10 +1,10 @@
 # encoding: UTF-8
 
 en:
-  
+
   will_paginate:
     page_gap: '...'
-  
+
   # == Rails translations
   # Below are Rails specific translations for date, time, number, currency, error messages and so on.
   date:
@@ -12,9 +12,9 @@ en:
       # Use the strftime parameters for formats.
       # When no format has been given, it uses default.
       # You can provide other formats here if you like!
-      default: "%Y-%m-%d" 
-      short: "%b %d" 
-      long: "%B %d, %Y" 
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
     day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
     abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
     # Don't forget the nil at the beginning; there's no such thing as a 0th month
@@ -27,11 +27,11 @@ en:
       - :day
   time:
     formats:
-      default: "%a, %d %b %Y %H:%M:%S %z" 
-      short: "%d %b %H:%M" 
-      long: "%B %d, %Y %H:%M" 
-    am: "am" 
-    pm: "pm" 
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "am"
+    pm: "pm"
   support:
     array:
       sentence_connector: "and"
@@ -41,116 +41,120 @@ en:
     # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
     format:
       # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
-      separator: "." 
+      separator: "."
       # Delimets thousands (e.g. 1,000,000 is a million) (always in groups of three)
-      delimiter: "," 
+      delimiter: ","
       # Number of decimals, behind the separator (1 with a precision of 2 gives: 1.00)
       precision: 3
-    
+
     # Used in number_to_currency()
     currency:
       format:
         # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
-        format: "%u%n" 
-        unit: "$" 
+        format: "%u%n"
+        unit: "$"
         # These three are to override number.format and are optional
-        separator: "." 
-        delimiter: "," 
+        separator: "."
+        delimiter: ","
         precision: 2
-    
+
     # Used in number_to_percentage()
     percentage:
       format:
         # These three are to override number.format and are optional
-        # separator: 
-        delimiter: "" 
-        # precision: 
+        # separator:
+        delimiter: ""
+        # precision:
 
     # Used in number_to_precision()
     precision:
       format:
         # These three are to override number.format and are optional
         # separator:
-        delimiter: "" 
+        delimiter: ""
         # precision:
 
     # Used in number_to_human_size()
     human:
       format:
         # These three are to override number.format and are optional
-        # separator: 
-        delimiter: "" 
+        # separator:
+        delimiter: ""
         precision: 1
 
   # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
   datetime:
     distance_in_words:
-      half_a_minute: "half a minute" 
+      half_a_minute: "half a minute"
       less_than_x_seconds:
-        one:  "less than 1 second" 
-        many: "less than %{count} seconds" 
+        one:  "less than 1 second"
+        many: "less than %{count} seconds"
       x_seconds:
-        one:  "1 second" 
-        many: "%{count} seconds" 
+        one:  "1 second"
+        many: "%{count} seconds"
       less_than_x_minutes:
-        one:  "less than a minute" 
-        many: "less than %{count} minutes" 
+        one:  "less than a minute"
+        many: "less than %{count} minutes"
       x_minutes:
-        one:  "1 minute" 
-        many: "%{count} minutes" 
+        one:  "1 minute"
+        many: "%{count} minutes"
       about_x_hours:
-        one:  "about 1 hour" 
-        many: "about %{count} hours" 
+        one:  "about 1 hour"
+        many: "about %{count} hours"
       x_days:
-        one:  "1 day" 
-        many: "%{count} days" 
+        one:  "1 day"
+        many: "%{count} days"
       about_x_months:
-        one:  "about 1 month" 
-        many: "about %{count} months" 
+        one:  "about 1 month"
+        many: "about %{count} months"
       x_months:
-        one:  "1 month" 
-        many: "%{count} months" 
+        one:  "1 month"
+        many: "%{count} months"
       about_x_years:
-        one:  "about 1 year" 
+        one:  "about 1 year"
         many: "about %{count} years"
       over_x_years:
-        one:  "over 1 year" 
+        one:  "over 1 year"
         many: "over %{count} years"
-  
+
   # Translations for active record database models and error messages.
   activerecord:
+    models:
+      extension:
+        one: Extension
+        other: Extensions
     errors:
       template:
         header:
-          one:   "1 error prohibited this %{model} from being saved" 
-          other:  "%{count} errors prohibited this %{model} from being saved" 
+          one:   "1 error prohibited this %{model} from being saved"
+          other:  "%{count} errors prohibited this %{model} from being saved"
         body: "There were problems with the following fields:"
         messages:
-          inclusion: "is not included in the list" 
-          exclusion: "is reserved" 
-          invalid: "is invalid" 
-          confirmation: "doesn't match confirmation" 
-          accepted: "must be accepted" 
-          empty: "can't be empty" 
-          blank: "can't be blank" 
-          too_long: "is too long (maximum is %{count} characters)" 
-          too_short: "is too short (minimum is %{count} characters)" 
-          wrong_length: "is the wrong length (should be %{count} characters)" 
-          taken: "has already been taken" 
-          not_a_number: "is not a number" 
-          greater_than: "must be greater than %{count}" 
-          greater_than_or_equal_to: "must be greater than or equal to %{count}" 
-          equal_to: "must be equal to %{count}" 
-          less_than: "must be less than %{count}" 
-          less_than_or_equal_to: "must be less than or equal to %{count}" 
-          odd: "must be odd" 
-          even: "must be even" 
+          inclusion: "is not included in the list"
+          exclusion: "is reserved"
+          invalid: "is invalid"
+          confirmation: "doesn't match confirmation"
+          accepted: "must be accepted"
+          empty: "can't be empty"
+          blank: "can't be blank"
+          too_long: "is too long (maximum is %{count} characters)"
+          too_short: "is too short (minimum is %{count} characters)"
+          wrong_length: "is the wrong length (should be %{count} characters)"
+          taken: "has already been taken"
+          not_a_number: "is not a number"
+          greater_than: "must be greater than %{count}"
+          greater_than_or_equal_to: "must be greater than or equal to %{count}"
+          equal_to: "must be equal to %{count}"
+          less_than: "must be less than %{count}"
+          less_than_or_equal_to: "must be less than or equal to %{count}"
+          odd: "must be odd"
+          even: "must be even"
         models:
           language:
             attributes:
               code:
                 invalid: 'Format of languagecode is not valid. Please use exactly two lowercase characters.'
-  
+
   # Translations for the authentication system used in alchemy.
   authlogic:
     authlogic:

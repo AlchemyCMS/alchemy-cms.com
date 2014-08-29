@@ -14,7 +14,8 @@
     <div class="twelve columns">
       <p><%= link_to '< Back to extensions list', extensions_path %></p>
       <h1><%= @extension.name %></h1>
-      <h3>by: <%= @extension.maintainer %></h3>
+      <h3>by: <%= link_to(@extension.maintainer, extensions_path(by: @extension.maintainer)) %></h3>
+      <hr>
     </div>
 
     <div class="eight columns">
@@ -24,12 +25,10 @@
       </p>
       <p>
         <b>Keywords:</b>
-        <%= @extension.keyword_list %>
+        <%= @extension.keywords.map { |k| link_to k.name, url_for(keyword: k.name, by: params[:by]) }.join(', ').html_safe %>
       </p>
-
-      <p>
-        <b>About:</b>
-      </p>
+      <hr>
+      <h4>About:</h4>
 
       <div class="extension-description">
         <%= raw Kramdown::Document.new(@extension.description).to_html %>

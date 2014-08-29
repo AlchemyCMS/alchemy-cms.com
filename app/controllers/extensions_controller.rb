@@ -12,6 +12,8 @@ class ExtensionsController < ApplicationController
       @extensions = @extensions.maintained_by(params[:by])
     end
     @extensions = @extensions.page(params[:page] || 1).per(5)
+
+    @keywords = Extension.tag_counts_on(:keywords).order('count DESC')
   end
 
   def show

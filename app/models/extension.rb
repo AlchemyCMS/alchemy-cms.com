@@ -5,7 +5,7 @@ class Extension < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: true
   validates :maintainer, presence: true
-  validates :url, presence: true
+  validates :url, presence: true, format: {with: /^https?:\/\//}
 
   scope :maintained_by, ->(maintainer) { where(maintainer: maintainer) }
 
