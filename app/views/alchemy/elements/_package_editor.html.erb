@@ -5,6 +5,6 @@
   <%= el.edit :min_days %>
   <%= el.edit :amount_per_day %>
   <%= el.edit :payment, select_values: [["PayPal", "PayPal"], ["Contact only", ""]] %>
-  <%= page_selector(element, 'success_page') %>
-  <%= page_selector(element, 'abort_page') %>
+  <%= el.edit :success_page, select_values: pages_for_select(nil, nil, 'Please Choose', :urlname) %>
+  <%= el.edit :abort_page, select_values: pages_for_select(nil, nil, 'Please Choose', :urlname) %>
 <%- end -%>
