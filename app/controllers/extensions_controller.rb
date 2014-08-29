@@ -43,7 +43,7 @@ class ExtensionsController < ApplicationController
   end
 
   def load_alchemy_root_page
-    session[:language_id] ||= Alchemy::Language.default.id
+    session[:language_id] ||= Alchemy::Language.get_default.try(:id)
     @root_page ||= Alchemy::Page.language_root_for(session[:language_id])
   end
 end
