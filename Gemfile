@@ -11,6 +11,7 @@ gem 'alchemy_cms', :github => 'magiclabs/alchemy_cms', :branch => '2.7-stable'
 gem 'newrelic_rpm'
 gem 'devise-encryptable'
 gem 'kramdown', '~> 1.4.1'
+gem 'airbrake'
 
 group :development do
   gem 'pry'

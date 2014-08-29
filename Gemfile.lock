@@ -69,6 +69,9 @@ GEM
       rails (>= 3.0)
     acts_as_list (0.2.0)
       activerecord (>= 3.0)
+    airbrake (4.0.0)
+      builder
+      multi_json
     arel (3.0.3)
     awesome_nested_set (2.1.6)
       activerecord (>= 3.0.0)
@@ -233,6 +236,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake
   alchemy_cms!
   capistrano
   capistrano-maintenance
