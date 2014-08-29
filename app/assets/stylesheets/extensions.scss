@@ -37,4 +37,9 @@
 
 nav.pagination {
   margin-bottom: 1em;
+
+  // prevent pagination buttons from being full width in mobile views
+  .button {
+    display: inline-block !important;
+  }
 }
