@@ -1,9 +1,11 @@
-<% if cell.elements.published.any? %>
-<div class="slide-row">
-  <div class="row" id="slide_gallery_container">
-    <div id="slide_gallery">
-      <%= render_cell_elements(cell) %>
+<% cache(cell) do %>
+  <% if cell.elements.published.any? %>
+  <div class="slide-row">
+    <div class="row" id="slide_gallery_container">
+      <div id="slide_gallery">
+        <%= render_elements(from_cell: cell) %>
+      </div>
     </div>
   </div>
-</div>
+  <% end %>
 <% end %>

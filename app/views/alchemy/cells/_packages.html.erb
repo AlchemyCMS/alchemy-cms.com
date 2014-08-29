@@ -1,3 +1,5 @@
-<div class="packages">
-  <%= render_cell_elements(cell) %>
-</div>
+<% cache(cell) do %>
+  <div class="packages">
+    <%= render_elements(from_cell: cell) %>
+  </div>
+<% end %>

@@ -1,5 +1,7 @@
-<div<%= element_preview_code(element) %>>
-  <%= render_essence_view_by_name(element, 'image', :image_size => "480x320", :crop => true, :format => :png) %>
-  <h2><%= render_essence_view_by_name(element, 'subheadline') %></h2>
-  <h1><%= render_essence_view_by_name(element, 'headline') %></h1>
-</div>
+<% cache(element) do %>
+  <div<%= element_preview_code(element) %>>
+    <%= render_essence_view_by_name(element, 'image', :image_size => "480x320", :crop => true, :format => :png) %>
+    <h2><%= render_essence_view_by_name(element, 'subheadline') %></h2>
+    <h1><%= render_essence_view_by_name(element, 'headline') %></h1>
+  </div>
+<% end %>

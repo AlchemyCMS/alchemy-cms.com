@@ -1,3 +1,5 @@
-<pre class="code <%= render_essence_view_by_name(element, 'grid') || "grid_12" %>" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
-<%= render_essence_view_by_name(element, 'block') -%>
-</pre>
+<% cache(element) do %>
+  <pre class="code <%= render_essence_view_by_name(element, 'grid') || "grid_12" %>" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+  <%= render_essence_view_by_name(element, 'block') -%>
+  </pre>
+<% end %>

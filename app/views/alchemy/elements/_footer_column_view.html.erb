@@ -1,13 +1,15 @@
-<div class="four columns" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
-  <h3><%= render_essence_view_by_name(element, 'headline') %></h3>
-<% if element.has_ingredient?(:addthis_profile) %>
-  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-    <a class="addthis_button_facebook"></a>
-    <a class="addthis_button_twitter"></a>
-    <a class="addthis_button_google"></a>
-    <a class="addthis_button_email"></a>
+<% cache(element) do %>
+  <div class="four columns" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+    <h3><%= render_essence_view_by_name(element, 'headline') %></h3>
+  <% if element.has_ingredient?(:addthis_profile) %>
+    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+      <a class="addthis_button_facebook"></a>
+      <a class="addthis_button_twitter"></a>
+      <a class="addthis_button_google"></a>
+      <a class="addthis_button_email"></a>
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=<%= render_essence_view_by_name(element, 'addthis_profile') %>"></script>
+  <% end %>
+    <%= render_essence_view_by_name(element, 'bigtext') %>
   </div>
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=<%= render_essence_view_by_name(element, 'addthis_profile') %>"></script>
 <% end %>
-  <%= render_essence_view_by_name(element, 'bigtext') %>
-</div>
