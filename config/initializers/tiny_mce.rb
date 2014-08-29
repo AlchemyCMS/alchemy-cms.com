@@ -1,5 +1,7 @@
 Alchemy::Tinymce.init = {
-	:theme_advanced_buttons2 => 'pastetext,pasteword,formatselect,styleselect,charmap,code,help',
-	:style_formats => [{:title => 'Code', :inline => 'code'}],
-  :theme_advanced_blockformats => "h3,p"
+  toolbar3: 'styleselect | formatselect',
+  style_formats: [
+    {title: 'Code', inline: 'code'}
+  ],
+  block_formats: "Header 3=h3;Paragraph=p"
 }
