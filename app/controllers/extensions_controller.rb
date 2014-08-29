@@ -13,7 +13,7 @@ class ExtensionsController < ApplicationController
     end
     @extensions = @extensions.page(params[:page] || 1).per(5)
 
-    @keywords = Extension.tag_counts_on(:keywords).order('count DESC')
+    @keywords = Extension.tag_counts_on(:keywords).order('count DESC, RAND()').limit(5)
   end
 
   def show

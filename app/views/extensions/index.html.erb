@@ -8,9 +8,6 @@
 <div id="content" class="row">
   <div class="twelve columns">
     <h1>Found <%= @extensions.total_count %> Alchemy <%= (Extension.model_name.human(count: @extensions.total_count)) %></h1>
-    <hr>
-  </div>
-  <div class="eight columns">
     <% if params[:keyword] || params[:by] %>
       <% if params[:keyword] %>
         <p>
@@ -25,7 +22,9 @@
         </p>
       <% end %>
     <% end %>
-
+    <hr>
+  </div>
+  <div class="eight columns">
     <ul class="extensions-list">
       <% @extensions.each do |extension| %>
       <li class="<%= cycle('even', 'odd') %>">
