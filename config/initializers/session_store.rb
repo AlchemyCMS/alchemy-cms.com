@@ -1,8 +1,3 @@
 # Be sure to restart your server when you modify this file.
 
-AlchemyCmsCom::Application.config.session_store :cookie_store, :key => '_alchemy-cms.com_session'
-
-# Use the database for sessions instead of the cookie-based default,
-# which shouldn't be used to store highly confidential information
-# (create the session table with "rails generate session_migration")
-# AlchemyCmsCom::Application.config.session_store :active_record_store
+AlchemyCmsCom::Application.config.session_store :cookie_store, key: '_alchemy_cms_com_session'

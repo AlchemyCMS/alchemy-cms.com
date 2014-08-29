@@ -1,7 +1,12 @@
 # Be sure to restart your server when you modify this file.
 
-# Your secret key for verifying the integrity of signed cookies.
+# Your secret key is used for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
+
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-AlchemyCmsCom::Application.config.secret_token = 'b92131bd0b0cae79f3d4542872af1efe6803779ed2599193d7ea4ecc10be757faf047a2d598478e384dec8517707a8f8065b0af1a0172683fda38f49fb3c40cb'
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure your secret_key_base is kept private
+# if you're sharing your code publicly.
+AlchemyCmsCom::Application.config.secret_key_base = '04bc61579578bf2a12deb63b7d458d91d697e81f94a39c8825db76f61082beeadb6e6a9929e337b91dfec10e3a2ac6218b1d5962e40385fa7e62eff88394e1df'
