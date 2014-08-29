@@ -5,31 +5,27 @@ end
 
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.2.13'
+gem 'rails', '~> 4.0.2'
 gem 'mysql2'
-gem 'alchemy_cms', :github => 'magiclabs/alchemy_cms', :branch => '2.7-stable'
+gem 'alchemy_cms',    github: 'magiclabs/alchemy_cms',    branch: '3.0-stable'
+gem 'alchemy-devise', github: 'magiclabs/alchemy-devise', branch: '2.0-stable'
 gem 'newrelic_rpm'
 gem 'devise-encryptable'
 gem 'kramdown', '~> 1.4.1'
 gem 'airbrake'
 
+# assets
+gem 'sass-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails'
+gem 'compass-rails'
+gem 'zurb-foundation', '~> 3.2.5'
+
 group :development do
   gem 'pry'
-  gem 'capistrano'
+  gem 'capistrano', "~> 2.15"
   gem 'capistrano-maintenance'
   gem 'caplock', github: 'Druwerd/caplock'
   gem 'thin'
-end
-
-group :assets do
-  gem 'sass-rails', '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  gem 'jquery-rails'
-  gem 'compass-rails'
-  gem 'zurb-foundation', '~> 3.2.5'
-
-  gem 'uglifier',     '>= 1.0.3'
-  gem 'quiet_assets'
-  gem 'turbo-sprockets-rails3'
 end
