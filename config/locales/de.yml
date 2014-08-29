@@ -28,6 +28,8 @@ de:
     cell_names:
       slide_gallery: Slides
       packages: Pakete
+      right_column: rechte Spalte
+      left_column: linke Spalte
 
     # == Translations for element names
     # Just use the elements name like defined inside the config/alchemy/elements.yml file and translate it.
