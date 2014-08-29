@@ -13,6 +13,3 @@ Alchemy::Modules.register_module({
     }]
   }
 })
-
-# Loading authorization rules and register them to auth engine instance
-Alchemy::Auth::Engine.get_instance.load(File.join(File.dirname(__FILE__), '..', 'authorization_rules.rb'))

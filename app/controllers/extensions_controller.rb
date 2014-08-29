@@ -29,7 +29,7 @@ class ExtensionsController < ApplicationController
   end
 
   def create
-    @extension = Extension.new(params[:extension])
+    @extension = Extension.new(extension_params)
     if @extension.save
       ExtensionsMailer.registration(@extension).deliver
       redirect_to extensions_url, notice: 'Extension was successfully registered. Thank you.'
@@ -47,5 +47,9 @@ class ExtensionsController < ApplicationController
   def load_alchemy_root_page
     session[:language_id] ||= Alchemy::Language.get_default.try(:id)
     @root_page ||= Alchemy::Page.language_root_for(session[:language_id])
+  end
+
+  def extension_params
+    params.require(:extension).permit(:description, :url, :maintainer, :name, :keyword_list)
   end
 end
