@@ -1,0 +1,81 @@
+<%- content_for :meta_keywords do -%>
+<%= "Alchemy CMS, Extension, #{@extension.keywords}" -%>
+<%- end -%>
+<%- content_for :title do -%>
+<%= "Extensions - #{@extension.name}" -%>
+<%- end -%>
+<%- content_for :meta_description do -%>
+<%= "#{@extension.name} is an Alchemy CMS Extension" -%>
+<%- end -%>
+
+<% cache @extension do %>
+  <div id="content" class="row extension-detail">
+
+    <div class="twelve columns">
+      <p><%= link_to '< Back to extensions list', extensions_path %></p>
+      <h1><%= @extension.name %></h1>
+      <h3>by: <%= @extension.maintainer %></h3>
+    </div>
+
+    <div class="eight columns">
+      <p>
+        <b>URL:</b>
+        <%= link_to @extension.url, @extension.url, target: '_blank' %>
+      </p>
+      <p>
+        <b>Keywords:</b>
+        <%= @extension.keyword_list %>
+      </p>
+
+      <p>
+        <b>About:</b>
+      </p>
+
+      <div class="extension-description">
+        <%= raw Kramdown::Document.new(@extension.description).to_html %>
+      </div>
+
+      <h4>Comments:</h4>
+
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'alchemycms'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+    <%= render 'extensions/register' %>
+
+    <div class="four columns">
+    <% if @similiar_keyword.any? %>
+      <div class="info_table">
+        <p>Other extensions with same keyword:</p>
+        <ul class="similiar-extensions">
+          <% @similiar_keyword.each do |extension| %>
+            <li><%= link_to extension.name, extension %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <% if @similiar_maintainer.any? %>
+      <div class="info_table">
+        <p>Other extensions from same maintainer:</p>
+        <ul class="similiar-extensions">
+          <% @similiar_maintainer.each do |extension| %>
+            <li><%= link_to extension.name, extension %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    </div>
+  </div>
+<% end %>

@@ -303,6 +303,7 @@ footer {
   background-color: transparentize($gray_medium, 0.75);
   @include border-radius(8px);
   padding: 20px;
+  margin-bottom: 2em;
 
   ul {
     padding: 0;

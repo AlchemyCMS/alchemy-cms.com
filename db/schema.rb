@@ -11,24 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131003204416) do
+ActiveRecord::Schema.define(:version => 20140828192220) do
 
   create_table "alchemy_attachments", :force => true do |t|
     t.string   "name"
-    t.string   "filename"
-    t.string   "content_type"
-    t.integer  "size"
+    t.string   "file_name"
+    t.string   "file_mime_type"
+    t.integer  "file_size"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "file_uid"
   end
+
+  add_index "alchemy_attachments", ["file_uid"], :name => "index_alchemy_attachments_on_file_uid"
 
   create_table "alchemy_cells", :force => true do |t|
     t.integer  "page_id"
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_contents", :force => true do |t|
@@ -37,8 +40,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.integer  "essence_id"
     t.integer  "element_id"
     t.integer  "position"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
   end
@@ -52,8 +55,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.boolean  "public",     :default => true
     t.boolean  "folded",     :default => false
     t.boolean  "unique",     :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.integer  "cell_id"
@@ -74,8 +77,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.boolean  "show_navigation", :default => true
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_essence_booleans", :force => true do |t|
@@ -92,8 +95,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.datetime "date"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_essence_files", :force => true do |t|
@@ -102,8 +105,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.string   "css_class"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_essence_flashes", :force => true do |t|
@@ -113,16 +116,16 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.string   "player_version", :default => "9.0.28"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_essence_htmls", :force => true do |t|
     t.text     "source"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_essence_pictures", :force => true do |t|
@@ -137,8 +140,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.string   "link_target"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "crop_from"
     t.string   "crop_size"
     t.string   "render_size"
@@ -151,8 +154,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.boolean  "public"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_essence_selects", :force => true do |t|
@@ -175,8 +178,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.string   "link_target"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_essence_videos", :force => true do |t|
@@ -188,8 +191,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.boolean  "show_navigation",  :default => true
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_folded_pages", :force => true do |t|
@@ -204,8 +207,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.string   "frontpage_name"
     t.string   "page_layout",    :default => "intro"
     t.boolean  "public",         :default => false
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.boolean  "default",        :default => false
@@ -248,8 +251,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.boolean  "robot_follow",     :default => true
     t.boolean  "sitemap",          :default => true
     t.boolean  "layoutpage",       :default => false
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.integer  "language_id"
@@ -264,8 +267,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.string   "image_file_name"
     t.integer  "image_file_width"
     t.integer  "image_file_height"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.string   "upload_hash"
@@ -293,7 +296,7 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.string   "login"
     t.string   "email"
     t.string   "gender"
-    t.string   "role",                                  :default => "registered"
+    t.string   "roles",                                 :default => "registered"
     t.string   "language"
     t.string   "encrypted_password",     :limit => 128, :default => "",           :null => false
     t.string   "password_salt",          :limit => 128, :default => "",           :null => false
@@ -304,8 +307,8 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                                      :null => false
-    t.datetime "updated_at",                                                      :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.string   "reset_password_token"
@@ -315,6 +318,20 @@ ActiveRecord::Schema.define(:version => 20131003204416) do
   add_index "alchemy_users", ["email"], :name => "index_alchemy_users_on_email", :unique => true
   add_index "alchemy_users", ["login"], :name => "index_alchemy_users_on_login", :unique => true
   add_index "alchemy_users", ["reset_password_token"], :name => "index_alchemy_users_on_reset_password_token", :unique => true
+  add_index "alchemy_users", ["roles"], :name => "index_alchemy_users_on_roles"
+
+  create_table "extensions", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.text     "description"
+    t.string   "maintainer"
+    t.integer  "creator_id"
+    t.integer  "updater_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "extensions", ["maintainer"], :name => "index_extensions_on_maintainer"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"

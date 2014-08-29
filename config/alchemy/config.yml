@@ -182,7 +182,7 @@ uploader:
 link_target_options: [blank]
 
 # Should pages that redirect to an external url open the link in a new tab/window?
-open_external_links_in_new_tab: true
+open_external_links_in_new_tab: false
 
 # === Devise modules
 #

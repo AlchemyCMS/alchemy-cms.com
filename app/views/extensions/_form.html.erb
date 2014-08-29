@@ -1,0 +1,43 @@
+<%= form_for(@extension) do |f| %>
+  <% if @extension.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@extension.errors.count, "error") %> prohibited this extension from being saved:</h2>
+
+      <ul>
+      <% @extension.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <small class="hint">Mandatory. The name must be unique</small>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :maintainer %>
+    <small class="hint">Mandatory</small>
+    <%= f.text_field :maintainer %>
+  </div>
+  <div class="field">
+    <%= f.label :keywords %>
+    <small class="hint">Separate keywords by komma</small>
+    <%= f.text_field :keyword_list %>
+  </div>
+  <div class="field">
+    <%= f.label :url %>
+    <small class="hint">Start URL with http://</small>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <small>Markdown enabled</small>
+    <%= f.text_area :description, rows: 12 %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Register Extension', class: 'button' %>
+    or <%= link_to 'Cancel', extensions_path %>
+  </div>
+<% end %>

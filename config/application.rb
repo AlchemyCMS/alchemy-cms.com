@@ -65,6 +65,10 @@ module AlchemyCmsCom
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # Disable some generators
+    config.generators.stylesheets = false
+    config.generators.javascripts = false
+
     config.to_prepare do
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator.rb")) do |e|
         Rails.env.production? ? require(e) : load(e)

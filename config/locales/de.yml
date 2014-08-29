@@ -85,6 +85,9 @@ de:
       image_mosaic:
         caption: "Mosaik Bildunterschrift"
 
+    modules:
+      extensions: Erweiterungen
+
     content_validations:
       errors:
         blank: '%{field} darf nicht leer sein.'
@@ -300,91 +303,13 @@ de:
 
   # Translations for active record database models and error messages.
   activerecord:
-
     models:
-
-      alchemy/attachment:
-        one: "Datei"
-        other: "Dateien"
-
-      alchemy/element:
-        one: "Element"
-        other: "Elemente"
-
-      alchemy/language:
-        one: "Sprache"
-        other: "Sprachen"
-
-      alchemy/page:
-        one: "Seite"
-        other: "Seiten"
-
-      alchemy/picture:
-        one: Bild
-        other: Bilder
-
-      alchemy/user:
-        one: Benutzer
-        other: Benutzer
-
+      extension:
+        one: Erweiterung
+        other: Erweiterungen
     attributes:
-
-      alchemy/attachment:
-        content_type: "Dateityp"
-        created_at: "Erstellt Am"
-        filename: "Dateiname"
-        name: "Name"
-        size: "Dateigröße"
-
-      alchemy/element:
-        display_name: "Name"
-        name: "Name"
-        public: "sichtbar"
-
-      alchemy/language:
-        code: "Sprachkürzel"
-        default: "Standardsprache"
-        frontpage_name: "Name der Startseite"
-        name: "Name"
-        page_layout: "Seitentyp der Startseite"
-        public: "Sprache veröffentlichen"
-
-      alchemy/page:
-        created_at: "Erstellt am"
-        language: "Sprache"
-        locked: "Die Seite ist gesperrt"
-        locked_by: "Gesperrt durch"
-        meta_description: "Meta Beschreibung"
-        meta_keywords: "Meta Schlagwörter"
-        name: "Name"
-        page_layout: "Seitentyp"
-        public: "Seite veröffentlichen"
-        resctricted: "Seite schützen"
-        robot_follow: "den Robot Links folgen lassen"
-        robot_index: "durch Robot indizieren"
-        sitemap: "in der Seitemap anzeigen"
-        title: "Seitentitel"
-        updated_at: "Aktualisiert am"
-        urlname: "URL-Name"
-        visible: "in der Navigation anzeigen"
-
-      alchemy/picture:
-        image_filename: "Dateiname"
-        image_height: "Bildhöhe"
-        image_width: "Bildbreite"
-        name: "Name"
-
-      alchemy/user:
-        email: "Email"
-        firstname: "Vorname"
-        gender: "Anrede"
-        language: "Sprache"
-        lastname: "Nachname"
-        login: "Benutzername"
-        name: "Name"
-        password: "Passwort"
-        password_confirmation: "Passwort Bestätigung"
-        role: "Benutzerrolle"
+      extension:
+        description: "Beschreibung"
 
     errors:
       template:
@@ -413,36 +338,3 @@ de:
         less_than_or_equal_to: "%{attribute} muss kleiner oder gleich %{count} sein"
         odd: "%{attribute} muss ungerade sein"
         even: "%{attribute} muss gerade sein"
-
-      models:
-        alchemy/language:
-          attributes:
-            code:
-              invalid: 'ist nicht korrekt. Bitte exakt zwei Kleinbuchstaben verwenden.'
-
-  # Translations for the authentication system used in alchemy.
-  authlogic:
-
-    error_messages:
-      login_blank: "^Es wurde kein Benutzername angeben."
-      login_not_found: "^Dieser Benutzername existiert nicht."
-      consecutive_failed_logins_limit_exceeded: "Zu viele Fehlversuche! Dieser Account ist aus Sicherheitsgründen gesperrt worden. Bitte wenden Sie sich an den Administrator."
-      email_invalid: "Die Email-Adresse entspricht nicht dem Format einer Email-Adresse."
-      password_blank: "^Bitte ein Passwort angegeben."
-      password_invalid: "^Das Passwort ist nicht richtig."
-      not_active: "Dieser Account wurde noch nicht aktiviert."
-      not_confirmed: "Dieser Account wurde noch nicht bestätigt."
-      not_approved: "Dieser Account wurde noch nicht freigeschaltet."
-      no_authentication_details: 'Sie haben keinen Benutzernamen und/oder Passwort eingegeben.'
-      login_not_valid: "^Der Benutzername darf nur aus Buchstaben, Zahlen, Leerzeichen und .-_@ bestehen."
-      login_too_short: "^Der Benutzername ist zu kurz. Bitte mindestens 3 Zeichen verwenden."
-
-    models:
-      alchemy/user_session: 'Sitzung'
-
-    attributes:
-      alchemy/user_session:
-        login: Benutzername
-        email: Email
-        password: Passwort
-        remember_me: "eingeloggt bleiben"

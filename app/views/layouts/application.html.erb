@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= render_meta_data(title_prefix: "Alchemy CMS", title_seperator: " - ") %>
+    <% if @page %>
+      <%= render_meta_data(title_prefix: "Alchemy CMS", title_seperator: " - ") %>
+    <% else %>
+      <% if content_for?(:title) %>
+      <title>Alchemy CMS - <%= content_for(:title) %></title>
+      <% else %>
+      <title>Alchemy CMS - <%= controller_name.humanize %></title>
+      <% end %>
+      <% if content_for?(:meta_keywords) %>
+      <meta name="keywords" content="<%= content_for(:meta_keywords) -%>" />
+      <% end %>
+      <% if content_for?(:meta_description) %>
+      <meta name="description" content="<%= content_for(:meta_description) -%>" />
+      <% end %>
+    <% end %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico">
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag "application" %>
   </head>
   <body>
+    <%= render "alchemy/shared/header" %>
     <%= yield %>
+    <%= render "alchemy/shared/footer" %>
+
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
         $(".zoomable").fancybox();
@@ -22,9 +39,10 @@
 
       ga('create', 'UA-22277258-1', 'alchemy-cms.com');
       ga('send', 'pageview');
-
     </script>
-    <%= alchemy_preview_mode_code %>
-    <%= alchemy_menu_bar %>
+    <% if @page %>
+      <%= alchemy_preview_mode_code %>
+      <%= alchemy_menu_bar %>
+    <% end %>
   </body>
 </html>
