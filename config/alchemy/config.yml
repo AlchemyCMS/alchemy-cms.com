@@ -1,13 +1,13 @@
 # encoding: UTF-8
 #
-# = Configuration
-#
 # == This is the global Alchemy configuration file
 #
-# Please override your apps settings in your config/alchemy/config.yml file.
-# You can use a handy rake task to generate it.
+
+# === Require SSL for login form and all admin modules
 #
-#   rake alchemy:app_structure:create:config
+# NOTE: You have to create a SSL certificate on your server to make this work
+#
+require_ssl: false
 
 # === Auto Log Out Time
 #
@@ -25,16 +25,6 @@ auto_logout_time: 30
 redirect_index: true
 redirect_to_public_child: true
 
-# === Enable the Ferret fulltext search engine
-#
-# Tip! For best performance and stability install a crontab that reindexes ferrets search index periodly.
-#
-# ==== Example:
-#
-#   cd ~/html/alchemy/current && RAILS_ENV=production rake ferret:rebuild_index
-#
-ferret: true
-
 # === Page caching
 #
 # Enable/Disable pagecaching globally.
@@ -45,11 +35,11 @@ cache_pages: true
 
 # === Sitemap
 #
-# Alchemy renders a nice HTML (<ul><li> style) and XML (Google conform!) Sitemap for you.
+# Alchemy creates a XML, Google compatible, sitemap for you.
 #
-# Just place a sitemap element for a page layout in your page_layouts.yml file. Alchemy does the rest.
+# The url is: http://your-domain.tld/sitemap.xml
 #
-# ==== Options:
+# ==== Config Options:
 #
 #   show_root [Boolean] # Show language root page in sitemap?
 #   show_flag [Boolean] # Enables the Checkbox in Page#update overlay. So your customer can set the visibilit of pages in the sitemap.
@@ -60,42 +50,36 @@ sitemap:
 
 # === URL nesting
 #
-# By default Alchemy does not nest page urls respectivley to their page tree position.
+# Since Alchemy 2.6.0 page urls are nested, respectivley to their tree position.
 #
-# Enable +url_nesting+ to get nested urls.
+# Disable +url_nesting+ to get slug only urls.
 #
-# ==== Example of a nested url:
+# NOTE: After changing the url_nesting, you should run one of these convert rake task:
 #
-# +http://homepage.com/company/history/the-early-years+
+#   rake alchemy:convert:urlnames:to_nested
+#   rake alchemy:convert:urlnames:to_slug
 #
-# Alchemy supports url nesting up to three levels deep. We think that's more then enough,
-# because URLs like this are possible:
-#
-# +http://homepage.com/en/2011/12/08/my-post
-#
-url_nesting: false
+url_nesting: true
 
 # === Picture rendering settings
 #
-# Alchemy uses Fleximage and RMagick to render images. Use {:image_size => "XXXxYYY", :crop => BOOLEAN [true]} to resize images.
+# Alchemy uses Dragonfly to render images. Use {:image_size => "XXXxYYY", :crop => BOOLEAN [true]} to resize images.
 #
-# See https://github.com/Squeegy/fleximage for further infos.
+# See http://markevans.github.com/dragonfly for further infos.
 #
 # ==== Options:
 #
 #   output_image_jpg_quality  [Integer]       # If image gets rendered as JPG this is the quality setting for it. (Default 85)
-#   preprocess_image_resize   [String]        # I.E.: 1000x1000. If you are limited on diskspace use this option to downsize large images to that value. (Default nil)
-#   image_store_format        [String]        # The storage format of the master image. All images get rendered from this master image, so a lossless format (png) is strongly recommended. (Default png)
+#   preprocess_image_resize   [String]        # Use this option to resize images to that value. Downsizing example: '1000x1000>' (Default nil)
 #   image_output_format       [String]        # The global image output format setting.
 #
 # TIP: You can always override the output format in the options of your Essence. I.E. {:format => :gif}
 #
 output_image_jpg_quality: 85
-preprocess_image_resize: 1000x1000
-image_store_format: png
+preprocess_image_resize:
 image_output_format: jpg
 
-# This is the default language for the seeder.
+# This is the default language for new sites.
 default_language:
   code: en
   name: English
@@ -139,10 +123,11 @@ mailer:
 
 # === User roles
 #
-# You can add own user roles. To set permissions for this roles please add an authorization_rules.rb file in your config folder.
+# You can add own user roles.
+#
 # Further documentation for the auth system used please visit:
 #
-# https://github.com/stffn/declarative_authorization/blob/master/README.rdoc
+# https://github.com/ryanb/cancan/wiki
 #
 # ==== Translating User roles
 #
@@ -152,7 +137,7 @@ mailer:
 #     user_roles:
 #       rolename: Name of the role
 #
-user_roles: [registered, author, editor, admin]
+user_roles: [member, author, editor, admin]
 
 # === Uploader Settings
 #
@@ -163,9 +148,13 @@ user_roles: [registered, author, editor, admin]
 #
 uploader:
   upload_limit: 50
-  file_size_limit: 500
+  file_size_limit: 100
   allowed_filetypes:
-    pictures: [jpg, jpeg, gif, png, psd, pdf]
+    pictures:
+    - :jpg
+    - :jpeg
+    - :gif
+    - :png
     attachments: ['*']
 
 # === Link Target Options
@@ -184,14 +173,16 @@ link_target_options: [blank]
 # Should pages that redirect to an external url open the link in a new tab/window?
 open_external_links_in_new_tab: false
 
-# === Devise modules
+# === Format matchers
 #
-# List of Devise modules that should be activated on the user model.
+# Named aliases for regular expressions that can be used in various places.
+# The most common use case is the format validation of essences, or attribute validations of your individual models.
 #
-devise_modules:
-  - :database_authenticatable
-  - :trackable
-  - :validatable
-  - :timeoutable
-  - :recoverable
-  - :encryptable # Uncomment this if you are upgrading from an Alchemy version < 2.5.0
+# == Example:
+#
+#   validates_format_of :url, with: Alchemy::Config.get('format_matchers')['url']
+#
+format_matchers:
+  email: !ruby/regexp '/\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/'
+  url: !ruby/regexp '/\A[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?\z/ix'
+  link_url: !ruby/regexp '/^(mailto:|\/|[a-z]+:\/\/)/'

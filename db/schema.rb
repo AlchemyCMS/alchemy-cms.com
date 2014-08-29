@@ -9,11 +9,11 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140828192220) do
+ActiveRecord::Schema.define(version: 20140829194051) do
 
-  create_table "alchemy_attachments", :force => true do |t|
+  create_table "alchemy_attachments", force: true do |t|
     t.string   "name"
     t.string   "file_name"
     t.string   "file_mime_type"
@@ -25,16 +25,16 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.string   "file_uid"
   end
 
-  add_index "alchemy_attachments", ["file_uid"], :name => "index_alchemy_attachments_on_file_uid"
+  add_index "alchemy_attachments", ["file_uid"], name: "index_alchemy_attachments_on_file_uid", using: :btree
 
-  create_table "alchemy_cells", :force => true do |t|
+  create_table "alchemy_cells", force: true do |t|
     t.integer  "page_id"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "alchemy_contents", :force => true do |t|
+  create_table "alchemy_contents", force: true do |t|
     t.string   "name"
     t.string   "essence_type"
     t.integer  "essence_id"
@@ -46,15 +46,15 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.integer  "updater_id"
   end
 
-  add_index "alchemy_contents", ["element_id", "position"], :name => "index_contents_on_element_id_and_position"
+  add_index "alchemy_contents", ["element_id", "position"], name: "index_contents_on_element_id_and_position", using: :btree
 
-  create_table "alchemy_elements", :force => true do |t|
+  create_table "alchemy_elements", force: true do |t|
     t.string   "name"
     t.integer  "position"
     t.integer  "page_id"
-    t.boolean  "public",     :default => true
-    t.boolean  "folded",     :default => false
-    t.boolean  "unique",     :default => false
+    t.boolean  "public",     default: true
+    t.boolean  "folded",     default: false
+    t.boolean  "unique",     default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "creator_id"
@@ -62,36 +62,36 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.integer  "cell_id"
   end
 
-  add_index "alchemy_elements", ["page_id", "position"], :name => "index_elements_on_page_id_and_position"
+  add_index "alchemy_elements", ["page_id", "position"], name: "index_elements_on_page_id_and_position", using: :btree
 
-  create_table "alchemy_elements_alchemy_pages", :id => false, :force => true do |t|
+  create_table "alchemy_elements_alchemy_pages", id: false, force: true do |t|
     t.integer "element_id"
     t.integer "page_id"
   end
 
-  create_table "alchemy_essence_audios", :force => true do |t|
+  create_table "alchemy_essence_audios", force: true do |t|
     t.integer  "attachment_id"
-    t.integer  "width",           :default => 400
-    t.integer  "height",          :default => 300
-    t.boolean  "show_eq",         :default => true
-    t.boolean  "show_navigation", :default => true
+    t.integer  "width",           default: 400
+    t.integer  "height",          default: 300
+    t.boolean  "show_eq",         default: true
+    t.boolean  "show_navigation", default: true
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "alchemy_essence_booleans", :force => true do |t|
+  create_table "alchemy_essence_booleans", force: true do |t|
     t.boolean  "value"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "creator_id"
     t.integer  "updater_id"
   end
 
-  add_index "alchemy_essence_booleans", ["value"], :name => "index_alchemy_essence_booleans_on_value"
+  add_index "alchemy_essence_booleans", ["value"], name: "index_alchemy_essence_booleans_on_value", using: :btree
 
-  create_table "alchemy_essence_dates", :force => true do |t|
+  create_table "alchemy_essence_dates", force: true do |t|
     t.datetime "date"
     t.integer  "creator_id"
     t.integer  "updater_id"
@@ -99,7 +99,7 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.datetime "updated_at"
   end
 
-  create_table "alchemy_essence_files", :force => true do |t|
+  create_table "alchemy_essence_files", force: true do |t|
     t.integer  "attachment_id"
     t.string   "title"
     t.string   "css_class"
@@ -109,18 +109,18 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.datetime "updated_at"
   end
 
-  create_table "alchemy_essence_flashes", :force => true do |t|
+  create_table "alchemy_essence_flashes", force: true do |t|
     t.integer  "attachment_id"
-    t.integer  "width",          :default => 400
-    t.integer  "height",         :default => 300
-    t.string   "player_version", :default => "9.0.28"
+    t.integer  "width",          default: 400
+    t.integer  "height",         default: 300
+    t.string   "player_version", default: "9.0.28"
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "alchemy_essence_htmls", :force => true do |t|
+  create_table "alchemy_essence_htmls", force: true do |t|
     t.text     "source"
     t.integer  "creator_id"
     t.integer  "updater_id"
@@ -128,7 +128,7 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.datetime "updated_at"
   end
 
-  create_table "alchemy_essence_pictures", :force => true do |t|
+  create_table "alchemy_essence_pictures", force: true do |t|
     t.integer  "picture_id"
     t.string   "caption"
     t.string   "title"
@@ -147,10 +147,9 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.string   "render_size"
   end
 
-  create_table "alchemy_essence_richtexts", :force => true do |t|
+  create_table "alchemy_essence_richtexts", force: true do |t|
     t.text     "body"
     t.text     "stripped_body"
-    t.boolean  "do_not_index",  :default => false
     t.boolean  "public"
     t.integer  "creator_id"
     t.integer  "updater_id"
@@ -158,23 +157,22 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.datetime "updated_at"
   end
 
-  create_table "alchemy_essence_selects", :force => true do |t|
+  create_table "alchemy_essence_selects", force: true do |t|
     t.string   "value"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "creator_id"
     t.integer  "updater_id"
   end
 
-  add_index "alchemy_essence_selects", ["value"], :name => "index_alchemy_essence_selects_on_value"
+  add_index "alchemy_essence_selects", ["value"], name: "index_alchemy_essence_selects_on_value", using: :btree
 
-  create_table "alchemy_essence_texts", :force => true do |t|
+  create_table "alchemy_essence_texts", force: true do |t|
     t.text     "body"
     t.string   "link"
     t.string   "link_title"
     t.string   "link_class_name"
-    t.boolean  "public",          :default => false
-    t.boolean  "do_not_index",    :default => false
+    t.boolean  "public",          default: false
     t.string   "link_target"
     t.integer  "creator_id"
     t.integer  "updater_id"
@@ -182,54 +180,54 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.datetime "updated_at"
   end
 
-  create_table "alchemy_essence_videos", :force => true do |t|
+  create_table "alchemy_essence_videos", force: true do |t|
     t.integer  "attachment_id"
     t.integer  "width"
     t.integer  "height"
-    t.boolean  "allow_fullscreen", :default => true
-    t.boolean  "auto_play",        :default => false
-    t.boolean  "show_navigation",  :default => true
+    t.boolean  "allow_fullscreen", default: true
+    t.boolean  "auto_play",        default: false
+    t.boolean  "show_navigation",  default: true
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "alchemy_folded_pages", :force => true do |t|
+  create_table "alchemy_folded_pages", force: true do |t|
     t.integer "page_id"
     t.integer "user_id"
-    t.boolean "folded",  :default => false
+    t.boolean "folded",  default: false
   end
 
-  create_table "alchemy_languages", :force => true do |t|
+  create_table "alchemy_languages", force: true do |t|
     t.string   "name"
     t.string   "language_code"
     t.string   "frontpage_name"
-    t.string   "page_layout",    :default => "intro"
-    t.boolean  "public",         :default => false
+    t.string   "page_layout",    default: "intro"
+    t.boolean  "public",         default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.boolean  "default",        :default => false
-    t.string   "country_code",   :default => "",      :null => false
+    t.boolean  "default",        default: false
+    t.string   "country_code",   default: "",      null: false
     t.integer  "site_id"
   end
 
-  add_index "alchemy_languages", ["language_code", "country_code"], :name => "index_alchemy_languages_on_language_code_and_country_code"
-  add_index "alchemy_languages", ["language_code"], :name => "index_alchemy_languages_on_language_code"
-  add_index "alchemy_languages", ["site_id"], :name => "index_alchemy_languages_on_site_id"
+  add_index "alchemy_languages", ["language_code", "country_code"], name: "index_alchemy_languages_on_language_code_and_country_code", using: :btree
+  add_index "alchemy_languages", ["language_code"], name: "index_alchemy_languages_on_language_code", using: :btree
+  add_index "alchemy_languages", ["site_id"], name: "index_alchemy_languages_on_site_id", using: :btree
 
-  create_table "alchemy_legacy_page_urls", :force => true do |t|
-    t.string   "urlname",    :null => false
-    t.integer  "page_id",    :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "alchemy_legacy_page_urls", force: true do |t|
+    t.string   "urlname",    null: false
+    t.integer  "page_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "alchemy_legacy_page_urls", ["urlname"], :name => "index_alchemy_legacy_page_urls_on_urlname"
+  add_index "alchemy_legacy_page_urls", ["urlname"], name: "index_alchemy_legacy_page_urls_on_urlname", using: :btree
 
-  create_table "alchemy_pages", :force => true do |t|
+  create_table "alchemy_pages", force: true do |t|
     t.string   "name"
     t.string   "urlname"
     t.string   "title"
@@ -242,27 +240,28 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.integer  "rgt"
     t.integer  "parent_id"
     t.integer  "depth"
-    t.boolean  "visible",          :default => false
-    t.boolean  "public",           :default => false
-    t.boolean  "locked",           :default => false
+    t.boolean  "visible",          default: false
+    t.boolean  "public",           default: false
+    t.boolean  "locked",           default: false
     t.integer  "locked_by"
-    t.boolean  "restricted",       :default => false
-    t.boolean  "robot_index",      :default => true
-    t.boolean  "robot_follow",     :default => true
-    t.boolean  "sitemap",          :default => true
-    t.boolean  "layoutpage",       :default => false
+    t.boolean  "restricted",       default: false
+    t.boolean  "robot_index",      default: true
+    t.boolean  "robot_follow",     default: true
+    t.boolean  "sitemap",          default: true
+    t.boolean  "layoutpage",       default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.integer  "language_id"
+    t.datetime "published_at"
   end
 
-  add_index "alchemy_pages", ["language_id"], :name => "index_pages_on_language_id"
-  add_index "alchemy_pages", ["parent_id", "lft"], :name => "index_pages_on_parent_id_and_lft"
-  add_index "alchemy_pages", ["urlname"], :name => "index_pages_on_urlname"
+  add_index "alchemy_pages", ["language_id"], name: "index_pages_on_language_id", using: :btree
+  add_index "alchemy_pages", ["parent_id", "lft"], name: "index_pages_on_parent_id_and_lft", using: :btree
+  add_index "alchemy_pages", ["urlname"], name: "index_pages_on_urlname", using: :btree
 
-  create_table "alchemy_pictures", :force => true do |t|
+  create_table "alchemy_pictures", force: true do |t|
     t.string   "name"
     t.string   "image_file_name"
     t.integer  "image_file_width"
@@ -277,31 +276,31 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.integer  "image_file_size"
   end
 
-  create_table "alchemy_sites", :force => true do |t|
+  create_table "alchemy_sites", force: true do |t|
     t.string   "host"
     t.string   "name"
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
-    t.boolean  "public",                   :default => false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.boolean  "public",                   default: false
     t.text     "aliases"
     t.boolean  "redirect_to_primary_host"
   end
 
-  add_index "alchemy_sites", ["host", "public"], :name => "alchemy_sites_public_hosts_idx"
-  add_index "alchemy_sites", ["host"], :name => "index_alchemy_sites_on_host"
+  add_index "alchemy_sites", ["host", "public"], name: "alchemy_sites_public_hosts_idx", using: :btree
+  add_index "alchemy_sites", ["host"], name: "index_alchemy_sites_on_host", using: :btree
 
-  create_table "alchemy_users", :force => true do |t|
+  create_table "alchemy_users", force: true do |t|
     t.string   "firstname"
     t.string   "lastname"
     t.string   "login"
     t.string   "email"
     t.string   "gender"
-    t.string   "roles",                                 :default => "registered"
+    t.string   "alchemy_roles",                      default: "member"
     t.string   "language"
-    t.string   "encrypted_password",     :limit => 128, :default => "",           :null => false
-    t.string   "password_salt",          :limit => 128, :default => "",           :null => false
-    t.integer  "sign_in_count",                         :default => 0,            :null => false
-    t.integer  "failed_attempts",                       :default => 0,            :null => false
+    t.string   "encrypted_password",     limit: 128, default: "",       null: false
+    t.string   "password_salt",          limit: 128, default: "",       null: false
+    t.integer  "sign_in_count",                      default: 0,        null: false
+    t.integer  "failed_attempts",                    default: 0,        null: false
     t.datetime "last_request_at"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
@@ -315,25 +314,26 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.datetime "reset_password_sent_at"
   end
 
-  add_index "alchemy_users", ["email"], :name => "index_alchemy_users_on_email", :unique => true
-  add_index "alchemy_users", ["login"], :name => "index_alchemy_users_on_login", :unique => true
-  add_index "alchemy_users", ["reset_password_token"], :name => "index_alchemy_users_on_reset_password_token", :unique => true
-  add_index "alchemy_users", ["roles"], :name => "index_alchemy_users_on_roles"
+  add_index "alchemy_users", ["alchemy_roles"], name: "index_alchemy_users_on_alchemy_roles", using: :btree
+  add_index "alchemy_users", ["email"], name: "index_alchemy_users_on_email", unique: true, using: :btree
+  add_index "alchemy_users", ["login"], name: "index_alchemy_users_on_login", unique: true, using: :btree
+  add_index "alchemy_users", ["reset_password_token"], name: "index_alchemy_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "extensions", :force => true do |t|
+  create_table "extensions", force: true do |t|
     t.string   "name"
     t.string   "url"
     t.text     "description"
     t.string   "maintainer"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "keywords"
   end
 
-  add_index "extensions", ["maintainer"], :name => "index_extensions_on_maintainer"
+  add_index "extensions", ["maintainer"], name: "index_extensions_on_maintainer", using: :btree
 
-  create_table "taggings", :force => true do |t|
+  create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
     t.string   "taggable_type"
@@ -343,11 +343,14 @@ ActiveRecord::Schema.define(:version => 20140828192220) do
     t.datetime "created_at"
   end
 
-  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
-  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
 
-  create_table "tags", :force => true do |t|
-    t.string "name"
+  create_table "tags", force: true do |t|
+    t.string  "name"
+    t.integer "taggings_count", default: 0
   end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
 end
