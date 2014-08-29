@@ -8,9 +8,9 @@
 <%= "#{@extension.name} is an Alchemy CMS Extension" -%>
 <%- end -%>
 
-<% cache @extension do %>
-  <div id="content" class="row extension-detail">
+<div id="content" class="row extension-detail">
 
+  <% cache @extension do %>
     <div class="twelve columns">
       <p><%= link_to '< Back to extensions list', extensions_path %></p>
       <h1><%= @extension.name %></h1>
@@ -52,30 +52,31 @@
       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
-    <%= render 'extensions/register' %>
+  <% end %>
 
-    <div class="four columns">
-    <% if @similiar_keyword.any? %>
-      <div class="info_table">
-        <p>Other extensions with same keyword:</p>
-        <ul class="similiar-extensions">
-          <% @similiar_keyword.each do |extension| %>
-            <li><%= link_to extension.name, extension %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+  <%= render 'extensions/register' %>
 
-    <% if @similiar_maintainer.any? %>
-      <div class="info_table">
-        <p>Other extensions from same maintainer:</p>
-        <ul class="similiar-extensions">
-          <% @similiar_maintainer.each do |extension| %>
-            <li><%= link_to extension.name, extension %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+  <div class="four columns">
+  <% if @similiar_keyword.any? %>
+    <div class="info_table">
+      <p>Other extensions with same keyword:</p>
+      <ul class="similiar-extensions">
+        <% @similiar_keyword.each do |extension| %>
+          <li><%= link_to extension.name, extension %></li>
+        <% end %>
+      </ul>
     </div>
+  <% end %>
+
+  <% if @similiar_maintainer.any? %>
+    <div class="info_table">
+      <p>Other extensions from same maintainer:</p>
+      <ul class="similiar-extensions">
+        <% @similiar_maintainer.each do |extension| %>
+          <li><%= link_to extension.name, extension %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   </div>
-<% end %>
+</div>
