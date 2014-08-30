@@ -2,7 +2,7 @@
 <html>
   <head>
     <% if @page %>
-      <%= render_meta_data(title_prefix: "Alchemy CMS", title_seperator: " - ") %>
+      <%= render_meta_data(title_prefix: "Alchemy CMS", title_separator: " - ") %>
     <% else %>
       <% if content_for?(:title) %>
       <title>Alchemy CMS - <%= content_for(:title) %></title>
