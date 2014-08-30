@@ -28,4 +28,5 @@ group :development do
   gem 'caplock', github: 'Druwerd/caplock'
   gem 'thin'
   gem 'quiet_assets'
+  gem 'spring'
 end
