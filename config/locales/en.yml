@@ -123,6 +123,9 @@ en:
       extension:
         one: Extension
         other: Extensions
+      showcase:
+        one: Showcase
+        other: Showcases
     errors:
       template:
         header:
