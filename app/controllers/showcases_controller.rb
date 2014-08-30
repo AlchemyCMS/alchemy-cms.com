@@ -1,7 +1,7 @@
 class ShowcasesController < ApplicationController
 
   def index
-    @showcases = Showcase.all.order('title ASC').page(params[:page] || 1).per(5)
+    @showcases = Showcase.all.order('RAND()').page(params[:page] || 1).per(3)
   end
 
   def new
