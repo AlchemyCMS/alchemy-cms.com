@@ -1,0 +1,31 @@
+<%- content_for :meta_keywords do -%>
+<%= 'Alchemy CMS, Showcases, Examples, Sites' -%>
+<%- end -%>
+<%- content_for :meta_description do -%>
+<%= 'Showcases, Examples and Sites build with Alchemy CMS.' -%>
+<%- end -%>
+
+<div id="content" class="row">
+  <div class="twelve columns">
+    <h1>Found <%= @showcases.total_count %> Alchemy <%= (Showcase.model_name.human(count: @showcases.total_count)) %></h1>
+    <hr>
+  </div>
+  <div class="eight columns">
+    <ul class="showcases-list">
+      <% @showcases.each do |showcase| %>
+      <li class="<%= cycle('even', 'odd') %>">
+        <h3><%= link_to showcase.title, showcase.url, target: '_blank', rel: 'nofollow' %></h3>
+        <p>
+          <b>by:</b>
+          <%= showcase.creator %>
+        </p>
+        <%= image_tag showcase.screenshot.thumb('450x280#').url if showcase.screenshot_stored? %>
+      </li>
+      <% end %>
+    </ul>
+    <hr>
+    <%= paginate(@showcases) %>
+  </div>
+
+  <%= render 'showcases/register' %>
+</div>

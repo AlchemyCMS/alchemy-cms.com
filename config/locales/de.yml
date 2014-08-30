@@ -89,115 +89,7 @@ de:
 
     modules:
       extensions: Erweiterungen
-
-    content_validations:
-      errors:
-        blank: '%{field} darf nicht leer sein.'
-        wrong_format: '%{field} hat das falsche Format.'
-
-    essence_pictures:
-      css_classes:
-        left: 'Links vom Text'
-        right: 'Rechts vom Text'
-        no_float: 'Über dem Text'
-
-    # == Translations for the build in full text search.
-    search_result_page:
-      no_results: 'Ihre Suche ergab kein Ergebnis.'
-      result_heading: "Ihre Suche nach '%{query}'"
-      result_count:
-        zero: "Ergab keine Ergebnisse"
-        one: "Ergab ein Ergebnis"
-        other: "Ergab %{count} Ergebnisse"
-
-    # == Contactform translations
-    contactform:
-      labels:
-        salutation: 'Anrede'
-        choose: Wählen Sie
-        mr: 'Herr'
-        mrs: 'Frau'
-        firstname: 'Vorname'
-        lastname: 'Nachname'
-        address: 'Straße/Nr'
-        zip: 'PLZ/Ort'
-        phone: 'Telefon'
-        email: 'Email'
-        message: 'Nachricht'
-        send: 'Nachricht absenden!'
-        mandatory_fields: 'Pflichtfelder. Bitte füllen Sie diese Felder aus. Vielen Dank!'
-        success_page: 'Folgeseite'
-      # Translations for the contactform validations.
-      # Validations are set in the config/alchemy/config.yml mailer section.
-      validations:
-        enter_name: 'Bitte geben Sie Ihren Namen an'
-        enter_mail: 'Bitte geben Sie Ihre Email an'
-        wrong_email_format: 'Die Email Adresse scheint nicht richtig zu sein.'
-      # The flash message shown after succesfully sending the message.
-      messages:
-        success: 'Ihre Nachricht wurde erfolgreich übermittelt.'
-
-    # == Translations for the mailer templates
-    mailer:
-      # The mail the user gets after registering for alchemy
-      new_user_mail:
-        subject: 'Ihre Zugangsdaten zu meiner Seite'
-        welcome: 'Willkommen auf meiner Seite'
-        login_url_explanation: 'Zum Anmelden klicken Sie bitte auf folgenden Link'
-        username: 'Ihr Benutzername'
-        password: 'Ihr Passwort'
-        greeting: 'Einen schönen Tag noch'
-
-    # == Translated language names for translation select
-    translations:
-      de: 'Deutsch'
-      en: 'Englisch'
-
-    # == User roles translations
-    user_roles:
-      registered: "Registriert"
-      author: "Author"
-      editor: "Redakteur"
-      admin: "Administrator"
-
-    # == Mime Types translations
-    # These are human readable mime types used for the document-type row in archive files.
-    mime_types:
-      audio/mp4: 'MP4-Audio'
-      application/msword: 'Word-Dokument'
-      application/rtf: 'RTF-Dokument'
-      audio/mpeg: 'MP3-Audio'
-      text/plain: 'Text-Dokument'
-      video/mp4: 'MP4-Video'
-      video/mpeg: 'MPEG-Video'
-      application/pdf: 'PDF-Dokument'
-      application/x-flash-video: 'Flash-Video'
-      video/x-flv: 'Flash-Video'
-      application/x-shockwave-flash: 'Flash-Film'
-      application/zip: 'ZIP-Archiv'
-      application/x-rar: 'RAR-Archiv'
-      application/vnd:
-        ms-excel: 'Excel-Dokument'
-      video/quicktime: 'Quicktime-Video'
-      image/x-psd: 'Photoshop-Datei'
-      image/gif: 'GIF-Bild'
-      image/jpeg: 'JPG-Bild'
-      image/png: 'PNG-Bild'
-      video/x-msvideo: 'AVI-Video'
-      video/x-ms-wmv: 'Windows Media Video'
-      image/tiff: 'TIFF-Bild'
-      'text/x-vcard': 'vCard'
-      application/vcard: 'vCard'
-
-    link_target_options:
-      default: gleichem Fenster
-      blank: neuem Fenster/Tab
-      overlay: einem Overlay
-
-  # END of Alchemy translation
-
-  will_paginate:
-    page_gap: '...'
+      showcases: Showcases
 
   # == Rails translations
   # Below are Rails specific translations for date, time, number, currency, error messages and so on.
@@ -309,8 +201,13 @@ de:
       extension:
         one: Erweiterung
         other: Erweiterungen
+      showcase:
+        one: Showcase
+        other: Showcases
     attributes:
       extension:
+        description: "Beschreibung"
+      showcase:
         description: "Beschreibung"
 
     errors:

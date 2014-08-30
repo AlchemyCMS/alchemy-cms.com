@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140829194051) do
+ActiveRecord::Schema.define(version: 20140830091427) do
 
   create_table "alchemy_attachments", force: true do |t|
     t.string   "name"
@@ -332,6 +332,18 @@ ActiveRecord::Schema.define(version: 20140829194051) do
   end
 
   add_index "extensions", ["maintainer"], name: "index_extensions_on_maintainer", using: :btree
+
+  create_table "showcases", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "creator"
+    t.text     "description"
+    t.string   "screenshot_uid"
+    t.integer  "creator_id"
+    t.integer  "updater_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"

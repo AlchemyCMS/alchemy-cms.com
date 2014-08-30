@@ -23,6 +23,9 @@ module AlchemyCmsCom
     # Disable some generators
     config.generators.stylesheets = false
     config.generators.javascripts = false
+    config.generators.serializers = false
+    config.generators.test_unit = false
+    config.generators.helpers = false
 
     # Load monkey patches
     config.to_prepare do

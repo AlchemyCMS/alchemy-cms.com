@@ -1,0 +1,9 @@
+<%= simple_form_for [main_app, :admin, @showcase] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :creator %>
+  <%= f.input :url %>
+  <%= f.input :screenshot, as: 'file' %>
+  <div class="submit">
+    <%= f.submit _t(:save) %>
+  </div>
+<% end %>

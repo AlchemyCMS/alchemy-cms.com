@@ -13,3 +13,19 @@ Alchemy::Modules.register_module({
     }]
   }
 })
+
+Alchemy::Modules.register_module({
+  name: 'showcases',
+  order: 2,
+  navigation: {
+    name: 'modules.showcases',
+    controller: '/admin/showcases',
+    action: 'index',
+    image: '/assets/showcases.png',
+    sub_navigation: [{
+      name: 'modules.showcases',
+      controller: '/admin/showcases',
+      action: 'index'
+    }]
+  }
+})
