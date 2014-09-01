@@ -12,7 +12,7 @@ module Alchemy
       if @message.valid?
         post_to_sugar_crm! if !Rails.env.development?
         Messages.contact_form_confirmation_mail(@message).deliver
-        Messages.contact_form_mail(@message, "mail@magiclabs.de", "mail@magiclabs.de", "Inquiry for Package: #{@message.package}").deliver
+        Messages.contact_form_mail(@message, "support@magiclabs.de", "mail@magiclabs.de", "Inquiry for Package: #{@message.package}").deliver
       else
         render template: 'alchemy/pages/show'
       end

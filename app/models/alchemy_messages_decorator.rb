@@ -2,7 +2,7 @@ module Alchemy
   Messages.class_eval do
     def contact_form_confirmation_mail(message)
       mail(
-        from: "mail@magiclabs.de",
+        from: "support@magiclabs.de",
         to: message.email1,
         reply_to: "mail@magiclabs.de",
         subject: "Professional Alchemy CMS Support - Your inquiry"
