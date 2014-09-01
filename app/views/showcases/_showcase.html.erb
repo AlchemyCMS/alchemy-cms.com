@@ -1,0 +1,10 @@
+<% cache(showcase) do %>
+<li class="<%= cycle('even', 'odd') %>">
+  <h3><%= link_to showcase.title, showcase.url, target: '_blank', rel: 'nofollow' %></h3>
+  <p>
+    <b>by:</b>
+    <%= showcase.creator %>
+  </p>
+  <%= image_tag showcase.screenshot.thumb('450x280#').url if showcase.screenshot_stored? %>
+</li>
+<% end %>
