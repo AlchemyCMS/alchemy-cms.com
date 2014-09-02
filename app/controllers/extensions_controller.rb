@@ -4,7 +4,7 @@ class ExtensionsController < ApplicationController
   before_filter :load_alchemy_root_page
 
   def index
-    @extensions = Extension.scoped
+    @extensions = Extension.published
     if params[:keyword]
       @extensions = @extensions.tagged_with(params[:keyword])
     end
