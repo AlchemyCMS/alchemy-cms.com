@@ -1,5 +1,5 @@
 <% cache(element) do %>
-  <div class="text" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
-  	<%= render_essence_view_by_name(element, 'bigtext') %>
-  </div>
+  <%= element_view_for(element) do |el| %>
+  	<%= el.render :bigtext %>
+  <% end %>
 <% end %>

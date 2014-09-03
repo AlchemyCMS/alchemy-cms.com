@@ -24,3 +24,8 @@
 - name: search_results
   cache: false
   searchresults: true
+
+- name: showcases
+  unique: true
+  layoutpage: true
+  elements: [headline, text]

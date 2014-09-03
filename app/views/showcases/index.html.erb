@@ -7,7 +7,7 @@
 
 <div id="content" class="row">
   <div class="twelve columns">
-    <h1>Found <%= @showcases.total_count %> Alchemy <%= (Showcase.model_name.human(count: @showcases.total_count)) %></h1>
+    <%= render_elements(from_page: showcases_page) %>
     <hr>
   </div>
   <div class="eight columns">
