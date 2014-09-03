@@ -6,7 +6,7 @@ class Extension < ActiveRecord::Base
   validates :url, presence: true, format: {with: /\Ahttps?:\/\//}
 
   scope :maintained_by, ->(maintainer) { where(maintainer: maintainer) }
-  scope :published, where(public: true)
+  scope :published, -> { where(public: true) }
 
   def to_param
     "#{id}-#{name.parameterize}"

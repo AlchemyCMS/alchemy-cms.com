@@ -4,5 +4,5 @@ class Showcase < ActiveRecord::Base
   validates :title, presence: true, uniqueness: true
   validates :url, presence: true, format: {with: /\Ahttps?:\/\//}
 
-  scope :published, where(public: true)
+  scope :published, -> { where(public: true) }
 end
