@@ -17,14 +17,24 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :url %>
+    <small>Please begin with http(s)://</small>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
     <%= f.label :creator %>
     <small>Optional</small>
     <%= f.text_field :creator %>
   </div>
   <div class="field">
-    <%= f.label :url %>
-    <small>Please begin with http://</small>
-    <%= f.text_field :url %>
+    <%= f.label :creator_url %>
+    <small>Please begin with http(s)://</small>
+    <%= f.text_field :creator_url %>
+  </div>
+  <div class="field">
+    <%= f.label :keyword_list %>
+    <small>Please separate keywords by comma</small>
+    <%= f.text_field :keyword_list %>
   </div>
   <div class="field">
     <%= f.label :screenshot %>
@@ -37,6 +47,6 @@
     <p></p>
   </div>
   <div class="actions">
-    <%= f.submit class: 'button' %> or <%= link_to 'cancel', showcases_path %>
+    <%= f.submit 'Register Showcase', class: 'button' %> or <%= link_to 'cancel', showcases_path %>
   </div>
 <% end %>

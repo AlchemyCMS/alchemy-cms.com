@@ -1,7 +1,13 @@
 class ShowcasesController < ApplicationController
 
   def index
-    @showcases = Showcase.published.order('title ASC').page(params[:page] || 1).per(8)
+    @showcases = Showcase.published.order('title ASC')
+    if params[:keyword]
+      @showcases = @showcases.tagged_with(params[:keyword])
+    end
+    @showcases = @showcases.page(params[:page] || 1).per(8)
+
+    @keywords = Showcase.tag_counts_on(:keywords).order('count DESC, RAND()').limit(5)
   end
 
   def new
@@ -23,6 +29,6 @@ class ShowcasesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def showcase_params
-    params.require(:showcase).permit(:title, :url, :creator, :description, :screenshot, :retained_screenshot)
+    params.require(:showcase).permit(:title, :url, :creator, :creator_url, :keyword_list, :screenshot, :retained_screenshot)
   end
 end

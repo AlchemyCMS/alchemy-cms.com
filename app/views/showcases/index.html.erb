@@ -8,6 +8,12 @@
 <div id="content" class="row">
   <div class="twelve columns">
     <%= render_elements(from_page: showcases_page) %>
+    <% if params[:keyword] %>
+      <p>
+        <b>Filtered by keyword:</b> <%= params[:keyword] %>
+        <%= link_to('(remove)', showcases_path) %>
+      </p>
+    <% end %>
     <hr>
   </div>
   <div class="eight columns">
@@ -19,4 +25,18 @@
   </div>
 
   <%= render 'showcases/register' %>
+
+  <div class="four columns">
+    <div class="info_table">
+      <p>Popular Keywords:</p>
+      <ul>
+      <% @keywords.each do |keyword| %>
+        <li>
+          <%= link_to(keyword.name, showcases_path(keyword: keyword.name)) %>
+          <small>(<%= keyword.count %>)</small>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
 </div>

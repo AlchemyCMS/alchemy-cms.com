@@ -3,8 +3,14 @@
   <h3><%= link_to showcase.title, showcase.url, target: '_blank', rel: 'nofollow' %></h3>
   <p>
     <b>by:</b>
-    <%= showcase.creator %>
+    <%= link_to_if showcase.creator_url.present?, showcase.creator, showcase.creator_url, target: '_blank' %>
   </p>
+  <% if showcase.keywords.any? %>
+    <p>
+      <b>Keywords:</b>
+      <%= showcase.keywords.map { |k| link_to k.name, showcases_path(keyword: k.name) }.join(', ').html_safe %>
+    </p>
+  <% end %>
   <%= image_tag showcase.screenshot.thumb('450x280#').url if showcase.screenshot_stored? %>
 </li>
 <% end %>
