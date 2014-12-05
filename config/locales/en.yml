@@ -2,6 +2,11 @@
 
 en:
 
+  alchemy:
+    modules:
+      extensions: Extensions
+      showcases: Showcases
+
   will_paginate:
     page_gap: '...'
 
