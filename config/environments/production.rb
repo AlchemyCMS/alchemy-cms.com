@@ -66,11 +66,11 @@ AlchemyCmsCom::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name: "support@magiclabs.de",
-    password: "he4Gsswt",
-    address: "mail.magicsupport.de",
+    user_name: "mail@magiclabs.de",
+    password: ENV['MANDRILL_SMTP_PASSWORD'],
+    address: "smtp.mandrillapp.com",
+    domain: "alchemy-cms.com",
     port: 587,
-    domain: "magicsupport.de",
     enable_starttls_auto: true,
     authentication: :login
   }

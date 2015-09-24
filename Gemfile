@@ -21,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'compass-rails'
 gem 'zurb-foundation', '~> 3.2.5'
+gem 'dotenv-rails'
 
 group :development do
   gem 'pry'
