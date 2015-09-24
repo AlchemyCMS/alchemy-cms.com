@@ -76,3 +76,17 @@
 
 - name: screenshot
   picture_gallery: true
+
+- name: newsletter
+  unique: true
+  contents:
+  - name: headline
+    type: EssenceText
+  - name: text
+    type: EssenceRichtext
+  - name: email_label
+    type: EssenceText
+    default: Email Address
+  - name: button_label
+    type: EssenceText
+    default: Subscribe

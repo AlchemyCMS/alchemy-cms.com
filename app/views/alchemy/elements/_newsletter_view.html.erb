@@ -1,0 +1,20 @@
+<%= element_view_for(element) do |el| -%>
+  <h3><%= el.render :headline %></h3>
+  <%= el.render :text %>
+  <form action="//magiclabs.us2.list-manage.com/subscribe/post?u=f85e16b26f02c23b904dad025&amp;id=c15e41577d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div style="position: absolute; left: -5000px;">
+      <input type="text" name="b_f85e16b26f02c23b904dad025_c15e41577d" tabindex="-1" value="">
+    </div>
+    <label for="newsletter-email"><%= el.render :email_label %></label>
+    <div class="row collapse">
+      <div class="eight columns">
+        <input type="email" value="" name="EMAIL" class="required email" required id="newsletter-email">
+      </div>
+      <div class="four columns">
+        <button type="submit" name="subscribe" class="button expand postfix">
+          <%= el.render :button_label %>
+        </button>
+      </div>
+    </div>
+  </form>
+<%- end -%>

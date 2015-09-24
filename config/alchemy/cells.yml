@@ -1,8 +1,8 @@
 - name: left_column
-  elements: [subheadline, text, code, guide, screenshot]
+  elements: [subheadline, text, code, guide, screenshot, newsletter]
 
 - name: right_column
-  elements: [subheadline, text, code, features_table]
+  elements: [subheadline, text, code, features_table, newsletter]
 
 - name: slide_gallery
   elements: [slide]

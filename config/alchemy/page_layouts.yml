@@ -6,7 +6,7 @@
   cells: [slide_gallery, packages]
 
 - name: two_columns
-  elements: [headline, subheadline, text, slide, code, features_table, screenshot]
+  elements: [headline, subheadline, text, slide, code, features_table, screenshot, newsletter]
   cells: [left_column, right_column, slide_gallery]
 
 - name: footer
