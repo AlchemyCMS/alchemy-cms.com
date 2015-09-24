@@ -69,7 +69,7 @@ AlchemyCmsCom::Application.configure do
     user_name: "mail@magiclabs.de",
     password: ENV['MANDRILL_SMTP_PASSWORD'],
     address: "smtp.mandrillapp.com",
-    domain: "alchemy-cms.com",
+    domain: "magiclabs.de",
     port: 587,
     enable_starttls_auto: true,
     authentication: :login

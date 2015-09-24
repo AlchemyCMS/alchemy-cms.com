@@ -29,10 +29,18 @@ before "deploy:create_symlink", "deploy:migrate"
 # after hooks
 after "deploy:setup",           "alchemy:database_yml:create"
 after "deploy:assets:symlink",  "alchemy:database_yml:symlink"
+after "deploy:assets:symlink",  "dotenv:symlink"
 after "deploy",                 "deploy:cleanup"
 after "deploy",                 "deploy:web:enable"
 
 # special tasks
+
+namespace :dotenv do
+  desc "Symlink .env file"
+  task :symlink do
+    run "cd #{current_path} && ln -s #{shared_path}/.env .env"
+  end
+end
 
 namespace :log do
   desc "show last 100 lines of log"
