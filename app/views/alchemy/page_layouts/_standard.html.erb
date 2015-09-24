@@ -1,9 +1,7 @@
-<% cache(@page) do %>
-  <%= render_cell(:slide_gallery) %>
-  <div id="content" class="row">
-    <div class="twelve columns">
-      <%= render_elements %>
-      <%= render_cell 'packages' %>
-    </div>
+<%= render_cell(:slide_gallery) %>
+<div id="content" class="row">
+  <div class="twelve columns">
+    <%= render_elements %>
+    <%= render_cell 'packages' %>
   </div>
-<% end %>
+</div>
