@@ -38,7 +38,7 @@ after "deploy",                 "deploy:web:enable"
 namespace :dotenv do
   desc "Symlink .env file"
   task :symlink do
-    run "cd #{current_path} && ln -s #{shared_path}/.env .env"
+    run "ln -s #{shared_path}/.env #{release_path}/.env"
   end
 end
 

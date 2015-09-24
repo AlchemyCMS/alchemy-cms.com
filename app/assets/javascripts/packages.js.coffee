@@ -64,4 +64,5 @@ $ ->
       $this.parents('.package').find('.description, .contact .form_fields').toggleClass('invisible')
       $this.children('span').text('Contact us')
     else
+      $this.attr('disabled', true)
       $this.parent().submit()

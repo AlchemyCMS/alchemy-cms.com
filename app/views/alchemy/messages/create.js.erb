@@ -4,3 +4,4 @@ $('.description', '.package[data-element=<%= @element.id %>]').prepend($success_
 $success_node.delay(3000).fadeOut();
 var button_value = $('.contact button span', '.package[data-element=<%= @element.id %>]').data('value');
 $('.contact button span', '.package[data-element=<%= @element.id %>]').text(button_value);
+$('.contact button').attr('disabled', false);
