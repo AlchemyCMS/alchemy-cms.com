@@ -2,7 +2,7 @@
   unique: true
 
 - name: standard
-  elements: [headline, subheadline, text, gallery, slide, code, screenshot, package]
+  elements: [headline, subheadline, text, gallery, slide, code, screenshot, package, newsletter]
   cells: [slide_gallery, packages]
 
 - name: two_columns
@@ -15,7 +15,7 @@
 
 - name: community
   cache: false
-  elements: [headline, subheadline, text, slide, code, features_table, screenshot]
+  elements: [headline, subheadline, text, slide, code, features_table, screenshot, newsletter]
   cells: [left_column, right_column, slide_gallery]
 
 - name: external
