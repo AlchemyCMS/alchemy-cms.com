@@ -3,6 +3,10 @@ module Alchemy
     require 'uri'
     require 'net/http'
 
+    def index
+      redirect_to alchemy.root_path, status: 301
+    end
+
     def create #:nodoc:
       @message = Message.new(params[:message])
       @message.ip = request.remote_ip
@@ -33,5 +37,7 @@ module Alchemy
       response = Net::HTTP.post_form(uri, data)
       response.body =~ /Thank You For Your Submission./ # returns true || false
     end
+
+    def get_page; end
   end
 end
