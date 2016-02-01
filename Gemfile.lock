@@ -81,7 +81,7 @@ GEM
     acts_as_list (0.3.0)
       activerecord (>= 3.0)
     addressable (2.3.6)
-    airbrake (4.1.0)
+    airbrake (4.3.5)
       builder
       multi_json
     arel (4.0.2)
@@ -158,7 +158,7 @@ GEM
       sass (>= 3.2.0)
       sassy-math (>= 1.5)
     multi_json (1.10.1)
-    mysql2 (0.3.16)
+    mysql2 (0.3.20)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -246,7 +246,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  airbrake
+  airbrake (~> 4.3.4)
   alchemy-devise!
   alchemy_cms!
   capistrano (~> 2.15)
@@ -257,7 +257,7 @@ DEPENDENCIES
   dotenv-rails
   jquery-rails
   kramdown (~> 1.4.1)
-  mysql2
+  mysql2 (~> 0.3.18)
   newrelic_rpm
   pry
   quiet_assets
@@ -269,4 +269,4 @@ DEPENDENCIES
   zurb-foundation (~> 3.2.5)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

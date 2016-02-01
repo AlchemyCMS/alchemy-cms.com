@@ -6,13 +6,13 @@ end
 source 'http://rubygems.org'
 
 gem 'rails', '~> 4.0.2'
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.18'
 gem 'alchemy_cms',    github: 'magiclabs/alchemy_cms',    branch: '3.0-stable'
 gem 'alchemy-devise', github: 'magiclabs/alchemy-devise', branch: '2.0-stable'
 gem 'newrelic_rpm'
 gem 'devise-encryptable'
 gem 'kramdown', '~> 1.4.1'
-gem 'airbrake'
+gem 'airbrake', '~> 4.3.4'
 
 # assets
 gem 'sass-rails', '~> 4.0.0'
