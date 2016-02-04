@@ -10,7 +10,7 @@ module Alchemy
     def create #:nodoc:
       @message = Message.new(params[:message])
       @message.ip = request.remote_ip
-      @element = Element.find_by_id(params[:message].delete(:contact_form_id))
+      @element = Element.find_by!(id: params[:message].delete(:contact_form_id))
       @page = @element.page
       @root_page = @page.get_language_root
       if @message.valid?
