@@ -3,4 +3,4 @@
 
 <%= simple_format Kramdown::Document.new(@extension.description).to_html %>
 
-<%= link_to 'bearbeiten', edit_admin_extension_url(@extension) %>
+<%= link_to 'bearbeiten', edit_admin_extension_url(@extension, protocol: 'https') %>
