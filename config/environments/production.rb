@@ -67,6 +67,7 @@ AlchemyCmsCom::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "magicsupport.de.relay.cloud-security.net",
+    domain: "magiclabs.de",
     enable_starttls_auto: false,
     port: 25
   }
