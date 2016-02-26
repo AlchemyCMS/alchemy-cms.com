@@ -66,13 +66,12 @@ AlchemyCmsCom::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name: "mail@magiclabs.de",
-    password: ENV['MANDRILL_SMTP_PASSWORD'],
-    address: "smtp.mandrillapp.com",
-    domain: "magiclabs.de",
-    port: 587,
+    user_name: "hello@alchemy-cms.com",
+    password: ENV['SMTP_PASSWORD'],
+    address: "mail.kundenportal.railshoster.de",
+    port: 465,
     enable_starttls_auto: true,
-    authentication: :login
+    authentication: :plain
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
