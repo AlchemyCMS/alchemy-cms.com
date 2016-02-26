@@ -1,5 +1,5 @@
 class ExtensionsMailer < ActionMailer::Base
-  default from: "hello@alchemy-cms.com"
+  default from: "alchemy@magiclabs.de"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
