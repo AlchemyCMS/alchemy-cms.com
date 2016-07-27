@@ -24,7 +24,7 @@ gem 'rack-cache', require: 'rack/cache'
 group :development do
   gem 'pry'
   gem 'capistrano', "~> 2.15"
-  gem 'caplock', github: 'Druwerd/caplock'
+  gem 'caplock', github: 'Druwerd/caplock', require: false
   gem 'thin'
   gem 'quiet_assets'
   gem 'spring'
