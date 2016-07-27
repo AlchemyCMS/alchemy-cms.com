@@ -1,12 +1,5 @@
 GIT
-  remote: git://github.com/Druwerd/caplock.git
-  revision: 3963f148c3b4924720504686048c3d93f566a25d
-  specs:
-    caplock (0.3.1)
-      capistrano (>= 2.9.0)
-
-GIT
-  remote: git://github.com/magiclabs/alchemy-devise.git
+  remote: git://github.com/AlchemyCMS/alchemy-devise.git
   revision: 851ee9adcb22789f557473a7a4b997fce468cac5
   branch: 2.0-stable
   specs:
@@ -15,7 +8,7 @@ GIT
       devise (~> 3.0.0)
 
 GIT
-  remote: git://github.com/magiclabs/alchemy_cms.git
+  remote: git://github.com/AlchemyCMS/alchemy_cms.git
   revision: 024e18f998f4c7f4fad488c882db09985aaec377
   branch: 3.0-stable
   specs:
@@ -45,8 +38,15 @@ GIT
       tvdeyen-handles_sortable_columns (~> 0.1.5)
       uglifier (>= 1.3.0)
 
+GIT
+  remote: git://github.com/Druwerd/caplock.git
+  revision: 04525a983abe2e63210d7d605073fdd39c641f73
+  specs:
+    caplock (0.3.1)
+      capistrano (>= 2.9.0)
+
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.0.13)
       actionpack (= 4.0.13)
@@ -81,25 +81,25 @@ GEM
     acts_as_list (0.3.0)
       activerecord (>= 3.0)
     addressable (2.4.0)
-    airbrake (4.3.5)
+    airbrake (4.3.8)
       builder
       multi_json
     arel (4.0.2)
     awesome_nested_set (3.0.3)
       activerecord (>= 4.0.0, < 5)
-    bcrypt (3.1.10)
+    bcrypt (3.1.11)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
     builder (3.1.4)
     cancan (1.6.10)
-    capistrano (2.15.5)
+    capistrano (2.15.9)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
-    chunky_png (1.3.5)
-    coderay (1.1.0)
+    chunky_png (1.3.6)
+    coderay (1.1.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -114,7 +114,7 @@ GEM
     compass-rails (1.1.7)
       compass (>= 0.12.2)
       sprockets (<= 2.11.0)
-    daemons (1.1.9)
+    daemons (1.2.3)
     devise (3.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -132,10 +132,10 @@ GEM
       multi_json (~> 1.0)
       rack (>= 1.3.0)
     erubis (2.7.0)
-    eventmachine (1.0.3)
-    execjs (2.6.0)
+    eventmachine (1.2.0.1)
+    execjs (2.7.0)
     fssm (0.2.10)
-    highline (1.6.21)
+    highline (1.7.8)
     hike (1.2.3)
     i18n (0.7.0)
     jquery-rails (3.1.4)
@@ -143,39 +143,40 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.1.2)
       railties (>= 3.1.0)
-    json (1.8.3)
-    kaminari (0.16.3)
+    kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kramdown (1.4.2)
     magiclabs-userstamp (2.1.0)
-    mail (2.6.3)
-      mime-types (>= 1.16, < 3)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
     method_source (0.8.2)
-    mime-types (2.99.1)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     minitest (4.7.5)
     modular-scale (1.0.6)
       compass (>= 0.12.1)
       sass (>= 3.2.0)
       sassy-math (>= 1.5)
-    multi_json (1.11.2)
-    mysql2 (0.3.20)
+    multi_json (1.12.1)
+    mysql2 (0.3.21)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
-    net-ssh (2.9.1)
+    net-ssh (3.2.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    newrelic_rpm (3.9.6.257)
-    non-stupid-digest-assets (1.0.7)
+    newrelic_rpm (3.16.0.318)
+    non-stupid-digest-assets (1.0.8)
       sprockets (>= 2.0)
     orm_adapter (0.5.0)
-    pry (0.10.1)
+    pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    quiet_assets (1.0.3)
+    quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.5.5)
     rack-test (0.6.3)
@@ -193,7 +194,7 @@ GEM
       activesupport (= 4.0.13)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.5.0)
+    rake (11.2.2)
     request_store (1.1.0)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -205,14 +206,14 @@ GEM
       compass (>= 0.12.2)
     sassy-math (1.5.1)
       compass (>= 0.11)
-    select2-rails (3.5.9.3)
+    select2-rails (3.5.10)
       thor (~> 0.14)
     simple_form (3.0.4)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     slop (3.6.0)
     spinner.rb (0.3.0)
-    spring (1.1.3)
+    spring (1.7.2)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -222,20 +223,19 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    thin (1.6.3)
+    thin (1.7.0)
       daemons (~> 1.0, >= 1.0.9)
-      eventmachine (~> 1.0)
-      rack (~> 1.0)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (>= 1, < 3)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
     turbolinks (2.5.3)
       coffee-rails
     tvdeyen-handles_sortable_columns (0.1.5)
-    tzinfo (0.3.46)
-    uglifier (2.7.2)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
+    tzinfo (0.3.51)
+    uglifier (3.0.0)
+      execjs (>= 0.3.0, < 3)
     warden (1.2.6)
       rack (>= 1.0)
     zurb-foundation (3.2.5)
@@ -254,10 +254,10 @@ DEPENDENCIES
   capistrano (~> 2.15)
   caplock!
   coffee-rails (~> 4.0.0)
-  compass-rails
-  devise-encryptable
-  dotenv-rails
-  jquery-rails
+  compass-rails (~> 1.1)
+  devise-encryptable (~> 0.2)
+  dotenv-rails (~> 0.11)
+  jquery-rails (~> 3.1)
   kramdown (~> 1.4.1)
   mysql2 (~> 0.3.18)
   newrelic_rpm
@@ -271,4 +271,4 @@ DEPENDENCIES
   zurb-foundation (~> 3.2.5)
 
 BUNDLED WITH
-   1.11.2
+   1.12.3
