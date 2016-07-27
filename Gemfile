@@ -18,6 +18,9 @@ gem 'compass-rails', '~> 1.1'
 gem 'zurb-foundation', '~> 3.2.5'
 gem 'dotenv-rails', '~> 0.11'
 
+# caching
+gem 'rack-cache', require: 'rack/cache'
+
 group :development do
   gem 'pry'
   gem 'capistrano', "~> 2.15"
