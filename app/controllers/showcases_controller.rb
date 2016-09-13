@@ -1,4 +1,5 @@
 class ShowcasesController < ApplicationController
+  include Alchemy::ControllerActions
 
   def index
     @showcases = Showcase.published.order('title ASC')

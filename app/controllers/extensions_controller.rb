@@ -1,5 +1,6 @@
 class ExtensionsController < ApplicationController
-  helper 'Alchemy::Pages'
+  include Alchemy::ControllerActions
+
   before_filter :load_extension, only: [:show]
   before_filter :load_alchemy_root_page
 
