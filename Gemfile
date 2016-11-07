@@ -1,20 +1,20 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.1.16'
+gem 'rails', '~> 4.2.7'
 gem 'pg', '~> 0.19'
-gem 'alchemy_cms',    github: 'AlchemyCMS/alchemy_cms',    branch: '3.1-stable'
-gem 'alchemy-devise', github: 'AlchemyCMS/alchemy-devise', branch: '2.1-stable'
+gem 'alchemy_cms',    github: 'AlchemyCMS/alchemy_cms',    branch: '3.2-stable'
+gem 'alchemy-devise', github: 'AlchemyCMS/alchemy-devise', branch: '3.2-stable'
 gem 'newrelic_rpm'
 gem 'devise-encryptable', '~> 0.2'
 gem 'kramdown', '~> 1.4.1'
 gem 'airbrake', '~> 4.3.4'
 
 # assets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'jquery-rails', '~> 3.1'
-gem 'compass-rails', '~> 1.1'
+gem 'jquery-rails', '~> 4.0'
+gem 'compass-rails', '~> 2.0'
 gem 'zurb-foundation', '~> 4.3.2'
 gem 'dotenv-rails', '~> 0.11'
 
@@ -28,6 +28,7 @@ group :development do
   gem 'thin'
   gem 'quiet_assets'
   gem 'spring'
+  gem 'web-console', '~> 2.0'
 end
 
 group :production do
