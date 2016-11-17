@@ -1,0 +1,7 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  database: alchemy-homepage_development
+  username: root
+  password:
