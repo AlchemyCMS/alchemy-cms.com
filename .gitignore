@@ -16,3 +16,4 @@ public/pictures/
 /.rvmrc
 /config/database.yml
 public/system
+.env
