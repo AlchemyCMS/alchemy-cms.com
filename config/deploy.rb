@@ -3,22 +3,22 @@ require 'alchemy/capistrano'
 require 'caplock'
 
 # ssh settings
-set :user,                      "rails3"
-set :ssh_options,               { :forward_agent => true }
+set :user,                      ENV["DEPLOY_USER"]
+set :ssh_options,               { forward_agent: true, port: ENV["DEPLOY_SSH_PORT"] }
 ssh_options[:keys] =            [File.join(ENV["HOME"], ".ssh", "id_rsa")]
 default_run_options[:pty] =     true
 
 # domain names
-role :app,                      "server1904.railsvserver.de"
-role :web,                      "server1904.railsvserver.de"
-role :db,                       "server1904.railsvserver.de", :primary => true
+role :app,                      "magiclabs.de"
+role :web,                      "magiclabs.de"
+role :db,                       "magiclabs.de", :primary => true
 
 # the webserver path
-set :deploy_to,                 "/var/www/alchemy-homepage"
+set :deploy_to,                 "/var/www/alchemy-cms.com"
 
 # repository settings
 set :scm,                       "git"
-set :repository,                "git@git.bitspire.de:alchemy/homepage.git"
+set :repository,                "git@github.com:AlchemyCMS/alchemy-cms.com.git"
 set :branch,                    "master"
 
 # before hooks
@@ -27,7 +27,6 @@ before "deploy:start",          "deploy:seed"
 before "deploy:create_symlink", "deploy:migrate"
 
 # after hooks
-after "deploy:setup",           "alchemy:database_yml:create"
 after "deploy:assets:symlink",  "alchemy:database_yml:symlink"
 after "deploy:assets:symlink",  "dotenv:symlink"
 after "deploy",                 "deploy:cleanup"

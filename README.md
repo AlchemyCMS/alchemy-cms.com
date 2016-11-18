@@ -42,6 +42,6 @@ Deployment happens via Capistrano.
 
 If you have access to the server via your ssh key a simple:
 
-    $ bundle exec cap deploy
+    $ bundle exec cap deploy DEPLOY_USER=<user> SSH_PORT=<port>
 
 is all you need.
