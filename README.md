@@ -2,7 +2,7 @@
 
 ### Prerequisites/Requirements
 
-* Ruby 2.1
+* Ruby 2.2
 * Imagemagick
 * MySQL >= 5
 
