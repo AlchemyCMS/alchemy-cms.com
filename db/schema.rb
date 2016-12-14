@@ -13,25 +13,25 @@
 
 ActiveRecord::Schema.define(version: 20140903131954) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "alchemy_attachments", force: true do |t|
     t.string   "name"
-    t.string   "file_name"
-    t.string   "file_mime_type"
-    t.integer  "file_size"
+    t.string   "filename"
+    t.string   "content_type"
+    t.integer  "size"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "file_uid"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
-
-  add_index "alchemy_attachments", ["file_uid"], name: "index_alchemy_attachments_on_file_uid", using: :btree
 
   create_table "alchemy_cells", force: true do |t|
     t.integer  "page_id"
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "alchemy_contents", force: true do |t|
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.integer  "essence_id"
     t.integer  "element_id"
     t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "creator_id"
     t.integer  "updater_id"
   end
@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.boolean  "public",     default: true
     t.boolean  "folded",     default: false
     t.boolean  "unique",     default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.integer  "cell_id"
@@ -77,8 +77,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.boolean  "show_navigation", default: true
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "alchemy_essence_booleans", force: true do |t|
@@ -95,8 +95,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.datetime "date"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "alchemy_essence_files", force: true do |t|
@@ -105,8 +105,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.string   "css_class"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "alchemy_essence_flashes", force: true do |t|
@@ -116,16 +116,16 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.string   "player_version", default: "9.0.28"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "alchemy_essence_htmls", force: true do |t|
     t.text     "source"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "alchemy_essence_pictures", force: true do |t|
@@ -140,8 +140,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.string   "link_target"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "crop_from"
     t.string   "crop_size"
     t.string   "render_size"
@@ -153,8 +153,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.boolean  "public"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "alchemy_essence_selects", force: true do |t|
@@ -176,8 +176,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.string   "link_target"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "alchemy_essence_videos", force: true do |t|
@@ -189,8 +189,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.boolean  "show_navigation",  default: true
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "alchemy_folded_pages", force: true do |t|
@@ -205,8 +205,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.string   "frontpage_name"
     t.string   "page_layout",    default: "intro"
     t.boolean  "public",         default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.boolean  "default",        default: false
@@ -221,8 +221,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
   create_table "alchemy_legacy_page_urls", force: true do |t|
     t.string   "urlname",    null: false
     t.integer  "page_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "alchemy_legacy_page_urls", ["urlname"], name: "index_alchemy_legacy_page_urls_on_urlname", using: :btree
@@ -249,8 +249,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.boolean  "robot_follow",     default: true
     t.boolean  "sitemap",          default: true
     t.boolean  "layoutpage",       default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.integer  "language_id"
@@ -266,8 +266,8 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.string   "image_file_name"
     t.integer  "image_file_width"
     t.integer  "image_file_height"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.string   "upload_hash"
@@ -279,15 +279,15 @@ ActiveRecord::Schema.define(version: 20140903131954) do
   create_table "alchemy_sites", force: true do |t|
     t.string   "host"
     t.string   "name"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.boolean  "public",                   default: false
     t.text     "aliases"
     t.boolean  "redirect_to_primary_host"
   end
 
   add_index "alchemy_sites", ["host", "public"], name: "alchemy_sites_public_hosts_idx", using: :btree
-  add_index "alchemy_sites", ["host"], name: "index_alchemy_sites_on_host", using: :btree
+  add_index "alchemy_sites", ["host"], name: "index_alchemy_sites_on_host", unique: true, using: :btree
 
   create_table "alchemy_users", force: true do |t|
     t.string   "firstname"
@@ -295,23 +295,24 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.string   "login"
     t.string   "email"
     t.string   "gender"
-    t.string   "alchemy_roles",                      default: "member"
+    t.string   "role",                               default: "registered"
     t.string   "language"
-    t.string   "encrypted_password",     limit: 128, default: "",       null: false
-    t.string   "password_salt",          limit: 128, default: "",       null: false
-    t.integer  "sign_in_count",                      default: 0,        null: false
-    t.integer  "failed_attempts",                    default: 0,        null: false
+    t.string   "encrypted_password",     limit: 128, default: "",           null: false
+    t.string   "password_salt",          limit: 128, default: "",           null: false
+    t.integer  "sign_in_count",                      default: 0,            null: false
+    t.integer  "failed_attempts",                    default: 0,            null: false
     t.datetime "last_request_at"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
+    t.string   "alchemy_roles",                      default: "member"
   end
 
   add_index "alchemy_users", ["alchemy_roles"], name: "index_alchemy_users_on_alchemy_roles", using: :btree
@@ -324,11 +325,11 @@ ActiveRecord::Schema.define(version: 20140903131954) do
     t.string   "url"
     t.text     "description"
     t.string   "maintainer"
+    t.text     "keywords"
     t.integer  "creator_id"
     t.integer  "updater_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.text     "keywords"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.boolean  "public",      default: false
   end
 
