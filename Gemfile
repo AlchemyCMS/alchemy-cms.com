@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 4.0.2'
-gem 'mysql2', '~> 0.3.18'
+gem 'pg', '~> 0.19'
 gem 'alchemy_cms',    github: 'AlchemyCMS/alchemy_cms',    branch: '3.0-stable'
 gem 'alchemy-devise', github: 'AlchemyCMS/alchemy-devise', branch: '2.0-stable'
 gem 'newrelic_rpm'
