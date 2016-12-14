@@ -29,3 +29,7 @@ group :development do
   gem 'quiet_assets'
   gem 'spring'
 end
+
+group :production do
+  gem 'mini_racer', '~> 0.1.7'
+end

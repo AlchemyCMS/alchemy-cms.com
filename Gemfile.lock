@@ -148,6 +148,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kramdown (1.4.2)
+    libv8 (5.3.332.38.3)
     magiclabs-userstamp (2.1.0)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
@@ -155,6 +156,8 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_racer (0.1.7)
+      libv8 (~> 5.3)
     minitest (4.7.5)
     modular-scale (1.0.6)
       compass (>= 0.12.1)
@@ -263,6 +266,7 @@ DEPENDENCIES
   dotenv-rails (~> 0.11)
   jquery-rails (~> 3.1)
   kramdown (~> 1.4.1)
+  mini_racer (~> 0.1.7)
   newrelic_rpm
   pg (~> 0.19)
   pry
