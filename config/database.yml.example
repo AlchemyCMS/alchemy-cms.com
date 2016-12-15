@@ -1,7 +1,5 @@
 development:
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
   pool: 5
   database: alchemy-cms.com
-  username: root
-  password:
