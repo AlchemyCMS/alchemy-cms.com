@@ -7,7 +7,7 @@ class ShowcasesController < ApplicationController
     end
     @showcases = @showcases.page(params[:page] || 1).per(8)
 
-    @keywords = Showcase.tag_counts_on(:keywords).order('count DESC, RAND()').limit(5)
+    @keywords = Showcase.tag_counts_on(:keywords).order('count DESC, RANDOM()').limit(5)
   end
 
   def new
