@@ -1,0 +1,37 @@
+---
+
+- name: Install ufw firewall
+  apt:
+    name: ufw
+    state: latest
+    update_cache: yes
+
+- name: Set defaults for incoming traffic
+  ufw:
+    policy: deny
+    direction: incoming
+    state: enabled
+
+- name: Set defaults for outgoing traffic
+  ufw:
+    policy: allow
+    direction: outgoing
+    state: enabled
+
+- name: limit ssh
+  ufw:
+    rule: limit
+    port: ssh
+    proto: tcp
+
+- name: allow http
+  ufw:
+    rule: allow
+    port: http
+    proto: tcp
+
+- name: allow https
+  ufw:
+    rule: allow
+    port: https
+    proto: tcp

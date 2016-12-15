@@ -36,6 +36,16 @@ login: admin
 password: test123
 ```
 
+### Provision server
+
+Make sure you have Ansible installed. On a mac:
+
+    $ brew install ansible
+
+Provisioning is as easy as:
+
+    $ ansible-playbook -i hosts playbooks/production.yml --ask-vault-pass --ask-become-pass
+
 ### Deployment
 
 Deployment happens via Capistrano.

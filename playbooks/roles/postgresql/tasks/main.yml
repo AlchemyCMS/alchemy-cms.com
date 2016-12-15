@@ -1,0 +1,33 @@
+---
+
+- include_vars: passwords.yml
+  no_log: true
+
+- name: Install PostgreSQL
+  apt:
+    name: "{{item}}"
+    state: latest
+    update_cache: yes
+  with_items:
+    - postgresql
+    - postgresql-contrib
+    - libpq-dev
+    - python-psycopg2
+
+- name: Create database user
+  become: true
+  become_user: postgres
+  postgresql_user:
+    name: "{{app_user}}"
+    password: "{{ database_pw }}"
+    role_attr_flags: CREATEDB,LOGIN
+    encrypted: true
+
+- name: Create database
+  become: true
+  become_user: postgres
+  postgresql_db:
+    encoding: UTF8
+    name: "{{app_user}}"
+    owner: "{{app_user}}"
+    template: template0

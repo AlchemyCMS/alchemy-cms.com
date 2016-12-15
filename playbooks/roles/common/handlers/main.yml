@@ -1,0 +1,4 @@
+---
+
+- name: restart sshd
+  command: systemctl restart ssh

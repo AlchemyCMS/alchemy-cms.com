@@ -1,0 +1,30 @@
+# Default server configuration
+#
+server {
+	server_name {{hostname}};
+	listen 80;
+
+	rewrite ^/(.*) https://{{hostname}}/$1 permanent;
+}
+
+server {
+	server_name {{hostname}};
+	listen 443 ssl;
+
+	ssl on;
+	ssl_certificate /etc/letsencrypt/live/{{hostname}}/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/{{hostname}}/privkey.pem;
+
+	passenger_enabled on;
+	passenger_app_env {{rails_env}};
+
+	root {{app_root}}/current/public;
+
+	client_max_body_size 10M;
+
+	location ~ ^/(assets)/	{
+		gzip_static on; # to serve pre-gzipped version
+		expires max;
+		add_header Cache-Control public;
+	}
+}

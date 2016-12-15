@@ -1,0 +1,46 @@
+---
+
+- name: Add passenger PGP key
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 561F9B9CAC40B2F7
+
+- name: Add https support for apt
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+
+- name: Add passenger repository
+  copy:
+    src: passenger.list
+    dest: /etc/apt/sources.list.d/passenger.list
+
+- name: Install passenger and NGINX
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  with_items:
+    - nginx-extras
+    - passenger
+
+- name: Install NGINX config
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+  notify: restart nginx
+
+- name: Install ssl config
+  copy:
+    src: ssl.conf
+    dest: /etc/nginx/conf.d/ssl.conf
+  notify: restart nginx
+
+- name: Install vhost config
+  template:
+    src: vhost.conf.j2
+    dest: "/etc/nginx/sites-available/{{hostname}}"
+  notify: enable vhost

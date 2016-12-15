@@ -1,0 +1,19 @@
+---
+
+- name: Provision production server
+  vars:
+    rails_env: production
+    app_root: /var/www/alchemy-homepage
+    app_user: alchemy
+    hostname: alchemy-cms.com
+  hosts: production
+  remote_user: root
+  roles:
+    - common
+    - ruby
+    - imagemagick
+    - nginx-passenger
+    - postgresql
+    - app
+    - firewall
+    - logrotate

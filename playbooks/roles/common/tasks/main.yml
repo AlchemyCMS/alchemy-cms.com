@@ -1,0 +1,17 @@
+---
+
+- name: Install common software properties
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  with_items:
+    - software-properties-common
+    - git
+    - build-essential
+
+- name: Copy configuration for sshd
+  copy:
+    src: sshd_config
+    dest: /etc/ssh/sshd_config
+  notify: restart sshd

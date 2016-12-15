@@ -1,0 +1,10 @@
+# Rotate Rails application logs daily, while keeping the last 90 days
+{{ app_root }}/shared/log/*.log {
+    compress
+    copytruncate
+    daily
+    dateext
+    delaycompress
+    missingok
+    rotate 90
+}

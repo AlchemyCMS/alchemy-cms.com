@@ -1,0 +1,76 @@
+---
+
+- include_vars: passwords.yml
+
+- name: Create the 'app' user
+  user:
+    name: "{{app_user}}"
+    shell: /bin/bash
+    home: "{{app_root}}"
+    skeleton: /etc/skel
+
+- name: Set app folder permissions
+  file:
+    path: "{{app_root}}"
+    owner: "{{app_user}}"
+
+- name: Copy ssh keys for app user
+  authorized_key:
+    key: https://git.bitspire.de/bitspire/ssh-keys/raw/master/keys
+    user: "{{app_user}}"
+    exclusive: yes
+
+- name: Create shared folder
+  file:
+    path: "{{app_root}}/shared"
+    mode: 0755
+    state: directory
+    owner: "{{app_user}}"
+    group: "{{app_user}}"
+
+- name: Create shared config folder
+  file:
+    path: "{{app_root}}/shared/config"
+    mode: 0750
+    state: directory
+    owner: "{{app_user}}"
+    group: "{{app_user}}"
+
+- name: Create database.yml file
+  template:
+    src: database.yml.j2
+    dest: "{{app_root}}/shared/config/database.yml"
+    owner: "{{app_user}}"
+    group: "{{app_user}}"
+    mode: 0640
+
+- name: Create secrets.yml file
+  template:
+    src: secrets.yml.j2
+    dest: "{{app_root}}/shared/config/secrets.yml"
+    owner: "{{app_user}}"
+    group: "{{app_user}}"
+    mode: 0640
+
+- name: Create .env file
+  template:
+    src: env.j2
+    dest: "{{app_root}}/shared/.env"
+    owner: "{{app_user}}"
+    group: "{{app_user}}"
+    mode: 0640
+
+- name: Create Bundler config folder
+  file:
+    dest: "{{app_root}}/.bundle"
+    owner: "{{app_user}}"
+    group: "{{app_user}}"
+    state: directory
+
+- name: Copy Bundler config
+  copy:
+    src: bundler.config
+    dest: "{{app_root}}/.bundle/config"
+    owner: "{{app_user}}"
+    group: "{{app_user}}"
+    force: true
