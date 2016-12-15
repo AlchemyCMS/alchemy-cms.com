@@ -4,17 +4,17 @@ require 'caplock'
 
 # ssh settings
 set :user,                      ENV["DEPLOY_USER"]
-set :ssh_options,               { forward_agent: true, port: ENV["DEPLOY_SSH_PORT"] }
+set :ssh_options,               { forward_agent: true }
 ssh_options[:keys] =            [File.join(ENV["HOME"], ".ssh", "id_rsa")]
 default_run_options[:pty] =     true
 
 # domain names
-role :app,                      "magiclabs.de"
-role :web,                      "magiclabs.de"
-role :db,                       "magiclabs.de", :primary => true
+role :app,                      "alchemy-cms.com"
+role :web,                      "alchemy-cms.com"
+role :db,                       "alchemy-cms.com", :primary => true
 
 # the webserver path
-set :deploy_to,                 "/var/www/alchemy-cms.com"
+set :deploy_to,                 "/var/www/alchemy-homepage"
 
 # repository settings
 set :scm,                       "git"
