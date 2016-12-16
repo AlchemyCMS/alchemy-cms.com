@@ -5,6 +5,8 @@
 <%= 'Extensions, Themes and Plugins for your Alchemy CMS based site.' -%>
 <%- end -%>
 
+<%= render "shared/flash" %>
+
 <div id="content" class="row">
   <div class="small-12 columns">
     <h1>Found <%= @extensions.total_count %> Alchemy <%= (Extension.model_name.human(count: @extensions.total_count)) %></h1>
