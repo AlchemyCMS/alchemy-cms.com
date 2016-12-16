@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails', '~> 3.1'
 gem 'compass-rails', '~> 1.1'
-gem 'zurb-foundation', '~> 3.2.5'
+gem 'zurb-foundation', '~> 4.3.2'
 gem 'dotenv-rails', '~> 0.11'
 
 # caching
