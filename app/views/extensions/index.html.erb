@@ -6,7 +6,7 @@
 <%- end -%>
 
 <div id="content" class="row">
-  <div class="twelve columns">
+  <div class="small-12 columns">
     <h1>Found <%= @extensions.total_count %> Alchemy <%= (Extension.model_name.human(count: @extensions.total_count)) %></h1>
     <% if params[:keyword] || params[:by] %>
       <% if params[:keyword] %>
@@ -24,31 +24,14 @@
     <% end %>
     <hr>
   </div>
-  <div class="eight columns">
+  <div class="small-12 large-8 columns">
     <ul class="extensions-list">
-      <% @extensions.each do |extension| %>
-      <li class="<%= cycle('even', 'odd') %>">
-        <h3><%= link_to extension.name, extension %></h3>
-        <p>
-          <b>by:</b>
-          <%= link_to extension.maintainer, extensions_path(by: extension.maintainer, keyword: params[:keyword]) %>
-        </p>
-        <% if extension.keywords.any? %>
-        <p>
-          <b>Keywords:</b>
-          <%= extension.keywords.map { |k| link_to k.name, url_for(keyword: k.name, by: params[:by]) }.join(', ').html_safe %>
-        </p>
-        <% end %>
-      </li>
-      <% end %>
+      <%= render @extensions %>
     </ul>
-    <hr>
-    <%= paginate(@extensions) %>
   </div>
 
-  <%= render 'extensions/register' %>
-
-  <div class="four columns">
+  <div class="small-12 large-4 columns">
+    <%= render 'extensions/register' %>
     <div class="info_table">
       <p>Popular Keywords:</p>
       <ul>
@@ -60,5 +43,10 @@
       <% end %>
       </ul>
     </div>
+  </div>
+
+  <div class="small-12 columns">
+    <hr>
+    <%= paginate(@extensions) %>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <% cache(element) do %>
   <div class="gallery row" id="<%= element_dom_id(element) %>" <%= element_preview_code(element) -%>>
   <% element.contents.gallery_pictures.each do |content| %>
-    <%= render_essence_view(content, {image_size: "450x280", crop: true}, {class: 'six columns'}) %>
+    <%= render_essence_view(content, {image_size: "450x280", crop: true}, {class: 'small-12 large-6 columns'}) %>
   <% end %>
   </div>
 <% end %>

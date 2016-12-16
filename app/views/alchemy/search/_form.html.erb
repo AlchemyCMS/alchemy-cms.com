@@ -1,6 +1,6 @@
 <% search_result_page ||= find_search_result_page %>
 <% if search_result_page %>
-  <%= form_tag show_alchemy_page_path(search_result_page), method: :get, class: 'two columns' do %>
+  <%= form_tag show_alchemy_page_path(search_result_page), method: :get, class: 'small-12 large-2 columns' do %>
     <%= search_field_tag(:query, params[:query], :placeholder => _t(:placeholder, :scope => "search_form")) %>
     <button type="submit" class="small secondary round button"><%= _t(:submit, :scope => "search_form") %></button>
   <% end %>

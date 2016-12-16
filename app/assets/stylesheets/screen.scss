@@ -5,6 +5,7 @@ body {
   font-weight: normal;
   font-size: 15px;
   line-height: 22px;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Headline fonts
@@ -103,12 +104,13 @@ header {
 }
 
 #main_navigation {
-  margin-top: 23px;
+  margin-top: 28px;
 
   .nav-bar {
     margin: 0;
     padding: 0;
     background: transparent;
+    list-style-type: none;
   }
 
   li {
@@ -116,7 +118,6 @@ header {
     position: relative;
     float: left;
     margin-right: 20px;
-    list-style-image: none;
     border: 0;
 
     &.last {
@@ -157,24 +158,10 @@ header {
 }
 
 #slide_gallery {
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 0;
-
-  > div {
-    padding-top: 13px;
-    margin: auto;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: auto;
-    width: 960px;
-  }
 
   h1, h2 {
-    position:  absolute;
-    right: -20px;
+    position: absolute;
+    right: 0;
     top: 80px;
     margin: 0;
     left: auto;
@@ -200,51 +187,10 @@ header {
   background-image: image-url("slider-pattern.png");
 
   #slide_gallery_container {
-
     margin: auto;
     padding: auto;
 
-    .timer { display: none }
-
-    .orbit-bullets {
-      position: absolute;
-      bottom: 2em;
-      right: 20px;
-      text-align: right;
-      z-index: 10;
-      left: auto;
-      margin: 0 !important;
-
-      li {
-        margin-left: 10px;
-        padding-top: 8px;
-        padding-left: 1px;
-        background-image: none;
-        text-indent: 0;
-        background-color: $alchemy_gray;
-        @include border-radius(22px);
-        width: 35px;
-        height: 35px;
-        display: inline-block;
-        text-align: center;
-        color: $gray_ultralight;
-        text-decoration: none;
-        font-family: 'Bitter', Helvetica, Arial, sans-serif;
-        font-size: 20px;
-        line-height: 18px;
-        font-weight: bold;
-        @include transition(all 0.2s ease-in-out);
-
-        &:hover {
-          background-color: $marine;
-        }
-
-        &.active {
-          background-color: $alchemy_green;
-          color: #FFFFFF;
-        }
-      }
-    }
+    .orbit-timer { display: none }
   }
 }
 
@@ -305,9 +251,8 @@ footer {
   padding: 20px;
   margin-bottom: 2em;
 
-  ul {
-    padding: 0;
-    padding-left: 20px;
+  ul, ol {
+    padding: 0 1em;
     margin: 0px;
   }
 
