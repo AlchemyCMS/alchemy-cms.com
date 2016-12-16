@@ -8,6 +8,9 @@ gem 'newrelic_rpm'
 gem 'kramdown', '~> 1.4.1'
 gem 'airbrake', '~> 4.3.4'
 
+# Fix for Alchemy 3.2 having to loose ams version
+gem 'active_model_serializers', '~> 0.9.5'
+
 # assets
 gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.0.0'
