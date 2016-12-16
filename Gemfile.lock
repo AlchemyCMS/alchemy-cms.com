@@ -146,8 +146,6 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    devise-encryptable (0.2.0)
-      devise (>= 2.1.0)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
@@ -313,7 +311,6 @@ DEPENDENCIES
   caplock!
   coffee-rails (~> 4.0.0)
   compass-rails (~> 2.0)
-  devise-encryptable (~> 0.2)
   dotenv-rails (~> 0.11)
   jquery-rails (~> 4.0)
   kramdown (~> 1.4.1)

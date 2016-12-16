@@ -5,7 +5,6 @@ gem 'pg', '~> 0.19'
 gem 'alchemy_cms',    github: 'AlchemyCMS/alchemy_cms',    branch: '3.2-stable'
 gem 'alchemy-devise', github: 'AlchemyCMS/alchemy-devise', branch: '3.2-stable'
 gem 'newrelic_rpm'
-gem 'devise-encryptable', '~> 0.2'
 gem 'kramdown', '~> 1.4.1'
 gem 'airbrake', '~> 4.3.4'
 
