@@ -1,6 +1,7 @@
 class ShowcasesController < ApplicationController
-  include Alchemy::ControllerActions
   include Alchemy::ConfigurationMethods
+  include Alchemy::AbilityHelper
+  include Alchemy::ControllerActions
 
   def index
     @showcases = Showcase.published.order('title ASC')

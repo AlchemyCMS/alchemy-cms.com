@@ -29,3 +29,5 @@ Alchemy::Modules.register_module({
     }]
   }
 })
+
+Alchemy.register_ability Ability

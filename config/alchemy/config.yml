@@ -69,9 +69,9 @@ url_nesting: true
 #
 #   output_image_jpg_quality  [Integer]       # If image gets rendered as JPG this is the quality setting for it. (Default 85)
 #   preprocess_image_resize   [String]        # Use this option to resize images to that value. Downsizing example: '1000x1000>' (Default nil)
-#   image_output_format       [String]        # The global image output format setting.
+#   image_output_format       [String]        # The global image output format setting. (Default +original+)
 #
-# NOTE: You can always override the output format in the options of your Essence. I.E. {:format => :gif}
+# NOTE: You can always override the output format in the options of your Essence. I.E. {format: 'gif'}
 #
 output_image_jpg_quality: 85
 preprocess_image_resize:
@@ -121,9 +121,9 @@ mailer:
   mail_success_page: thanks
   mail_from: AlchemyCMS Support <alchemy@magiclabs.de>
   mail_to: AlchemyCMS Support <alchemy@magiclabs.de>
+  subject: A new support request
   fields: [package, first_name, last_name, account_name, phone_work, email1, spamblocker]
   validate_fields: [package, first_name, last_name, email1]
-  subject: A new support request
 
 # === User roles
 #
@@ -161,6 +161,7 @@ uploader:
     - jpeg
     - gif
     - png
+    - svg
 
 # === Link Target Options
 #

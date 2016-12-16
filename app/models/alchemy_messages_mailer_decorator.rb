@@ -1,5 +1,5 @@
 module Alchemy
-  Messages.class_eval do
+  MessagesMailer.class_eval do
     def contact_form_confirmation_mail(message)
       mail(
         from: "AlchemyCMS Support <alchemy@magiclabs.de>",
