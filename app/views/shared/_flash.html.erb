@@ -1,0 +1,11 @@
+<% if flash.present? %>
+<div class="flash row">
+  <div class="small-12 columns">
+  <% flash.each do |type, message| %>
+    <div class="alert-box <%= type %>">
+      <%= message %>
+    </div>
+  <% end %>
+  </div>
+</div>
+<% end %>
