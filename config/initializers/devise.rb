@@ -6,6 +6,8 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
   config.mailer_sender = Alchemy::Config.get(:mailer)['mail_from']
 
+  config.secret_key = ENV['DEVISE_SECRET']
+
   # Configure the class responsible to send e-mails.
   config.mailer = "Alchemy::Notifications"
 
