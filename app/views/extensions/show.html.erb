@@ -11,14 +11,14 @@
 <div id="content" class="row extension-detail">
 
   <% cache @extension do %>
-    <div class="twelve columns">
+    <div class="small-12 columns">
       <p><%= link_to '< Back to extensions list', extensions_path %></p>
       <h1><%= @extension.name %></h1>
       <h3>by: <%= link_to(@extension.maintainer, extensions_path(by: @extension.maintainer)) %></h3>
       <hr>
     </div>
 
-    <div class="eight columns">
+    <div class="small-12 large-8 columns">
       <p>
         <b>URL:</b>
         <%= link_to @extension.url, @extension.url, target: '_blank' %>
@@ -55,7 +55,7 @@
 
   <%= render 'extensions/register' %>
 
-  <div class="four columns">
+  <div class="small-12 large-4 columns">
   <% if @similiar_keyword.any? %>
     <div class="info_table">
       <p>Other extensions with same keyword:</p>

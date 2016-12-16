@@ -6,7 +6,7 @@
 <%- end -%>
 
 <div id="content" class="row">
-  <div class="twelve columns">
+  <div class="small-12 columns">
     <%= render_elements(from_page: showcases_page) %>
     <% if params[:keyword] %>
       <p>
@@ -16,17 +16,15 @@
     <% end %>
     <hr>
   </div>
-  <div class="eight columns">
+
+  <div class="small-12 large-8 columns">
     <ul class="showcases-list">
       <%= render @showcases %>
     </ul>
-    <hr>
-    <%= paginate(@showcases) %>
   </div>
 
-  <%= render 'showcases/register' %>
-
-  <div class="four columns">
+  <div class="small-12 large-4 columns">
+    <%= render 'showcases/register' %>
     <div class="info_table">
       <p>Popular Keywords:</p>
       <ul>
@@ -38,5 +36,10 @@
       <% end %>
       </ul>
     </div>
+  </div>
+
+  <div class="small-12 columns">
+    <hr>
+    <%= paginate(@showcases) %>
   </div>
 </div>

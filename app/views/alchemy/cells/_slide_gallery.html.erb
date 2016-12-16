@@ -2,8 +2,10 @@
   <% if cell.elements.published.any? %>
   <div class="slide-row">
     <div class="row" id="slide_gallery_container">
-      <div id="slide_gallery">
-        <%= render_elements(from_cell: cell) %>
+      <div class="slideshow-wrapper">
+        <ul id="slide_gallery" data-orbit>
+          <%= render_elements(from_cell: cell) %>
+        </ul>
       </div>
     </div>
   </div>

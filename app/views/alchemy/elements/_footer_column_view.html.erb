@@ -1,5 +1,5 @@
 <% cache(element) do %>
-  <div class="four columns" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+  <div class="small-12 large-4 columns" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
     <h3><%= render_essence_view_by_name(element, 'headline') %></h3>
   <% if element.has_ingredient?(:addthis_profile) %>
     <div class="addthis_toolbox addthis_default_style addthis_32x32_style">

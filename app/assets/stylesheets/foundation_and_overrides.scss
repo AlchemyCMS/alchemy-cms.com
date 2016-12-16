@@ -80,7 +80,7 @@ $default-float: left;
 // Colors
 
 $primary-color: $alchemy_green;
-$secondary-color: $alchemy_blue;
+$secondary-color: $gray_light;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
 
@@ -149,7 +149,7 @@ $large-screen: 1440px;
 // Grid Variables
 //
 
-// $row-width: em-calc(1000);
+$row-width: 65em;
 // $column-gutter: em-calc(30);
 // $total-columns: 12;
 
@@ -173,7 +173,7 @@ $large-screen: 1440px;
 // Control header font styles
 
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $header-font-weight: bold;
+$header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
@@ -375,7 +375,7 @@ $large-screen: 1440px;
 // $button-font-tny: em-calc(11);
 // $button-font-sml: em-calc(13);
 // $button-font-lrg: em-calc(20);
-// $button-font-weight: bold;
+$button-font-weight: normal;
 // $button-font-align: center;
 
 // We use these to control various hover effects.
