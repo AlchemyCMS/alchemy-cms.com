@@ -1,5 +1,6 @@
 class ExtensionsController < ApplicationController
   include Alchemy::ControllerActions
+  include Alchemy::ConfigurationMethods
 
   before_filter :load_extension, only: [:show]
   before_filter :load_alchemy_root_page
