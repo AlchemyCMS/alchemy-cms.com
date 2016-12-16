@@ -3,7 +3,7 @@ require 'alchemy/capistrano'
 require 'caplock'
 
 # ssh settings
-set :user,                      ENV["DEPLOY_USER"]
+set :user,                      'alchemy'
 set :ssh_options,               { forward_agent: true }
 ssh_options[:keys] =            [File.join(ENV["HOME"], ".ssh", "id_rsa")]
 default_run_options[:pty] =     true
