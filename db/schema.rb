@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107221429) do
+ActiveRecord::Schema.define(version: 20161216230257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,19 +52,21 @@ ActiveRecord::Schema.define(version: 20161107221429) do
   add_index "alchemy_contents", ["element_id", "position"], name: "index_contents_on_element_id_and_position", using: :btree
 
   create_table "alchemy_elements", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name",              limit: 255
     t.integer  "position"
     t.integer  "page_id"
-    t.boolean  "public",                 default: true
-    t.boolean  "folded",                 default: false
-    t.boolean  "unique",                 default: false
+    t.boolean  "public",                        default: true
+    t.boolean  "folded",                        default: false
+    t.boolean  "unique",                        default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.integer  "cell_id"
+    t.integer  "parent_element_id"
   end
 
+  add_index "alchemy_elements", ["page_id", "parent_element_id"], name: "index_alchemy_elements_on_page_id_and_parent_element_id", using: :btree
   add_index "alchemy_elements", ["page_id", "position"], name: "index_elements_on_page_id_and_position", using: :btree
 
   create_table "alchemy_elements_alchemy_pages", id: false, force: :cascade do |t|
@@ -110,6 +112,7 @@ ActiveRecord::Schema.define(version: 20161107221429) do
     t.integer  "updater_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "link_text"
   end
 
   create_table "alchemy_essence_flashes", force: :cascade do |t|
@@ -215,6 +218,7 @@ ActiveRecord::Schema.define(version: 20161107221429) do
     t.boolean  "default",                    default: false
     t.string   "country_code",   limit: 255, default: "",      null: false
     t.integer  "site_id"
+    t.string   "locale"
   end
 
   add_index "alchemy_languages", ["language_code", "country_code"], name: "index_alchemy_languages_on_language_code_and_country_code", using: :btree
