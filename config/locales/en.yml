@@ -129,6 +129,12 @@ en:
       showcase:
         one: Showcase
         other: Showcases
+    attributes:
+      extension:
+        url: URL
+      showcase:
+        url: URL
+        creator_url: Creator URL
     errors:
       template:
         header:
@@ -160,26 +166,3 @@ en:
             attributes:
               code:
                 invalid: 'Format of languagecode is not valid. Please use exactly two lowercase characters.'
-
-  # Translations for the authentication system used in alchemy.
-  authlogic:
-    authlogic:
-      error_messages:
-        login_blank: 'can not be blank'
-        login_not_found: 'is not valid'
-        consecutive_failed_logins_limit_exceeded: 'Consecutive failed logins limit exceeded, account is disabled.'
-        email_invalid: 'should look like an email address.'
-        password_blank: 'can not be blank'
-        password_invalid: 'is not valid'
-        not_active: 'Your account is not active'
-        not_confirmed: 'Your account is not confirmed'
-        not_approved: 'Your account is not approved'
-        no_authentication_details: 'You did not provide any details for authentication.'
-      models:
-        user_session: UserSession
-      attributes:
-        user_session:
-          login: login
-          email: email
-          password: password
-          remember_me: 'remember me'

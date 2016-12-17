@@ -1,3 +1,22 @@
 button.button.postfix {
   line-height: 0;
 }
+
+.field_with_errors {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"] {
+    border-color: $alert_red;
+  }
+}
+
+.alert-box {
+
+  h3 {
+    color: white;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+}

@@ -1,8 +1,7 @@
 <%= form_for(@showcase) do |f| %>
   <% if @showcase.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@showcase.errors.count, "error") %> prohibited this showcase from being saved:</h2>
-
+    <div class="alert-box alert">
+      <h3>Please correct these <%= pluralize(@showcase.errors.count, "error") %>:</h3>
       <ul>
       <% @showcase.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -19,7 +18,7 @@
   <div class="field">
     <%= f.label :url %>
     <small>Please begin with http(s)://</small>
-    <%= f.text_field :url %>
+    <%= f.url_field :url %>
   </div>
   <div class="field">
     <%= f.label :creator %>
@@ -29,7 +28,7 @@
   <div class="field">
     <%= f.label :creator_url %>
     <small>Please begin with http(s)://</small>
-    <%= f.text_field :creator_url %>
+    <%= f.url_field :creator_url %>
   </div>
   <div class="field">
     <%= f.label :keyword_list %>

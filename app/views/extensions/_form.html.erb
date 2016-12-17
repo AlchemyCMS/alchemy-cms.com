@@ -1,8 +1,7 @@
 <%= form_for(@extension) do |f| %>
   <% if @extension.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@extension.errors.count, "error") %> prohibited this extension from being saved:</h2>
-
+    <div class="alert-box alert">
+      <h3>Please correct these <%= pluralize(@extension.errors.count, "error") %>:</h3>
       <ul>
       <% @extension.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -17,6 +16,11 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :url %>
+    <small class="hint">Mandatory. Start URL with http(s)://</small>
+    <%= f.url_field :url %>
+  </div>
+  <div class="field">
     <%= f.label :maintainer %>
     <small class="hint">Mandatory</small>
     <%= f.text_field :maintainer %>
@@ -25,11 +29,6 @@
     <%= f.label :keywords %>
     <small class="hint">Separate keywords by komma</small>
     <%= f.text_field :keyword_list %>
-  </div>
-  <div class="field">
-    <%= f.label :url %>
-    <small class="hint">Start URL with http(s)://</small>
-    <%= f.text_field :url %>
   </div>
   <div class="field">
     <%= f.label :description %>
