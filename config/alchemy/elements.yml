@@ -26,6 +26,10 @@
   contents:
   - name: image
     type: EssencePicture
+    settings:
+      size: 480x320
+      crop: true
+      format: png
   - name: headline
     type: EssenceText
   - name: subheadline
