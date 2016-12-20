@@ -26,7 +26,7 @@ gem 'rack-cache', require: 'rack/cache'
 group :development do
   gem 'pry'
   gem 'capistrano', '3.6.1'
-  gem 'capistrano-alchemy', '0.3.0', require: false
+  gem 'capistrano-alchemy', '~> 1.0', require: false
   gem 'capistrano-maintenance', require: false
   gem 'capistrano-passenger', require: false
   gem 'thin'
