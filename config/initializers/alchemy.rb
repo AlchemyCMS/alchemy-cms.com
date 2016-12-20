@@ -5,12 +5,7 @@ Alchemy::Modules.register_module({
     name: 'modules.extensions',
     controller: '/admin/extensions',
     action: 'index',
-    image: 'extensions.png',
-    sub_navigation: [{
-      name: 'modules.extensions',
-      controller: '/admin/extensions',
-      action: 'index'
-    }]
+    image: 'extensions.png'
   }
 })
 
@@ -21,12 +16,7 @@ Alchemy::Modules.register_module({
     name: 'modules.showcases',
     controller: '/admin/showcases',
     action: 'index',
-    image: 'showcases.png',
-    sub_navigation: [{
-      name: 'modules.showcases',
-      controller: '/admin/showcases',
-      action: 'index'
-    }]
+    image: 'showcases.png'
   }
 })
 
