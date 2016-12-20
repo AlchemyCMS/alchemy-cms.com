@@ -1,7 +1,7 @@
 <% cache(element) do %>
-  <li<%= element_preview_code(element) %>>
-    <%= render_essence_view_by_name(element, 'image', :image_size => "480x320", :crop => true, :format => :png) %>
-    <h2><%= render_essence_view_by_name(element, 'subheadline') %></h2>
-    <h1><%= render_essence_view_by_name(element, 'headline') %></h1>
-  </li>
+  <%= element_view_for(element, tag: 'li', class: nil, id: nil) do |el| %>
+    <%= el.render :image, image_size: "480x320", crop: true, format: :png %>
+    <h2><%= el.render :subheadline %></h2>
+    <h1><%= el.render :headline %></h1>
+  <% end %>
 <% end %>

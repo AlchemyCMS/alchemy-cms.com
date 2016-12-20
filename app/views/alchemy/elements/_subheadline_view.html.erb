@@ -1,5 +1,5 @@
 <% cache(element) do %>
-  <h3 class="subheadline" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
-  	<%= render_essence_view_by_name(element, 'subheadline') %>
-  </h3>
+  <%= element_view_for(element, tag: 'h3', class: 'subheadline') do |el| %>
+    <%= el.render :subheadline %>
+  <% end %>
 <% end %>
