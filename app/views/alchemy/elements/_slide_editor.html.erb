@@ -1,3 +1,5 @@
-<%= render_essence_editor_by_name(element, 'image', :image_size => "480x320", :crop => true) %>
-<%= render_essence_editor_by_name(element, 'subheadline') %>
-<%= render_essence_editor_by_name(element, 'headline') %>
+<%= element_editor_for(element) do |el| %>
+  <%= el.edit :image, image_size: "480x320", crop: true %>
+  <%= el.edit :subheadline %>
+  <%= el.edit :headline %>
+<% end %>
