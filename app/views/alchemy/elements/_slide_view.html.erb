@@ -1,6 +1,6 @@
 <% cache(element) do %>
   <%= element_view_for(element, tag: 'li', class: nil, id: nil) do |el| %>
-    <%= el.render :image, image_size: "480x320", crop: true, format: :png %>
+    <%= el.render :image, image_size: "480x320", crop: true, format: 'png' %>
     <h2><%= el.render :subheadline %></h2>
     <h1><%= el.render :headline %></h1>
   <% end %>
