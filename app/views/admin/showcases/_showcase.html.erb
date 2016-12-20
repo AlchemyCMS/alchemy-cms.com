@@ -1,0 +1,32 @@
+<tr class="<%= cycle('even', 'odd') %>">
+<% resource_handler.attributes.each do |attribute| %>
+  <td class="<%= attribute[:type] %> <%= attribute[:name] %>">
+  <% if attribute[:type] == :boolean %>
+    <%= render_icon !!showcase.send(attribute[:name]) %>
+  <% elsif attribute[:name] == 'screenshot_uid' %>
+    <%= image_tag showcase.screenshot.thumb('140x78#').url %>
+  <% else %>
+    <%= render_attribute(showcase, attribute) %>
+  <% end %>
+  </td>
+<% end %>
+  <td class="tools">
+    <% if can?(:destroy, showcase) %>
+    <%= delete_button resource_path(showcase, current_location_params) %>
+    <% end %>
+    <% if can?(:edit, showcase) %>
+    <%= link_to_dialog(
+      '',
+      edit_resource_path(showcase, current_location_params),
+      {
+        title: Alchemy.t('Edit'),
+        size: resource_window_size
+      },
+      {
+        class: 'icon edit',
+        title: Alchemy.t('Edit')
+      }
+    ) %>
+    <% end %>
+  </td>
+</tr>

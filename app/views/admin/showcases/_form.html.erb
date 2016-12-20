@@ -3,7 +3,15 @@
   <%= f.input :url %>
   <%= f.input :creator %>
   <%= f.input :creator_url %>
-  <%= f.input :screenshot, as: 'file' %>
+  <% if @showcase.screenshot %>
+  <div class="ui-helper-clearfix">
+    <%= image_tag @showcase.screenshot.thumb('250x140#').url, class: 'float_right' %>
+  </div>
+  <% end %>
+  <div class="input">
+    <%= f.label :screenshot %>
+    <%= f.file_field :screenshot %>
+  </div>
   <%= f.input :public %>
   <%= f.input :keyword_list, as: 'string' %>
   <div class="submit">
