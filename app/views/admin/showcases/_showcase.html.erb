@@ -3,7 +3,7 @@
   <td class="<%= attribute[:type] %> <%= attribute[:name] %>">
   <% if attribute[:type] == :boolean %>
     <%= render_icon !!showcase.send(attribute[:name]) %>
-  <% elsif attribute[:name] == 'screenshot_uid' %>
+  <% elsif attribute[:name] == 'screenshot_uid' && showcase.screenshot %>
     <%= image_tag showcase.screenshot.thumb('140x78#').url %>
   <% else %>
     <%= render_attribute(showcase, attribute) %>
