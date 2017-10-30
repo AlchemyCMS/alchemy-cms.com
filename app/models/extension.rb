@@ -1,4 +1,4 @@
-class Extension < ActiveRecord::Base
+class Extension < ApplicationRecord
   acts_as_taggable_on :keywords
 
   validates :name, presence: true, uniqueness: true
