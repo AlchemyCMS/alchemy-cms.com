@@ -3,28 +3,28 @@
 }
 
 .package {
-  @include inline-block;
+  display: inline-block;
   position: relative;
   width: 30%;
   max-width: 295px;
   padding-bottom: 140px;
   background: #fff;
-  @include box-sizing(border-box);
-  @include box-shadow(lighten($gray_medium, 10) 0px 6px 8px);
+  box-sizing: border-box;
+  box-shadow: lighten($gray_medium, 10) 0px 6px 8px;
 
   &:first-child {
-    @include border-left-radius(8px);
+    border-radius: 0 0 8px 8px;
 
     .name {
-      @include border-top-left-radius(8px);
+      border-radius: 0 0 0 8px;
     }
   }
 
   &:last-child {
-    @include border-right-radius(8px);
+    border-radius: 8px 8px 0 0;
 
     .name {
-      @include border-top-right-radius(8px);
+      border-radius: 8px 0 0 0;
     }
   }
 
@@ -33,20 +33,16 @@
     z-index: 2;
     width: 40%;
     max-width: 380px;
-    @include border-radius(8px);
+    border-radius: 8px;
 
     .name {
-      @include border-top-left-radius(8px);
-      @include border-top-right-radius(8px);
+      border-radius: 8px 0 0 8px;
     }
 
     button {
       font-size: 18px;
       height: 50px;
-      background-image: -o-linear-gradient(-89deg, #8CD330  0%, #72AC27  100%);
-      background-image: -moz-linear-gradient(-89deg, #8CD330  0%, #72AC27  100%);
-      background-image: -ms-linear-gradient(-89deg, #8CD330  0%, #72AC27  100%);
-      background-image: linear-gradient(-179deg, #8CD330  0%, #72AC27  100%);
+      background-image: linear-gradient(-179deg, #8CD330 0%, #72AC27 100%);
     }
 
     .description { height: 400px }
@@ -59,7 +55,7 @@
     width: 100%;
     padding: 10px 35px;
     background: #d8d8d8;
-    @include inline-block(top);
+    display: inline-block(top);
   }
 
   .description {
@@ -98,7 +94,7 @@
 
     input {
       margin: 0;
-      @include inline-block;
+      display: inline-block;
       color: $gray_extra;
       font-size: inherit;
       width: 54px;
@@ -115,11 +111,7 @@
     height: 42px;
     border: 0 none;
     border-radius: 8px;
-    -moz-box-shadow:  0px 2px 2px 0px rgba(0,0,0,0.15);
-    box-shadow:       0px 2px 2px 0px rgba(0,0,0,0.15);
-    background-image: -o-linear-gradient(-89deg, #349BDE 0%, #2980B9 100%);
-    background-image: -moz-linear-gradient(-89deg, #349BDE 0%, #2980B9 100%);
-    background-image: -ms-linear-gradient(-89deg, #349BDE 0%, #2980B9 100%);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.15);
     background-image: linear-gradient(-179deg, #349BDE 0%, #2980B9 100%);
   }
 }

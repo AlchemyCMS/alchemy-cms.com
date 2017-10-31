@@ -16,7 +16,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails', '~> 4.0'
-gem 'compass-rails', '~> 2.0'
+gem 'autoprefixer-rails'
 gem 'zurb-foundation', '~> 4.3.2'
 gem 'dotenv-rails', '~> 0.11'
 
