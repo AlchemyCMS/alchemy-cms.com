@@ -1,8 +1,8 @@
 <% cache(element) do %>
   <%= element_view_for(element, class: 'screenshot row') do |el| %>
     <% element.contents.gallery_pictures.each do |content| %>
-      <%= link_to show_alchemy_picture_path(content.ingredient, format: 'jpg'), class: 'zoomable small-12 large-6 columns', rel: 'tour', title: content.essence.caption do %>
-        <%= render_essence_view(content, image_size: "450x280", crop: true) %>
+      <%= link_to content.ingredient.url(format: 'jpg'), class: 'zoomable small-12 large-6 columns', rel: 'tour', title: content.essence.caption do %>
+        <%= render_essence_view(content, size: "450x280", crop: true) %>
       <% end %>
     <% end %>
   <% end %>
