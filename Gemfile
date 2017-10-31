@@ -12,7 +12,7 @@ gem 'airbrake', '~> 4.3.4'
 gem 'active_model_serializers', '~> 0.9.5'
 
 # assets
-gem 'sass-rails', '~> 5.0'
+gem 'sassc-rails', '~> 1.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails', '~> 4.0'
