@@ -8,3 +8,16 @@ append :linked_dirs, 'log', 'tmp/cache', 'public/system'
 
 before :deploy, 'maintenance:enable'
 after :deploy, 'maintenance:disable'
+
+after 'alchemy:import:pictures', 'import:showcases'
+
+namespace :import do
+  desc "Import showcase pictures"
+  task :showcases do
+    system "mkdir -p ./public/system"
+    puts "Importing showcase screenshots. Please wait..."
+    on roles :app do |server|
+      system "rsync --progress -rue 'ssh -p #{server.port || 22}' #{server.user}@#{server.hostname}:#{shared_path}/public/system/dragonfly ./public/system/"
+    end
+  end
+end
