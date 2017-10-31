@@ -29,6 +29,10 @@ group :development do
   gem 'capistrano-alchemy', '~> 1.0', require: false
   gem 'capistrano-maintenance', require: false
   gem 'capistrano-passenger', require: false
+  # required for ed25519 ssh support
+  gem 'rbnacl', '>= 3.2', '< 5.0', require: false
+  gem 'rbnacl-libsodium', require: false
+  gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0', require: false
   gem 'thin'
   gem 'spring'
   gem 'web-console', '~> 2.0'
