@@ -2,7 +2,7 @@
   <%= element_view_for(element, class: 'gallery row') do |el| %>
     <% element.contents.gallery_pictures.each do |content| %>
       <%= render_essence_view content, {
-        image_size: "450x280",
+        size: "450x280",
         crop: true
       }, {
         class: 'small-12 large-6 columns'

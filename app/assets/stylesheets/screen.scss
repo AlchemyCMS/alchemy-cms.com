@@ -6,6 +6,7 @@ body {
   font-size: 15px;
   line-height: 22px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // Headline fonts
@@ -47,7 +48,7 @@ p {
 a {
   color: $alchemy_green;
   text-decoration: underline;
-  @include transition(all 0.1s ease-in-out);
+  transition: all 0.1s ease-in-out;
 
   &:hover {
     color: $belize_blue;
@@ -118,7 +119,7 @@ header {
   }
 
   li {
-    @include box-shadow(none);
+    box-shadow: none;
     position: relative;
     float: left;
     margin-right: 20px;
@@ -149,7 +150,7 @@ header {
     font-weight: 900;
     text-transform: uppercase;
 
-    @include transition(all 0.1s ease-in-out);
+    transition: all 0.1s ease-in-out;
 
     &:hover {
       color: $gray_extra;
@@ -222,7 +223,7 @@ footer {
   a {
     color: $alchemy_green;
     text-decoration: underline;
-    @include transition(all 0.1s ease-in-out);
+    transition: all 0.1s ease-in-out;
 
     &:hover {
       color: $gray_ultralight;
@@ -251,7 +252,7 @@ footer {
 
 .info_table {
   background-color: transparentize($gray_medium, 0.75);
-  @include border-radius(8px);
+  border-radius: 8px;
   padding: 20px;
   margin-bottom: 2em;
 
@@ -286,7 +287,7 @@ footer {
     font-size: 18px;
     line-height: 18px;
     text-decoration: none;
-    @include transition(all 0.1s ease-in-out);
+    transition: all 0.1s ease-in-out;
 
     &:hover {
       color: $belize_blue;
@@ -295,7 +296,7 @@ footer {
   }
 
   img {
-    @include box-shadow(0px 2px 5px $gray_extra);
+    box-shadow: 0px 2px 5px $gray_extra;
     margin-bottom: 15px;
   }
 }

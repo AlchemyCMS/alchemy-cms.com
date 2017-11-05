@@ -22,7 +22,7 @@
     width: 100%;
     max-width: 100%;
     margin-bottom: 3em;
-    @include border-radius(8px);
+    border-radius: 8px;
 
     &:nth-child(2) {
       width: 100%;
@@ -34,7 +34,7 @@
     }
 
     .name {
-      @include border-top-radius(8px);
+      border-radius: 8px 0 0 8px;
     }
 
     .description {

@@ -1,4 +1,4 @@
-class Showcase < ActiveRecord::Base
+class Showcase < ApplicationRecord
   acts_as_taggable_on :keywords
 
   dragonfly_accessor :screenshot
