@@ -35,12 +35,9 @@ p {
 }
 
 a {
-  color: $alchemy_green;
-  text-decoration: underline;
   transition: all 0.1s ease-in-out;
 
   &:hover {
-    color: $belize_blue;
     text-decoration: underline;
   }
 }
@@ -218,12 +215,9 @@ footer {
 
   a {
     color: $alchemy_green;
-    text-decoration: underline;
-    transition: all 0.1s ease-in-out;
 
     &:hover {
       color: $gray_ultralight;
-      text-decoration: underline;
     }
   }
 
