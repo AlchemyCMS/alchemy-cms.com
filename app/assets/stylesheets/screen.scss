@@ -1,9 +1,4 @@
 body {
-  background: $gray_ultralight;
-  color: $marine;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 15px;
   line-height: 22px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,8 +7,6 @@ body {
 // Headline fonts
 
 h1 {
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-  font-weight: 900;
   font-size: 40px;
   line-height: 1.2;
   margin-bottom: 45px;
@@ -23,8 +16,6 @@ h1 {
 
 h2 {
   padding-top: 20px;
-  font-family: 'Bitter', serif;
-  font-weight: normal;
   font-size: 28px;
   line-height: 1.2;
   color: $gray_extra;
@@ -32,8 +23,6 @@ h2 {
 
 h3 {
   color: $marine;
-  font-family: 'Bitter', serif;
-  font-weight: normal;
   font-size: 25px;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -185,11 +174,11 @@ header {
 }
 
 .slide-row {
-
   width: 100%;
   height: auto;
   margin: 0 auto;
-  background-image: image-url("slider-pattern.png");
+  background-color: $gray_ultralight;
+  border-bottom: 1px solid $gray_ultralight;
 
   #slide_gallery_container {
     margin: auto;
@@ -289,9 +278,7 @@ footer {
   a {
     margin-bottom: 42px;
     color: $alchemy_green;
-    font-family: 'Bitter', serif;
     font-weight: normal;
-    font-size: 18px;
     line-height: 18px;
     text-decoration: none;
     transition: all 0.1s ease-in-out;

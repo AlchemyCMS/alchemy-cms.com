@@ -63,11 +63,11 @@ $em-base: 16px !default;
 
 $default-float: left;
 
-// $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: normal;
-// $body-font-style: normal;
+$body-bg: #fff;
+$body-font-color: $marine;
+$body-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$body-font-weight: normal;
+$body-font-style: normal;
 
 // Font-smoothing
 
@@ -172,8 +172,8 @@ $row-width: 65em;
 
 // Control header font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-weight: normal;
+$header-font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$header-font-weight: 900;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
@@ -231,7 +231,7 @@ $header-font-weight: normal;
 
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: #ddd;
+$hr-border-color: $gray_ultralight;
 // $hr-margin: em-calc(20);
 
 // Style lists
