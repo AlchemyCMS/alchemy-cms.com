@@ -296,9 +296,12 @@ footer {
   }
 
   img {
-    box-shadow: 0px 2px 5px $gray_extra;
     margin-bottom: 15px;
   }
+}
+
+figure {
+  margin: 0;
 }
 
 .gallery {
