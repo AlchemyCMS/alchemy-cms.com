@@ -242,23 +242,15 @@ footer {
 
 .info_table {
   background-color: transparentize($gray_medium, 0.75);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 20px;
   margin-bottom: 2em;
 
-  ul, ol {
-    padding: 0 1em;
-    margin: 0px;
-  }
-
   li {
-    color: $belize-blue;
     font-weight: 600;
     margin-bottom: 12px;
     background-color: none;
     border-bottom: 0 none;
-    font-size: 15px;
-    line-height: 22px;
 
     &:last-child {
       border-bottom: 0 none;
