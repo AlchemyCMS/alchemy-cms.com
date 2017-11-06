@@ -1,18 +1,18 @@
 GIT
   remote: https://github.com/AlchemyCMS/alchemy-devise
-  revision: 7a39cac88442f982810c36fcd19d41d7407af24e
-  branch: master
+  revision: a1ed6a3914fc649ff2c93fe803fb16bf625ab3fd
+  branch: 4.0-stable
   specs:
-    alchemy-devise (4.0.0.beta)
+    alchemy-devise (4.0.0)
       alchemy_cms (>= 4.0.0.beta, < 4.99)
       devise (>= 4.0, < 4.99)
 
 GIT
   remote: https://github.com/AlchemyCMS/alchemy_cms
-  revision: f170b953bd74dbfcdbce715fee2a71fe6bf8384e
-  branch: master
+  revision: 0cb6cc49efb58ca97e1a3d95440ba24bbd7b43c1
+  branch: 4.0-stable
   specs:
-    alchemy_cms (4.0.0.rc2)
+    alchemy_cms (4.0.0)
       active_model_serializers (~> 0.9.0)
       acts-as-taggable-on (~> 5.0)
       acts_as_list (~> 0.3)

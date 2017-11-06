@@ -2,8 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0'
 gem 'pg', '~> 0.19'
-gem 'alchemy_cms',    git: 'https://github.com/AlchemyCMS/alchemy_cms',    branch: 'master'
-gem 'alchemy-devise', git: 'https://github.com/AlchemyCMS/alchemy-devise', branch: 'master'
+
+'4.0-stable'.tap do |branch|
+  gem 'alchemy_cms',    git: 'https://github.com/AlchemyCMS/alchemy_cms',    branch: branch
+  gem 'alchemy-devise', git: 'https://github.com/AlchemyCMS/alchemy-devise', branch: branch
+end
+
 gem 'newrelic_rpm'
 gem 'kramdown', '~> 1.4.1'
 gem 'airbrake', '~> 4.3.4'
