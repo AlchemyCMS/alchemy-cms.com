@@ -53,9 +53,10 @@
     </div>
   <% end %>
 
-  <%= render 'extensions/register' %>
 
   <div class="small-12 large-4 columns">
+    <%= render 'extensions/register' %>
+
   <% if @similiar_keyword.any? %>
     <div class="info_table">
       <p>Other extensions with same keyword:</p>
