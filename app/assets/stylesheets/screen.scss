@@ -206,6 +206,14 @@ header {
   margin-bottom: -75px;
   margin-top: -35px;
   color: $gray_extra;
+
+  img {
+    border: 1px solid $marine;
+  }
+
+  a img {
+    border-color: $alchemy_green;
+  }
 }
 
 footer {
