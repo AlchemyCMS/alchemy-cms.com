@@ -21,6 +21,8 @@
     type: EssenceText
   - name: bigtext
     type: EssenceRichtext
+  - name: slack
+    type: EssenceHtml
 
 - name: slide
   contents:
