@@ -2,7 +2,9 @@
 <% resource_handler.attributes.each do |attribute| %>
   <td class="<%= attribute[:type] %> <%= attribute[:name] %>">
   <% if attribute[:type] == :boolean %>
-    <%= render_icon !!extension.send(attribute[:name]) %>
+    <% if extension.send(attribute[:name]) %>
+      <%= render_icon :check %>
+    <% end %>
   <% elsif attribute[:name] == 'keywords' %>
     <%= extension.keyword_list %>
   <% else %>
@@ -16,14 +18,13 @@
     <% end %>
     <% if can?(:edit, extension) %>
     <%= link_to_dialog(
-      '',
+      render_icon(:edit),
       edit_resource_path(extension, current_location_params),
       {
         title: Alchemy.t('Edit'),
         size: resource_window_size
       },
       {
-        class: 'icon edit',
         title: Alchemy.t('Edit')
       }
     ) %>

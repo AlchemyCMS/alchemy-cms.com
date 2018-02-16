@@ -1,23 +1,22 @@
 GIT
   remote: https://github.com/AlchemyCMS/alchemy-devise
-  revision: a1ed6a3914fc649ff2c93fe803fb16bf625ab3fd
-  branch: 4.0-stable
+  revision: 9a4bcd1195a1d1ae4daec68c03d1ffb3cd19541a
+  branch: master
   specs:
-    alchemy-devise (4.0.0)
+    alchemy-devise (4.1.0.beta)
       alchemy_cms (>= 4.0.0.beta, < 4.99)
       devise (>= 4.0, < 4.99)
 
 GIT
   remote: https://github.com/AlchemyCMS/alchemy_cms
-  revision: 0cb6cc49efb58ca97e1a3d95440ba24bbd7b43c1
-  branch: 4.0-stable
+  revision: 4927a21410dfb39baab9ff13ed3185a3ec9887fe
+  branch: master
   specs:
-    alchemy_cms (4.0.0)
+    alchemy_cms (4.1.0.beta)
       active_model_serializers (~> 0.9.0)
       acts-as-taggable-on (~> 5.0)
       acts_as_list (~> 0.3)
       awesome_nested_set (~> 3.1)
-      bourbon (~> 4.2)
       cancancan (~> 1.9)
       coffee-rails (~> 4.0)
       dragonfly (~> 1.0, >= 1.0.7)
@@ -99,9 +98,6 @@ GEM
     bcrypt_pbkdf (1.0.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    bourbon (4.3.4)
-      sass (~> 3.4)
-      thor (~> 0.19)
     builder (3.2.3)
     cancancan (1.17.0)
     capistrano (3.6.1)

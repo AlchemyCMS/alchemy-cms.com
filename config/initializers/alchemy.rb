@@ -5,7 +5,7 @@ Alchemy::Modules.register_module({
     name: 'modules.extensions',
     controller: '/admin/extensions',
     action: 'index',
-    image: 'extensions.png'
+    icon: 'puzzle-piece'
   }
 })
 
@@ -16,7 +16,7 @@ Alchemy::Modules.register_module({
     name: 'modules.showcases',
     controller: '/admin/showcases',
     action: 'index',
-    image: 'showcases.png'
+    icon: 'camera'
   }
 })
 
