@@ -316,7 +316,6 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.9.5)
-  airbrake (~> 4.3.4)
   alchemy-devise!
   alchemy_cms!
   autoprefixer-rails
