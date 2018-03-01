@@ -1,0 +1,10 @@
+---
+
+- name: Provision demo server
+  import_playbook: production.yml
+  vars:
+    rails_env: production
+    app_root: /var/www/alchemy-demo
+    app_user: demo
+    hostname: demo.alchemy-cms.com
+    vault: demo_passwords.yml
