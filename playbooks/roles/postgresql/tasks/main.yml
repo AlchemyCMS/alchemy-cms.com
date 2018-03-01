@@ -1,6 +1,6 @@
 ---
 
-- include_vars: passwords.yml
+- include_vars: "{{vault}}"
   no_log: true
 
 - name: Install PostgreSQL

@@ -6,6 +6,7 @@
     app_root: /var/www/alchemy-homepage
     app_user: alchemy
     hostname: alchemy-cms.com
+    vault: passwords.yml
   hosts: production
   remote_user: root
   roles:
