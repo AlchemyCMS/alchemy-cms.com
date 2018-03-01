@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.0'
-gem 'pg', '~> 0.19'
+gem 'rails', '~> 5.1.5'
+gem 'pg', '~> 1.0'
 
 'master'.tap do |branch|
   gem 'alchemy_cms',    git: 'https://github.com/AlchemyCMS/alchemy_cms',    branch: branch
@@ -35,9 +35,9 @@ group :development do
   gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0', require: false
   gem 'thin'
   gem 'spring'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
 end
 
 group :production do
-  gem 'mini_racer', '~> 0.1.7'
+  gem 'mini_racer', '~> 0.1'
 end
