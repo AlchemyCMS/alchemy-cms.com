@@ -36,6 +36,7 @@ group :development do
   gem 'thin'
   gem 'spring'
   gem 'web-console'
+  gem 'listen'
 end
 
 group :production do

@@ -176,6 +176,10 @@ GEM
     kaminari-core (1.1.1)
     kramdown (1.4.2)
     libv8 (6.3.292.48.1)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     loofah (2.2.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -255,6 +259,7 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    ruby_dep (1.5.0)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -331,6 +336,7 @@ DEPENDENCIES
   dotenv-rails (~> 0.11)
   jquery-rails (~> 4.0)
   kramdown (~> 1.4.1)
+  listen
   mini_racer (~> 0.1)
   newrelic_rpm
   pg (~> 1.0)
