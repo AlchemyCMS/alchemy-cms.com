@@ -17,7 +17,7 @@
 
 - name: Copy ssh keys for app user
   authorized_key:
-    key: https://git.bitspire.de/bitspire/ssh-keys/raw/master/keys
+    key: https://github.com/tvdeyen.keys
     user: "{{app_user}}"
     exclusive: yes
 
