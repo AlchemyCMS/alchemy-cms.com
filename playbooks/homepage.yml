@@ -2,6 +2,7 @@
 
 - name: Provision production server
   vars:
+    ruby_version: 2.5
     rails_env: production
     app_root: /var/www/alchemy-homepage
     app_user: alchemy

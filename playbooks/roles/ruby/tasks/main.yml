@@ -9,8 +9,9 @@
     name: "{{item}}"
     state: latest
   with_items:
-    - ruby2.5
-    - ruby2.5-dev
+    - "ruby{{ruby_version}}"
+    - "ruby{{ruby_version}}-dev"
+  notify: switch ruby
 
 - name: Install Bundler
   gem:
