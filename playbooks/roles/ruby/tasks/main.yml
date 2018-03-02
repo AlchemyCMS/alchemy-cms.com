@@ -9,8 +9,8 @@
     name: "{{item}}"
     state: latest
   with_items:
-    - ruby2.3
-    - ruby2.3-dev
+    - ruby2.5
+    - ruby2.5-dev
 
 - name: Install Bundler
   gem:
