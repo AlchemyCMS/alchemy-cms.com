@@ -6,7 +6,7 @@
       <%= render_icon :check %>
     <% end %>
   <% elsif attribute[:name] == 'keywords' %>
-    <%= extension.keyword_list %>
+    <%= extension.tag_list.join(', ') %>
   <% else %>
     <%= render_attribute(extension, attribute) %>
   <% end %>

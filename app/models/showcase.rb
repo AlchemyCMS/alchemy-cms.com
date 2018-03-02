@@ -1,5 +1,5 @@
 class Showcase < ApplicationRecord
-  acts_as_taggable_on :keywords
+  include Alchemy::Taggable
 
   dragonfly_accessor :screenshot
 

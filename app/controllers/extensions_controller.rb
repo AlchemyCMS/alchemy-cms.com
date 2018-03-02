@@ -53,6 +53,6 @@ class ExtensionsController < ApplicationController
   end
 
   def extension_params
-    params.require(:extension).permit(:description, :url, :maintainer, :name, :keyword_list)
+    params.require(:extension).permit(:description, :url, :maintainer, :name, :tag_list)
   end
 end

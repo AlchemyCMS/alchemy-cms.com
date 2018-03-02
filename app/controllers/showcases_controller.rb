@@ -32,6 +32,6 @@ class ShowcasesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def showcase_params
-    params.require(:showcase).permit(:title, :url, :creator, :creator_url, :keyword_list, :screenshot, :retained_screenshot)
+    params.require(:showcase).permit(:title, :url, :creator, :creator_url, :tag_list, :screenshot, :retained_screenshot)
   end
 end

@@ -1,5 +1,5 @@
 class Extension < ApplicationRecord
-  acts_as_taggable_on :keywords
+  include Alchemy::Taggable
 
   validates :name, presence: true, uniqueness: true
   validates :maintainer, presence: true
