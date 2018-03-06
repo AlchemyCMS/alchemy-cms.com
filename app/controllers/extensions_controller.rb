@@ -3,8 +3,8 @@ class ExtensionsController < ApplicationController
   include Alchemy::AbilityHelper
   include Alchemy::ControllerActions
 
-  before_filter :load_extension, only: [:show]
-  before_filter :load_alchemy_root_page
+  before_action :load_extension, only: [:show]
+  before_action :load_alchemy_root_page
 
   def index
     @extensions = Extension.published
