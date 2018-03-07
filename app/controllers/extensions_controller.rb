@@ -7,7 +7,7 @@ class ExtensionsController < ApplicationController
   before_action :load_alchemy_root_page
 
   def index
-    @extensions = Extension.published
+    @extensions = Extension.published.order(:name)
     if params[:keyword]
       @extensions = @extensions.tagged_with(params[:keyword])
     end
