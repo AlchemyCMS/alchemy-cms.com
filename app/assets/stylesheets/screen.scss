@@ -7,27 +7,25 @@ body {
 // Headline fonts
 
 h1 {
-  font-size: 40px;
-  line-height: 1.2;
-  margin-bottom: 45px;
-  color: $alchemy_gray;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: $alchemy_orange;
+  text-decoration-skip-ink: auto;
 }
 
-h2 {
-  padding-top: 20px;
-  font-size: 28px;
-  line-height: 1.2;
-  color: $gray_extra;
-}
+// h2 {
+//   padding-top: 20px;
+//   font-size: 28px;
+//   line-height: 1.2;
+//   color: $alchemy_gray;
+// }
 
-h3 {
-  color: $marine;
-  font-size: 25px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  padding-top: 20px;
-}
+// h3 {
+//   color: $alchemy_gray;
+//   font-size: 25px;
+//   line-height: 1.2;
+//   margin-bottom: 20px;
+//   padding-top: 20px;
+// }
 
 // Body fonts
 p {
@@ -69,11 +67,10 @@ pre {
 }
 
 header {
-  background: $alchemy_blue;
-  color: #FFF;
+  background: $alchemy_gray;
+  color: #fff;
   width: 100%;
-  min-height: 140px;
-  border-bottom: 4px solid $alchemy_green;
+  min-height: 110px;
 
   .container {
     height: 135px;
@@ -114,14 +111,6 @@ header {
     &.last {
       margin-right: 0px;
     }
-
-    &:hover {
-      background: transparent;
-    }
-
-    &.active {
-      background-color: $alchemy_blue;
-    }
   }
 
   a {
@@ -132,18 +121,18 @@ header {
     display: block;
     font-size: 16px;
     text-decoration: none;
-    color: $alchemy_gray;
+    color: #fff;
     font-weight: 900;
     text-transform: uppercase;
 
     transition: all 0.1s ease-in-out;
 
     &:hover {
-      color: $gray_extra;
+      color: $alchemy_orange;
     }
 
     &.active {
-      color: $alchemy_green;
+      color: $alchemy_orange;
     }
   }
 }
@@ -156,12 +145,13 @@ header {
     top: 80px;
     margin: 0;
     left: auto;
+    color: #fff;
   }
 
   h1 {
     line-height: 42px;
-    color: $marine;
     text-transform: uppercase;
+    text-decoration: none;
     margin-top: 60px;
   }
 
@@ -173,9 +163,11 @@ header {
 .slide-row {
   width: 100%;
   height: auto;
+  min-height: 385px;
   margin: 0 auto;
-  background-color: $gray_ultralight;
-  border-bottom: 1px solid $gray_ultralight;
+  background-color: $alchemy_gray;
+  border-bottom: 1px solid $alchemy_orange;
+  padding-top: 4em;
 
   #slide_gallery_container {
     margin: auto;
@@ -197,7 +189,7 @@ header {
   }
 
   a img {
-    border-color: $alchemy_green;
+    border-color: $alchemy_orange;
   }
 }
 
@@ -214,7 +206,7 @@ footer {
   }
 
   a {
-    color: $alchemy_green;
+    color: $alchemy_orange;
 
     &:hover {
       color: $gray_ultralight;
@@ -232,7 +224,7 @@ footer {
 
 .success {
   padding: 12px;
-  background: $alchemy_green;
+  background: $alchemy_orange;
   color: #fff;
 }
 
@@ -263,7 +255,7 @@ footer {
 
   a {
     margin-bottom: 42px;
-    color: $alchemy_green;
+    color: $alchemy_orange;
     font-weight: normal;
     line-height: 18px;
     text-decoration: none;

@@ -79,8 +79,8 @@ $body-font-style: normal;
 
 // Colors
 
-$primary-color: $alchemy_green;
-$secondary-color: $gray_light;
+$primary-color: $alchemy_gray;
+$secondary-color: $alchemy_orange;
 $alert-color: $alert_red;
 // $success-color: #5da423;
 
@@ -175,7 +175,7 @@ $row-width: 65em;
 $header-font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 $header-font-weight: 900;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: $alchemy_gray;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -225,13 +225,13 @@ $header-font-weight: 900;
 
 // $anchor-text-decoration: none;
 // $anchor-font-color: $primary-color;
-$anchor-font-color-hover: $belize_blue;
+$anchor-font-color-hover: $alchemy_orange;
 
 // Style the <hr> element
 
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-$hr-border-color: $gray_ultralight;
+$hr-border-color: $alchemy_orange;
 // $hr-margin: em-calc(20);
 
 // Style lists
@@ -380,7 +380,7 @@ $button-font-weight: normal;
 
 // We use these to control various hover effects.
 
-// $button-function-factor: 10%;
+$button-function-factor: 5%;
 
 // We use these to control button border styles.
 
