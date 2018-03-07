@@ -56,60 +56,62 @@ header {
   width: 100%;
   min-height: $header-height;
 
-  .container {
-    height: 135px;
-    padding: 0px;
-    overflow: visible;
+  &.small {
+    min-height: $header-height / 2;
+
+    #logo {
+      width: 150px;
+    }
+  }
+
+  .row, .columns {
+    display: flex;
+  }
+
+  .columns {
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 
 #logo {
   display: block;
-  width: 300px;
-  height: 91px;
-  margin: -10px 0 6px 0;
+  width: 100%;
+  transition: width 0.3s;
+  padding: 1em 0;
 
   img {
-    margin-left: -10px;
-    margin-top: 17px;
+    margin-left: -0.25em;
   }
 }
 
 #main_navigation {
-  margin-top: 28px;
-
   .nav-bar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
-    background: transparent;
     list-style-type: none;
+    transform: translateX(1em);
   }
 
   li {
     box-shadow: none;
     position: relative;
-    float: left;
-    margin-right: 20px;
+    margin: 0 0.5em;
     border: 0;
-
-    &.last {
-      margin-right: 0px;
-    }
   }
 
   a {
-    padding: 13px 5px 0px 0;
-    position: relative;
-    left: 0;
-    top: 0;
+    padding: 0 0.5em;
     display: block;
     font-size: 16px;
     text-decoration: none;
     color: #fff;
     font-weight: 900;
     text-transform: uppercase;
-
-    transition: all 0.1s ease-in-out;
+    transition: color 0.2s;
 
     &:hover {
       color: $alchemy_orange;
