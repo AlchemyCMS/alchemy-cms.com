@@ -11,6 +11,8 @@
       <%= showcase.tags.map { |k| link_to k.name, showcases_path(keyword: k.name) }.join(', ').html_safe %>
     </p>
   <% end %>
-  <%= image_tag showcase.screenshot.thumb('450x280#').url if showcase.screenshot_stored? %>
+  <%= link_to showcase.url, target: '_blank', rel: 'nofollow' do %>
+    <%= image_tag showcase.screenshot.thumb('450x281#').url if showcase.screenshot_stored? %>
+  <% end %>
 </li>
 <% end %>
