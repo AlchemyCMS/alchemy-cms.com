@@ -1,7 +1,5 @@
 <% cache(element) do %>
   <%= element_view_for(element, tag: 'li', class: nil, id: nil) do |el| %>
     <%= el.render :image %>
-    <h2><%= el.render :subheadline %></h2>
-    <h1><%= el.render :headline %></h1>
   <% end %>
 <% end %>

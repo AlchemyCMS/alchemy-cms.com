@@ -1,10 +1,10 @@
 $(function() {
   $(document).foundation('orbit', {
     animation: 'fade',
-    timer_speed: 4000,
+    timer_speed: 5000,
     pause_on_hover: false,
     resume_on_mouseout: false,
-    animation_speed: 250,
+    animation_speed: 300,
     stack_on_small: false,
     navigation_arrows: false,
     slide_number: false,

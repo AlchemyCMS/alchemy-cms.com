@@ -29,13 +29,9 @@
   - name: image
     type: EssencePicture
     settings:
-      size: 480x320
+      size: 1280x720
       crop: true
-      format: png
-  - name: headline
-    type: EssenceText
-  - name: subheadline
-    type: EssenceText
+      format: jpg
 
 - name: package
   contents:

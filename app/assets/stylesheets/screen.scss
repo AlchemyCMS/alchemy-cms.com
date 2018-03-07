@@ -27,11 +27,6 @@ a {
 
 //
 
-#bordure {
-  background: $alchemy_gray;
-  height: 30px;
-}
-
 .flash.row {
   margin-top: 1em;
 }
@@ -122,36 +117,13 @@ header {
   }
 }
 
-#slide_gallery {
-
-  h1, h2 {
-    position: absolute;
-    right: 0;
-    top: 80px;
-    margin: 0;
-    left: auto;
-    color: $gray_light;
-  }
-
-  h1 {
-    line-height: 42px;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-top: 60px;
-  }
-
-  h2 {
-    padding-top: 20px;
-  }
-}
-
 .slide-row {
   width: 100%;
   height: auto;
-  min-height: 385px;
+  min-height: 650px;
   margin: 0 auto;
   background-color: $alchemy_gray;
-  border-bottom: 1px solid $alchemy_orange;
+  border-bottom: 2px solid $alchemy_orange;
   padding-top: 4em;
 
   #slide_gallery_container {
