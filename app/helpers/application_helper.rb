@@ -6,4 +6,8 @@ module ApplicationHelper
   def showcases_page
     @showcases_page ||= Alchemy::Page.find_by(page_layout: 'showcases', language_id: session[:alchemy_language_id])
   end
+
+  def extensions_page
+    @extensions_page ||= Alchemy::Page.find_by(page_layout: 'extensions', language_id: session[:alchemy_language_id])
+  end
 end

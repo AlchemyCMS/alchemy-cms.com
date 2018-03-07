@@ -10,6 +10,7 @@
 <div id="content" class="row">
   <div class="small-12 columns">
     <h1>Found <%= @extensions.total_count %> Alchemy <%= (Extension.model_name.human(count: @extensions.total_count)) %></h1>
+    <%= render_elements(from_page: extensions_page) %>
     <% if params[:keyword] || params[:by] %>
       <% if params[:keyword] %>
         <p>

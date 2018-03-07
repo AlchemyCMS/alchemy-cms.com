@@ -29,3 +29,8 @@
   unique: true
   layoutpage: true
   elements: [headline, text]
+
+- name: extensions
+  unique: true
+  layoutpage: true
+  elements: [headline, text]
