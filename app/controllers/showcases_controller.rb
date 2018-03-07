@@ -4,11 +4,10 @@ class ShowcasesController < ApplicationController
   include Alchemy::ControllerActions
 
   def index
-    @showcases = Showcase.published.order('title ASC')
+    @showcases = Showcase.published.order('RANDOM()')
     if params[:keyword]
       @showcases = @showcases.tagged_with(params[:keyword])
     end
-    @showcases = @showcases.page(params[:page] || 1).per(8)
 
     @keywords = Showcase.tag_counts.order('taggings_count DESC').limit(5)
   end
