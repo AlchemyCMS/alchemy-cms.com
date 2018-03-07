@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301164304) do
+ActiveRecord::Schema.define(version: 20180307115935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -344,7 +344,6 @@ ActiveRecord::Schema.define(version: 20180301164304) do
     t.string "url", limit: 255
     t.text "description"
     t.string "maintainer", limit: 255
-    t.text "keywords"
     t.integer "creator_id"
     t.integer "updater_id"
     t.datetime "created_at", null: false
