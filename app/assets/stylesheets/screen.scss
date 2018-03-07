@@ -12,21 +12,6 @@ h1 {
   text-decoration-skip-ink: auto;
 }
 
-// h2 {
-//   padding-top: 20px;
-//   font-size: 28px;
-//   line-height: 1.2;
-//   color: $alchemy_gray;
-// }
-
-// h3 {
-//   color: $alchemy_gray;
-//   font-size: 25px;
-//   line-height: 1.2;
-//   margin-bottom: 20px;
-//   padding-top: 20px;
-// }
-
 // Body fonts
 p {
   margin-bottom: 20px;
@@ -145,7 +130,7 @@ header {
     top: 80px;
     margin: 0;
     left: auto;
-    color: #fff;
+    color: $gray_light;
   }
 
   h1 {
@@ -178,11 +163,8 @@ header {
 }
 
 #content {
-  padding-bottom: 110px;
-  padding-top: 70px;
+  padding: 4em 0;
   min-height: 300px;
-  margin-bottom: -75px;
-  margin-top: -35px;
 
   img {
     border: 1px solid $marine;
