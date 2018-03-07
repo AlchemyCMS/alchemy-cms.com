@@ -3,7 +3,6 @@
 //= require packages
 //= require foundation/foundation
 //= require foundation/foundation.orbit
-//= require foundation/foundation.topbar
 //= require orbit
 //= require jquery.fancybox
 //= require numeral.min
