@@ -2,6 +2,7 @@ body {
   line-height: 22px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: $header-height;
 }
 
 // Headline fonts
@@ -47,10 +48,13 @@ pre {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
   background: $alchemy_gray;
   color: #fff;
   width: 100%;
-  min-height: 110px;
+  min-height: $header-height;
 
   .container {
     height: 135px;
