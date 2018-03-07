@@ -2,6 +2,10 @@ button.button.postfix {
   line-height: 0;
 }
 
+button, .button {
+  box-shadow: none;
+}
+
 .field_with_errors {
   input[type="text"],
   input[type="email"],
