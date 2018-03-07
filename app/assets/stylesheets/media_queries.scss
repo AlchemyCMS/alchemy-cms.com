@@ -10,13 +10,6 @@
   #logo {
     width: 80%;
   }
-
-  #slide_gallery {
-
-    h1, h2 {
-      padding-right: 40px;
-    }
-  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -71,22 +64,5 @@
 
   .slide-row {
     display: none;
-  }
-
-  h1 {
-    margin-top: -15px;
-    margin-bottom: -1px;
-    font-size: 26px;
-    line-height: 30px;
-  }
-
-  h3 {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  footer h3 {
-    font-size: 18px;
-    line-height: 22px;
   }
 }
