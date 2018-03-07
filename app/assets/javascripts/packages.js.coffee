@@ -1,3 +1,4 @@
+#= require numeral.min
 # jQuery plugin to set the amounts on the buttons calculated by the days from the number input
 $.fn.extend
   packageCalculator: ->
