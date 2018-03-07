@@ -4,10 +4,10 @@
     <b>by:</b>
     <%= link_to extension.maintainer, extensions_path(by: extension.maintainer, keyword: params[:keyword]) %>
   </p>
-  <% if extension.keywords.any? %>
+  <% if extension.tags.any? %>
   <p>
     <b>Keywords:</b>
-    <%= extension.keywords.map { |k| link_to k.name, url_for(keyword: k.name, by: params[:by]) }.join(', ').html_safe %>
+    <%= extension.tags.map { |k| link_to k.name, url_for(keyword: k.name, by: params[:by]) }.join(', ').html_safe %>
   </p>
   <% end %>
 </li>

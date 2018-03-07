@@ -1,5 +1,5 @@
 <%- content_for :meta_keywords do -%>
-<%= "Alchemy CMS, Extension, #{@extension.keywords}" -%>
+<%= "Alchemy CMS, Extension, #{@extension.tags}" -%>
 <%- end -%>
 <%- content_for :title do -%>
 <%= "Extensions - #{@extension.name}" -%>
@@ -25,7 +25,7 @@
       </p>
       <p>
         <b>Keywords:</b>
-        <%= @extension.keywords.map { |k| link_to k.name, url_for(keyword: k.name, by: params[:by]) }.join(', ').html_safe %>
+        <%= @extension.tags.map { |k| link_to k.name, url_for(keyword: k.name, by: params[:by]) }.join(', ').html_safe %>
       </p>
       <hr>
       <h4>About:</h4>

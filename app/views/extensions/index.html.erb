@@ -40,7 +40,7 @@
       <% @keywords.each do |keyword| %>
         <li>
           <%= link_to(keyword.name, extensions_path(keyword: keyword.name)) %>
-          <small>(<%= keyword.count %>)</small>
+          <small>(<%= keyword.taggings_count %>)</small>
         </li>
       <% end %>
       </ul>

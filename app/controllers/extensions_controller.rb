@@ -16,11 +16,11 @@ class ExtensionsController < ApplicationController
     end
     @extensions = @extensions.page(params[:page] || 1).per(8)
 
-    @keywords = Extension.tag_counts_on(:keywords).order('count DESC, RANDOM()').limit(5)
+    @keywords = Extension.tag_counts.order('taggings_count DESC').limit(5)
   end
 
   def show
-    @similiar_keyword = Extension.tagged_with(@extension.keywords)
+    @similiar_keyword = Extension.tagged_with(@extension.tags)
     @similiar_keyword = @similiar_keyword.to_a - [@extension]
 
     @similiar_maintainer = Extension.maintained_by(@extension.maintainer)

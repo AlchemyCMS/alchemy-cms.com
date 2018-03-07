@@ -5,10 +5,10 @@
     <b>by:</b>
     <%= link_to_if showcase.creator_url.present?, showcase.creator, showcase.creator_url, target: '_blank' %>
   </p>
-  <% if showcase.keywords.any? %>
+  <% if showcase.tags.any? %>
     <p>
       <b>Keywords:</b>
-      <%= showcase.keywords.map { |k| link_to k.name, showcases_path(keyword: k.name) }.join(', ').html_safe %>
+      <%= showcase.tags.map { |k| link_to k.name, showcases_path(keyword: k.name) }.join(', ').html_safe %>
     </p>
   <% end %>
   <%= image_tag showcase.screenshot.thumb('450x280#').url if showcase.screenshot_stored? %>
