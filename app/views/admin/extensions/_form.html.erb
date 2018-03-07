@@ -1,9 +1,0 @@
-<%= alchemy_form_for resource_instance_variable, url: resource_path(resource_instance_variable) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :maintainer %>
-  <%= f.input :url %>
-  <%= f.input :description, as: 'text', input_html: {rows: 8} %>
-  <%= f.input :tag_list, as: 'string' %>
-  <%= f.input :public %>
-  <%= f.submit Alchemy.t(:save) %>
-<% end %>

@@ -13,7 +13,10 @@
     <%= f.file_field :screenshot %>
   </div>
   <%= f.input :public %>
-  <%= f.input :tag_list, as: 'string' %>
+  <div class="input string autocomplete_tag_list">
+    <%= f.label :tag_list %>
+    <%= render 'alchemy/admin/partials/autocomplete_tag_list', f: f %>
+  </div>
   <div class="submit">
     <%= f.submit Alchemy.t(:save) %>
   </div>
