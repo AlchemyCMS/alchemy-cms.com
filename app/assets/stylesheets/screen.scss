@@ -143,10 +143,10 @@ header {
   min-height: 300px;
 
   img {
-    border: 1px solid $marine;
+    border: 1px solid $alchemy_blue;
   }
 
-  a img {
+  a:hover img {
     border-color: $alchemy_orange;
   }
 }
@@ -213,16 +213,12 @@ footer {
 
   a {
     margin-bottom: 42px;
-    color: $alchemy_orange;
     font-weight: normal;
     line-height: 18px;
-    text-decoration: none;
-    transition: all 0.1s ease-in-out;
+  }
 
-    &:hover {
-      color: $belize_blue;
-      text-decoration: underline;
-    }
+  figure {
+    min-height: 315px;
   }
 
   img {
