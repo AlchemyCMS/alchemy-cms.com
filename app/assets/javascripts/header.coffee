@@ -1,5 +1,5 @@
 $ ->
-  doc = $('html')
+  doc = $(document)
   header = $('header')
   nav_bar = $('.nav-bar')
   $(window).scroll ->
