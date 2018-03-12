@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/AlchemyCMS/alchemy_cms
-  revision: bb501b5ee366fdcc869a83dd27b96a4bc82f80fa
+  revision: 4b2f5868fb38d2ac19426dcaacdeb5f6914369e7
   branch: master
   specs:
     alchemy_cms (4.1.0.beta)
