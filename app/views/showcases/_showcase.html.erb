@@ -1,10 +1,12 @@
 <% cache(showcase) do %>
 <li class="<%= cycle('even', 'odd') %>">
   <h3><%= link_to showcase.title, showcase.url, target: '_blank', rel: 'nofollow' %></h3>
+  <% if showcase.creator.present? %>
   <p>
     <b>by:</b>
     <%= link_to_if showcase.creator_url.present?, showcase.creator, showcase.creator_url, target: '_blank' %>
   </p>
+  <% end %>
   <% if showcase.tags.any? %>
     <p>
       <b>Keywords:</b>
