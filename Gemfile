@@ -42,3 +42,5 @@ end
 group :production do
   gem 'mini_racer', '~> 0.1'
 end
+
+gem "bugsnag", "~> 6.8"
