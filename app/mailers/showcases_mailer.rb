@@ -1,5 +1,5 @@
 class ShowcasesMailer < ActionMailer::Base
-  default from: "alchemy@magiclabs.de"
+  default from: "mail@alchemy-cms.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -9,6 +9,6 @@ class ShowcasesMailer < ActionMailer::Base
   def registration(showcase)
     @showcase = showcase
 
-    mail to: "alchemy@magiclabs.de", subject: "Alchemy Showcase Registration"
+    mail to: "tvdeyen+alchemy@gmail.com", subject: "Alchemy Showcase Registration"
   end
 end
