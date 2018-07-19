@@ -37,6 +37,7 @@ group :development do
   gem 'spring'
   gem 'web-console'
   gem 'listen'
+  gem 'letter_opener'
 end
 
 group :production do
