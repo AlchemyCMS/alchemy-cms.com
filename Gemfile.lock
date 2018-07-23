@@ -219,6 +219,8 @@ GEM
       method_source (~> 0.9.0)
     public_suffix (3.0.2)
     rack (2.0.5)
+    rack-attack (5.4.0)
+      rack (>= 1.0, < 3)
     rack-cache (1.7.1)
       rack (>= 0.4)
     rack-test (1.0.0)
@@ -349,6 +351,7 @@ DEPENDENCIES
   newrelic_rpm
   pg (~> 1.0)
   pry
+  rack-attack (~> 5.4)
   rack-cache
   rails (~> 5.1.5)
   rbnacl (>= 3.2, < 5.0)

@@ -45,3 +45,5 @@ group :production do
 end
 
 gem "bugsnag", "~> 6.8"
+
+gem "rack-attack", "~> 5.4"

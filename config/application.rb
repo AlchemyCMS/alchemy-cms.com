@@ -30,6 +30,8 @@ module AlchemyCmsCom
     config.generators.test_unit = false
     config.generators.helpers = false
 
+    config.middleware.use Rack::Attack
+
     # Load monkey patches
     config.to_prepare do
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator.rb")) do |e|
