@@ -1,7 +1,3 @@
-# for ed25519 ssh support
-require 'rbnacl'
-require 'bcrypt_pbkdf'
-
 # Load DSL and set up stages
 require "capistrano/setup"
 
