@@ -9,7 +9,7 @@ class Rack::Attack
   # whitelisting). It must implement .increment and .write like
   # ActiveSupport::Cache::Store
 
-  # Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new 
+  # Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
 
   ### Throttle Spammy Clients ###
 
@@ -74,6 +74,10 @@ class Rack::Attack
   #    {},   # headers
   #    ['']] # body
   # end
+end
+
+Rack::Attack.blocklist('bad-robots') do |req|
+  req.ip if /\S+\.php/.match?(req.path)
 end
 
 # Block suspicious requests for '/etc/password' or wordpress specific paths.
