@@ -1,5 +1,5 @@
-<% cache(element) do %>
-  <%= element_view_for(element, tag: 'pre', class: 'code small-12 columns') do |el| %>
+<% cache(code_view) do %>
+  <%= element_view_for(code_view, tag: 'pre', class: 'code small-12 columns') do |el| %>
     <%= el.render :block -%>
   <% end %>
 <% end %>

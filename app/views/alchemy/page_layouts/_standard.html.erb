@@ -1,8 +1,8 @@
-<%= render_cell(:slide_gallery) %>
+<%= render_elements(only: :slide_gallery, fixed: true) %>
 
 <div id="content" class="row">
   <div class="small-12 columns">
     <%= render_elements %>
-    <%= render_cell 'packages' %>
+    <%= render_elements(only: 'packages', fixed: true) %>
   </div>
 </div>

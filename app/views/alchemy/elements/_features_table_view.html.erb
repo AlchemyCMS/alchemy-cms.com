@@ -1,5 +1,5 @@
-<% cache(element) do %>
-  <%= element_view_for(element, class: 'info_table') do |el| %>
+<% cache(features_table_view) do %>
+  <%= element_view_for(features_table_view, class: 'info_table') do |el| %>
     <div class="content features">
       <h3><%= el.render :headline %></h3>
       <%= el.render :features %>

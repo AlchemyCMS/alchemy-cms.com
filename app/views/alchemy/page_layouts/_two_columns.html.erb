@@ -1,4 +1,4 @@
-<%= render_cell(:slide_gallery) %>
+<%= render_elements(only: :slide_gallery, fixed: true) %>
 
 <div id="content">
   <div class="row">
@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="row">
-    <%= render_cell(:left_column) %>
-    <%= render_cell(:right_column) %>
+    <%= render_elements(only: :left_column, fixed: true) %>
+    <%= render_elements(only: :right_column, fixed: true) %>
   </div>
 </div>

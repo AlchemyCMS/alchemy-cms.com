@@ -1,5 +1,5 @@
-<% cache(element) do %>
-  <%= element_view_for(element, class: 'gallery row') do |el| %>
-    <%= element.nested_elements.published %>
+<% cache(gallery_view) do %>
+  <%= element_view_for(gallery_view, class: 'gallery row') do |el| %>
+    <%= gallery_view.nested_elements.published %>
   <% end %>
 <% end %>

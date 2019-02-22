@@ -1,5 +1,5 @@
-<% cache(element) do %>
-  <%= element_view_for(element, tag: 'h3', class: 'subheadline') do |el| %>
+<% cache(subheadline_view) do %>
+  <%= element_view_for(subheadline_view, tag: 'h3', class: 'subheadline') do |el| %>
     <%= el.render :subheadline %>
   <% end %>
 <% end %>

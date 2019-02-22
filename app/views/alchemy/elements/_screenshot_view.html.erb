@@ -1,5 +1,5 @@
-<% cache(element) do %>
-  <%= element_view_for(element, class: 'screenshot row') do |el| %>
-    <%= render element.nested_elements.published %>
+<% cache(screenshot_view) do %>
+  <%= element_view_for(screenshot_view, class: 'screenshot row') do |el| %>
+    <%= render screenshot_view.nested_elements.published %>
   <% end %>
 <% end %>

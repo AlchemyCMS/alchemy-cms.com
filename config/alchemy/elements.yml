@@ -109,3 +109,36 @@
   - name: button_label
     type: EssenceText
     default: Subscribe
+
+- name: left_column
+  fixed: true
+  unique: true
+  nestable_elements:
+  - subheadline
+  - text
+  - code
+  - guide
+  - screenshot
+  - newsletter
+
+- name: right_column
+  fixed: true
+  unique: true
+  nestable_elements:
+  - subheadline
+  - text
+  - code
+  - features_table
+  - newsletter
+
+- name: slide_gallery
+  fixed: true
+  unique: true
+  nestable_elements:
+  - slide
+
+- name: packages
+  fixed: true
+  unique: true
+  nestable_elements:
+  - package
