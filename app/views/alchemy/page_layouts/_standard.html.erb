@@ -1,8 +1,10 @@
-<%= render_elements(only: :slide_gallery, fixed: true) %>
+<% cache(page) do %>
+  <%= render_elements(only: 'slide_gallery', fixed: true) %>
 
-<div id="content" class="row">
-  <div class="small-12 columns">
-    <%= render_elements %>
-    <%= render_elements(only: 'packages', fixed: true) %>
+  <div id="content" class="row">
+    <div class="small-12 columns">
+      <%= render_elements %>
+      <%= render_elements(only: 'packages', fixed: true) %>
+    </div>
   </div>
-</div>
+<% end %>
