@@ -57,6 +57,7 @@ de:
       searchresult: Suchergebnisse
       contactform: Kontaktformular
       package: Support-Paket
+      screenshot_picture: Bild
 
     # == Translated names for contents in elements.
     # Used for the content editor label inside the element editor view (The elements window)

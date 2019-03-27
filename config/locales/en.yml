@@ -1,6 +1,8 @@
 en:
 
   alchemy:
+    element_names:
+      screenshot_picture: Picture
     modules:
       extensions: Extensions
       showcases: Showcases

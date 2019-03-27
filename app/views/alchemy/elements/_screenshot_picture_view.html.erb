@@ -1,0 +1,7 @@
+<%- cache(screenshot_picture_view) do -%>
+  <%= element_view_for(screenshot_picture_view, class: 'small-12 large-6 columns') do |el| -%>
+    <%= link_to el.ingredient(:picture).url(format: 'jpg'), class: 'zoomable', rel: 'tour', title: el.essence(:picture).caption do %>
+      <%= el.render(:picture, size: "1280x720", crop: true, format: 'jpg') %>
+    <% end %>
+  <%- end -%>
+<%- end -%>

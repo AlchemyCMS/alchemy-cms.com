@@ -1,9 +1,5 @@
 <% cache(element) do %>
   <%= element_view_for(element, class: 'screenshot row') do |el| %>
-    <% element.contents.gallery_pictures.each do |content| %>
-      <%= link_to content.ingredient.url(format: 'jpg'), class: 'zoomable small-12 large-6 columns', rel: 'tour', title: content.essence.caption do %>
-        <%= render_essence_view(content, size: "1280x720", crop: true, format: 'jpg') %>
-      <% end %>
-    <% end %>
+    <%= render element.nested_elements.published %>
   <% end %>
 <% end %>
