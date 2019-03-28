@@ -1,10 +1,10 @@
-<% cache(element) do %>
-  <% if element.nested_elements.published.published.any? %>
+<% cache(slide_gallery_view) do %>
+  <% if slide_gallery_view.nested_elements.published.published.any? %>
   <div class="slide-row">
     <div class="row" id="slide_gallery_container">
       <div class="slideshow-wrapper small-12 columns">
         <ul id="slide_gallery" data-orbit>
-          <%= render element.nested_elements.published %>
+          <%= render slide_gallery_view.nested_elements.published %>
         </ul>
       </div>
     </div>
