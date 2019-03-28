@@ -1,10 +1,10 @@
-# alchemy-cms.com website
+# [AlchemyCMS Homepage](alchemy-cms.com)
 
 ### Prerequisites/Requirements
 
-* Ruby 2.2
+* Ruby 2.5
 * Imagemagick
-* MySQL >= 5
+* PostgreSQL >= 9
 
 ### Setup local development
 
@@ -44,7 +44,7 @@ Make sure you have Ansible installed. On a mac:
 
 Provisioning is as easy as:
 
-    $ ansible-playbook -i hosts playbooks/production.yml --ask-vault-pass --ask-become-pass
+    $ ansible-playbook -i hosts playbooks/homepage.yml --ask-vault-pass
 
 ### Deployment
 
