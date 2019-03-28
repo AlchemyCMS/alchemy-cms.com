@@ -1,0 +1,5 @@
+<% cache(packages_view) do %>
+  <div class="packages">
+    <%= render packages_view.nested_elements.published %>
+  </div>
+<% end %>

@@ -1,6 +1,6 @@
-<% cache(element) do %>
-  <% payable = element.ingredient(:payment).present? %>
-  <%= element_view_for(element, "data-element" => element.id) do |el| -%>
+<% cache(package_view) do %>
+  <% payable = package_view.ingredient(:payment).present? %>
+  <%= element_view_for(package_view, "data-package_view" => package_view.id) do |el| -%>
     <div class="name">
       <h3><%= el.render :name %></h3>
     </div>
@@ -9,25 +9,25 @@
     </div>
     <% if payable %>
       <div class="payment">
-        <% default_days = element.ingredient(:default_days).to_i %>
+        <% default_days = package_view.ingredient(:default_days).to_i %>
         <div class="day_select">
-          Days: <input type="number" min="<%= element.ingredient(:min_days) %>" name="days" value="<%= default_days %>">
+          Days: <input type="number" min="<%= package_view.ingredient(:min_days) %>" name="days" value="<%= default_days %>">
         </div>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="mail@magiclabs.de">
-          <% success_url = Alchemy::Page.find_by_id element.ingredient(:success_page) %>
+          <% success_url = Alchemy::Page.find_by_id package_view.ingredient(:success_page) %>
           <% if success_url.present? %>
             <input type="hidden" name="return" value="<%= show_alchemy_page_url(success_url) %>">
           <% end %>
-          <% abort_url = Alchemy::Page.find_by_id element.ingredient(:abort_page) %>
+          <% abort_url = Alchemy::Page.find_by_id package_view.ingredient(:abort_page) %>
           <% if abort_url.present? %>
             <input type="hidden" name="cancel_return" value="<%= show_alchemy_page_url(abort_url) %>">
           <% end %>
           <input type="hidden" name="lc" value="DE">
           <input type="hidden" name="item_name" value="<%= el.render :name %>">
           <input type="hidden" name="quantity" value="<%= default_days %>">
-          <input type="hidden" name="amount" value="<%= element.ingredient(:amount_per_day).to_i %>">
+          <input type="hidden" name="amount" value="<%= package_view.ingredient(:amount_per_day).to_i %>">
           <input type="hidden" name="currency_code" value="EUR">
           <input type="hidden" name="button_subtype" value="services">
           <input type="hidden" name="no_note" value="1">
@@ -42,7 +42,7 @@
           <%= form_for(@message ||= Alchemy::Message.new, remote: true) do |f| %>
             <div class="form_fields invisible">
               <p>We will contact you to talk about individual Service agreements.</p>
-              <%= f.hidden_field :contact_form_id, value: element.id %>
+              <%= f.hidden_field :contact_form_id, value: package_view.id %>
               <%= f.hidden_field :package, value: el.render(:name) %>
               <%= f.text_field :spamblocker, class: "hidden" %>
               <%= f.text_field :account_name, placeholder: "Company" %>

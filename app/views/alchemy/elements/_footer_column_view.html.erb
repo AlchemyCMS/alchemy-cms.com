@@ -1,7 +1,7 @@
-<% cache(element) do %>
-  <%= element_view_for(element, class: 'small-12 large-4 columns') do |el| %>
+<% cache(footer_column_view) do %>
+  <%= element_view_for(footer_column_view, class: 'small-12 large-4 columns') do |el| %>
     <h3><%= el.render :headline %></h3>
-    <% if element.has_ingredient?(:addthis_profile) %>
+    <% if footer_column_view.has_ingredient?(:addthis_profile) %>
       <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
         <a class="addthis_button_facebook"></a>
         <a class="addthis_button_twitter"></a>

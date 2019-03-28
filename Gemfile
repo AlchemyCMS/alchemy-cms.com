@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.2.2'
 gem 'pg', '~> 1.0'
 
-'4.1-stable'.tap do |branch|
+'master'.tap do |branch|
   gem 'alchemy_cms',    git: 'https://github.com/AlchemyCMS/alchemy_cms',    branch: branch
   gem 'alchemy-devise', git: 'https://github.com/AlchemyCMS/alchemy-devise', branch: branch
 end
@@ -29,10 +29,6 @@ group :development do
   gem 'capistrano-alchemy', '~> 1.0', require: false
   gem 'capistrano-maintenance', require: false
   gem 'capistrano-passenger', require: false
-  # required for ed25519 ssh support
-  gem 'rbnacl', '>= 3.2', '< 5.0', require: false
-  gem 'rbnacl-libsodium', require: false
-  gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0', require: false
   gem 'thin'
   gem 'spring'
   gem 'web-console'

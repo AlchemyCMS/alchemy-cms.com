@@ -1,12 +1,5 @@
-<% cache(element) do %>
-  <%= element_view_for(element, class: 'gallery row') do |el| %>
-    <% element.contents.gallery_pictures.each do |content| %>
-      <%= render_essence_view content, {
-        size: "450x280",
-        crop: true
-      }, {
-        class: 'small-12 large-6 columns'
-      } %>
-    <% end %>
+<% cache(gallery_view) do %>
+  <%= element_view_for(gallery_view, class: 'gallery row') do |el| %>
+    <%= gallery_view.nested_elements.published %>
   <% end %>
 <% end %>

@@ -74,10 +74,27 @@
     type: EssenceRichtext
 
 - name: gallery
-  picture_gallery: true
+  nestable_elements:
+  - gallery_picture
+
+- name: gallery_picture
+  compact: true
+  contents:
+  - name: picture
+    type: EssencePicture
 
 - name: screenshot
-  picture_gallery: true
+  nestable_elements:
+  - screenshot_picture
+
+- name: screenshot_picture
+  compact: true
+  contents:
+  - name: picture
+    type: EssencePicture
+    settings:
+      crop: true
+      size: 1280x720
 
 - name: newsletter
   unique: true
@@ -92,3 +109,36 @@
   - name: button_label
     type: EssenceText
     default: Subscribe
+
+- name: left_column
+  fixed: true
+  unique: true
+  nestable_elements:
+  - subheadline
+  - text
+  - code
+  - guide
+  - screenshot
+  - newsletter
+
+- name: right_column
+  fixed: true
+  unique: true
+  nestable_elements:
+  - subheadline
+  - text
+  - code
+  - features_table
+  - newsletter
+
+- name: slide_gallery
+  fixed: true
+  unique: true
+  nestable_elements:
+  - slide
+
+- name: packages
+  fixed: true
+  unique: true
+  nestable_elements:
+  - package

@@ -1,5 +1,5 @@
-<% cache(element) do %>
-  <%= element_view_for(element, tag: 'h1', class: nil) do |el| %>
+<% cache(headline_view) do %>
+  <%= element_view_for(headline_view, tag: 'h1', class: nil) do |el| %>
     <%= el.render :headline %>
   <% end %>
 <% end %>
