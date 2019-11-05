@@ -19,6 +19,7 @@ gem 'jquery-rails', '~> 4.0'
 gem 'autoprefixer-rails'
 gem 'zurb-foundation', '~> 4.3.2'
 gem 'dotenv-rails', '~> 0.11'
+gem 'sprockets', '< 4'
 
 # caching
 gem 'rack-cache', require: 'rack/cache'
