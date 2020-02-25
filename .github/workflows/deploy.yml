@@ -14,6 +14,14 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.5
+    - name: Restore Bundler cache
+      id: cache
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-bundle-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-bundle-
     - uses: tvdeyen/capistrano-deploy@no-install-deps
       with:
         target: production
