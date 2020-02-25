@@ -10,7 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: miloserdow/capistrano-deploy@v1.3
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.5
+    - uses: tvdeyen/capistrano-deploy@no-install-deps
       with:
         target: production
         deploy_key: ${{ secrets.DEPLOY_ENC_KEY }}
