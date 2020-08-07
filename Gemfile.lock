@@ -183,7 +183,8 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    kramdown (1.4.2)
+    kramdown (2.3.0)
+      rexml
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
@@ -273,6 +274,7 @@ GEM
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rexml (3.2.4)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -346,7 +348,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   dotenv-rails (~> 0.11)
   jquery-rails (~> 4.0)
-  kramdown (~> 1.4.1)
+  kramdown (~> 2.3.0)
   letter_opener
   listen
   mini_racer

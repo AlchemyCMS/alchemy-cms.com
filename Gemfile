@@ -9,7 +9,7 @@ gem 'pg', '~> 1.0'
 end
 
 gem 'newrelic_rpm'
-gem 'kramdown', '~> 1.4.1'
+gem 'kramdown', '~> 2.3.0'
 
 # assets
 gem 'sassc-rails', '~> 1.3'
